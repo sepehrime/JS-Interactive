@@ -15,10 +15,10 @@ Build a simple HTML, CSS, and vanilla JavaScript learning website for beginner-t
 **Implementation files:** The website itself will use only `index.html`, `style.css`, and `script.js`. The requested `Agent.md` and `plan.md` are project guidance, not website assets. At the start of Phase 1, the project directory contains those two guidance files and no website implementation files.
 
 ### Phase 2: Create the HTML foundation
-- [ ] Build the page with semantic HTML elements
-- [ ] Add sections for HTML elements, CSS basics, selecting elements, reading and changing content, events, user input, multiple elements, and the console
-- [ ] Include a short explanation, visible example, interactive example, and relevant code snippet in each section
-- [ ] Use IDs and classes intentionally in the examples
+- [x] Build the page with semantic HTML elements
+- [x] Add sections for HTML elements, CSS basics, selecting elements, reading and changing content, events, user input, multiple elements, and the console
+- [x] Include a short explanation, visible example, interactive example, and relevant code snippet in each section
+- [x] Use IDs and classes intentionally in the examples
 
 ### Phase 3: Add simple CSS styling
 - [ ] Create a clean, readable layout for the lessons and demo areas
