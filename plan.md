@@ -21,10 +21,10 @@ Build a simple HTML, CSS, and vanilla JavaScript learning website for beginner-t
 - [x] Use IDs and classes intentionally in the examples
 
 ### Phase 3: Add simple CSS styling
-- [ ] Create a clean, readable layout for the lessons and demo areas
-- [ ] Style headings, buttons, inputs, examples, and code blocks using basic CSS
-- [ ] Demonstrate selectors, classes, IDs, colors, spacing, borders, backgrounds, dimensions, and simple flexbox
-- [ ] Keep the styling accessible and avoid advanced CSS techniques
+- [x] Create a clean, readable layout for the lessons and demo areas
+- [x] Style headings, buttons, inputs, examples, and code blocks using basic CSS
+- [x] Demonstrate selectors, classes, IDs, colors, spacing, borders, backgrounds, dimensions, and simple flexbox
+- [x] Keep the styling accessible and avoid advanced CSS techniques
 
 ### Phase 4: Teach selecting, reading, and changing elements
 - [ ] Demonstrate `document.getElementById()` and `document.querySelector()`
