@@ -37,7 +37,35 @@ const greetButton = document.querySelector("#greetButton");
 const greeting = document.querySelector("#greeting");
 
 greetButton.addEventListener("click", function () {
-    greeting.textContent = "You typed: " + nameInput.value;
+    if (nameInput.value === "") {
+        greeting.textContent = "Please enter your name.";
+    } else {
+        greeting.textContent = "Hello, " + nameInput.value + "!";
+    }
+});
+
+// Show a visible result for each basic event.
+const eventButton = document.querySelector("#eventButton");
+const eventInput = document.querySelector("#eventInput");
+const hoverTarget = document.querySelector("#hoverTarget");
+const eventOutput = document.querySelector("#eventOutput");
+const resetEventButton = document.querySelector("#resetEventButton");
+
+eventButton.addEventListener("click", function () {
+    eventOutput.textContent = "Click event: the button was clicked.";
+});
+
+eventInput.addEventListener("input", function () {
+    eventOutput.textContent = "Input event: you typed \"" + eventInput.value + "\".";
+});
+
+hoverTarget.addEventListener("mouseover", function () {
+    eventOutput.textContent = "Mouseover event: the pointer entered the box.";
+});
+
+resetEventButton.addEventListener("click", function () {
+    eventInput.value = "";
+    eventOutput.textContent = "Demo reset. Click, hover, or type to see an event.";
 });
 
 // Show the difference between a direct style change and a CSS class.
@@ -74,4 +102,16 @@ const countOutput = document.querySelector("#countOutput");
 
 countButton.addEventListener("click", function () {
     countOutput.textContent = "Found " + topicButtons.length + " matching buttons: HTML, CSS, and JavaScript.";
+});
+
+// Log a message in the browser console and show that it was sent.
+const consoleButton = document.querySelector("#consoleButton");
+const consoleDemoMessage = document.querySelector("#consoleDemoMessage");
+const consoleOutput = document.querySelector("#consoleOutput");
+
+consoleButton.addEventListener("click", function () {
+    const message = "The console demo button was clicked";
+    console.log(message);
+    consoleDemoMessage.textContent = message;
+    consoleOutput.textContent = "Message sent. Open Developer Tools > Console to see the console.log() output.";
 });

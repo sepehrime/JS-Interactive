@@ -859,6 +859,16 @@ h2 {
     text-align: center;
 }
 
+.event-target:hover {
+    color: #44376c;
+    background: #e3def5;
+    border-color: #a99bd5;
+}
+
+.event-stage #resetEventButton {
+    margin-top: 10px;
+}
+
 .field-label {
     display: block;
     margin-bottom: 6px;

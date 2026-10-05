@@ -33,11 +33,11 @@ Build a simple HTML, CSS, and vanilla JavaScript learning website for beginner-t
 - [x] Explain the code near the interactive example it controls
 
 ### Phase 5: Teach interaction and decisions
-- [ ] Add simple `click`, `input`, and `mouseover` event examples
-- [ ] Demonstrate changing an inline style and, preferably, toggling a CSS class
-- [ ] Add a name input and greeting example with a basic `if / else` check
-- [ ] Demonstrate `document.querySelectorAll()` with a simple group of elements
-- [ ] Add `console.log()` examples and explain how to view them in browser Developer Tools
+- [x] Add simple `click`, `input`, and `mouseover` event examples
+- [x] Demonstrate changing an inline style and, preferably, toggling a CSS class
+- [x] Add a name input and greeting example with a basic `if / else` check
+- [x] Demonstrate `document.querySelectorAll()` with a simple group of elements
+- [x] Add `console.log()` examples and explain how to view them in browser Developer Tools
 
 ### Phase 6: Review and validate
 - [ ] Confirm the concept order follows the teaching progression in `Agent.md`

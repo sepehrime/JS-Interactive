@@ -255,25 +255,37 @@ box.<span class="code-blue">classList</span>.<span class="code-blue">toggle</spa
                     <h2 id="events-title">Listen for an <span>event.</span></h2>
                     <p>An event is something that happens on a page. A click, typing into a field, or moving a pointer over a box can each trigger JavaScript.</p>
                     <div class="code-card">
-                        <div class="code-card-heading"><span>LISTEN FOR A CLICK</span><span class="code-language">JAVASCRIPT</span></div>
-                        <pre><code><span class="code-pink">const</span> button =
-  document.<span class="code-blue">querySelector</span>(<span class="code-green">"#eventButton"</span>);
+                        <div class="code-card-heading"><span>CLICK, INPUT, AND MOUSEOVER</span><span class="code-language">JAVASCRIPT</span></div>
+                        <pre><code><span class="code-pink">const</span> eventButton = document.<span class="code-blue">querySelector</span>(<span class="code-green">"#eventButton"</span>);
+<span class="code-pink">const</span> eventInput = document.<span class="code-blue">querySelector</span>(<span class="code-green">"#eventInput"</span>);
+<span class="code-pink">const</span> hoverTarget = document.<span class="code-blue">querySelector</span>(<span class="code-green">"#hoverTarget"</span>);
+                        <span class="code-pink">const</span> eventOutput = document.<span class="code-blue">querySelector</span>(<span class="code-green">"#eventOutput"</span>);
 
-button.<span class="code-blue">addEventListener</span>(<span class="code-green">"click"</span>, <span class="code-pink">function</span> () {
-  message.<span class="code-yellow">textContent</span> = <span class="code-green">"Clicked!"</span>;
+                        eventButton.<span class="code-blue">addEventListener</span>(<span class="code-green">"click"</span>, <span class="code-pink">function</span> () {
+                          eventOutput.<span class="code-yellow">textContent</span> = <span class="code-green">"Click event: the button was clicked."</span>;
+                        });
+
+eventInput.<span class="code-blue">addEventListener</span>(<span class="code-green">"input"</span>, <span class="code-pink">function</span> () {
+  eventOutput.<span class="code-yellow">textContent</span> = <span class="code-green">"Input event: you typed \""</span> + eventInput.value + <span class="code-green">"\"."</span>;
+});
+
+hoverTarget.<span class="code-blue">addEventListener</span>(<span class="code-green">"mouseover"</span>, <span class="code-pink">function</span> () {
+  eventOutput.<span class="code-yellow">textContent</span> = <span class="code-green">"Mouseover event: the pointer entered the box."</span>;
 });</code></pre>
                     </div>
                 </div>
                 <div class="demo-card">
                     <div class="demo-card-heading"><span class="live-indicator"></span> TRY EACH EVENT</div>
                     <div class="demo-stage event-stage">
-                        <button class="button button-primary" id="eventButton" type="button">Click me</button>
-                        <p class="event-target" id="hoverTarget">Move your pointer over me</p>
+                        <span class="stage-label">Click the button, move over the box, or type below. Watch the result.</span>
+                        <button class="button button-primary" id="eventButton" type="button">Click to test click event</button>
+                        <p class="event-target" id="hoverTarget">Move your pointer over this box</p>
                         <label class="field-label" for="eventInput">Type something</label>
                         <input class="text-input" id="eventInput" type="text" placeholder="An input event happens as you type">
                         <p class="output-line" id="eventOutput" aria-live="polite">Click, hover, or type to see an event.</p>
+                        <button class="button button-outline" id="resetEventButton" type="button">Reset demo</button>
                     </div>
-                    <p class="demo-caption">The page reacts to <code>click</code>, <code>mouseover</code>, and <code>input</code>.</p>
+                    <p class="demo-caption">Each action updates the result above so you can see which event JavaScript received.</p>
                 </div>
             </div>
         </section>
@@ -283,25 +295,29 @@ button.<span class="code-blue">addEventListener</span>(<span class="code-green">
                 <div class="lesson-copy">
                     <p class="eyebrow"><span class="lesson-number">09</span> Give it a little information</p>
                     <h2 id="input-title">Read user <span>input.</span></h2>
-                    <p>The input's <code>value</code> is the text the visitor typed. JavaScript can read it and show that text on the page.</p>
+                    <p>The input's <code>value</code> is the text the visitor typed. JavaScript checks whether it is empty, then shows either a prompt or a personal greeting.</p>
                     <div class="code-card">
-                        <div class="code-card-heading"><span>READING INPUT</span><span class="code-language">JAVASCRIPT</span></div>
-                        <pre><code>greeting.<span class="code-yellow">textContent</span> =
-  <span class="code-green">"You typed: "</span> + nameInput.<span class="code-yellow">value</span>;</code></pre>
+                        <div class="code-card-heading"><span>READ INPUT + MAKE A DECISION</span><span class="code-language">JAVASCRIPT</span></div>
+                        <pre><code><span class="code-pink">if</span> (nameInput.<span class="code-yellow">value</span> === <span class="code-green">""</span>) {
+  greeting.<span class="code-yellow">textContent</span> = <span class="code-green">"Please enter your name."</span>;
+} <span class="code-pink">else</span> {
+  greeting.<span class="code-yellow">textContent</span> =
+    <span class="code-green">"Hello, "</span> + nameInput.<span class="code-yellow">value</span> + <span class="code-green">"!"</span>;
+}</code></pre>
                     </div>
                 </div>
                 <div class="demo-card input-demo">
                     <div class="demo-card-heading"><span class="live-indicator"></span> YOUR TURN</div>
                     <div class="demo-stage">
-                        <span class="stage-label">Enter a name, then show its value</span>
+                        <span class="stage-label">Leave the field empty or enter a name, then click the button.</span>
                         <label class="field-label" for="nameInput">Your name</label>
                         <div class="input-row">
                             <input class="text-input" id="nameInput" type="text" placeholder="e.g. Ada" autocomplete="given-name">
-                            <button class="button button-primary" id="greetButton" type="button">Show my name</button>
+                            <button class="button button-primary" id="greetButton" type="button">Greet me</button>
                         </div>
-                        <p class="greeting-output" id="greeting" aria-live="polite">Your greeting will appear here.</p>
+                        <p class="greeting-output" id="greeting" aria-live="polite">The greeting or prompt will appear here.</p>
                     </div>
-                    <p class="demo-caption">JavaScript reads <code>input.value</code> and displays what you typed.</p>
+                    <p class="demo-caption">Try it once with the field empty and once with your name entered.</p>
                 </div>
             </div>
         </section>
@@ -346,9 +362,7 @@ countOutput.<span class="code-yellow">textContent</span> =
                     <p><code>console.log()</code> prints a message in your browser's Developer Tools. It's a handy way to check what JavaScript is reading or when an event happens.</p>
                     <div class="code-card">
                         <div class="code-card-heading"><span>PRINT A MESSAGE</span><span class="code-language">JAVASCRIPT</span></div>
-                        <pre><code>console.<span class="code-blue">log</span>(<span class="code-green">"The button was clicked"</span>);
-
-console.<span class="code-blue">log</span>(nameInput.<span class="code-yellow">value</span>);</code></pre>
+                        <pre><code>console.<span class="code-blue">log</span>(<span class="code-green">"The console demo button was clicked"</span>);</code></pre>
                     </div>
                     <p class="small-note"><strong>Open Developer Tools:</strong> right-click the page and choose Inspect, then select the Console tab.</p>
                 </div>
@@ -356,12 +370,12 @@ console.<span class="code-blue">log</span>(nameInput.<span class="code-yellow">v
                     <div class="demo-card-heading"><span class="live-indicator"></span> BROWSER CONSOLE</div>
                     <div class="console-window" aria-label="Example browser console output">
                         <div class="console-title"><span aria-hidden="true">›_</span> Console</div>
-                        <p><span class="console-prompt">&gt;</span> The button was clicked</p>
-                        <p><span class="console-prompt">&gt;</span> Hello, web!</p>
+                        <p><span class="console-prompt">&gt;</span> Click the button to log a message</p>
+                        <p><span class="console-prompt">&gt;</span> <span id="consoleDemoMessage" aria-live="polite">Waiting for a click...</span></p>
                         <div class="console-input-line"><span>&gt;</span><span class="console-caret"></span></div>
                     </div>
                     <button class="button button-primary" id="consoleButton" type="button">Write a message to the console</button>
-                    <p class="demo-caption" id="consoleOutput" aria-live="polite">Open Developer Tools to see the real output.</p>
+                    <p class="demo-caption" id="consoleOutput" aria-live="polite">Click the button. A message appears here and in Developer Tools &gt; Console.</p>
                 </div>
             </div>
         </section>
