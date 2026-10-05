@@ -775,6 +775,16 @@ h2 {
     font-weight: 700;
 }
 
+.interactive-title {
+    transition: background-color 140ms ease, border-color 140ms ease, box-shadow 140ms ease;
+}
+
+.interactive-title.is-selected {
+    background: #fff1e9;
+    border-color: var(--coral);
+    box-shadow: 0 0 0 3px rgba(239, 112, 85, 0.14);
+}
+
 .output-line {
     min-height: 23px;
     margin: 15px 0 0;
@@ -816,8 +826,11 @@ h2 {
 
 .color-box.highlight {
     color: #484077;
-    background: #e5e0f8;
-    border: 2px solid #9989d1;
+    border-color: #9989d1;
+    outline: 3px solid rgba(153, 137, 209, 0.45);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 5px rgba(153, 137, 209, 0.12);
+    font-weight: 700;
 }
 
 .button-row,
@@ -1160,14 +1173,6 @@ h2 {
     .lesson-grid > .demo-card {
         width: 100%;
         flex: auto;
-    }
-
-    .reverse-grid .demo-card {
-        order: 2;
-    }
-
-    .reverse-grid .lesson-copy {
-        order: 1;
     }
 
     .chapter-intro {

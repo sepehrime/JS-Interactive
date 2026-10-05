@@ -27,10 +27,10 @@ Build a simple HTML, CSS, and vanilla JavaScript learning website for beginner-t
 - [x] Keep the styling accessible and avoid advanced CSS techniques
 
 ### Phase 4: Teach selecting, reading, and changing elements
-- [ ] Demonstrate `document.getElementById()` and `document.querySelector()`
-- [ ] Show how to read `textContent` and display a useful result
-- [ ] Demonstrate changing `textContent` and reading an input's `value`
-- [ ] Explain the code near the interactive example it controls
+- [x] Demonstrate `document.getElementById()` and `document.querySelector()`
+- [x] Show how to read `textContent` and display a useful result
+- [x] Demonstrate changing `textContent` and reading an input's `value`
+- [x] Explain the code near the interactive example it controls
 
 ### Phase 5: Teach interaction and decisions
 - [ ] Add simple `click`, `input`, and `mouseover` event examples
