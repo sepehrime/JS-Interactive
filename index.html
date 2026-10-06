@@ -1,99 +1,177 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A hands-on introduction to HTML, CSS, and JavaScript.">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A hands-on introduction to HTML, CSS, and JavaScript."
+    />
     <title>JavaScript, Made Visible</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
-</head>
-<body>
+  </head>
+  <body>
     <header class="site-header">
-        <div class="page-width header-content">
-            <a class="wordmark" href="#top" aria-label="JavaScript, Made Visible home">
-                <span class="wordmark-mark" aria-hidden="true">JS</span>
-                <span>made visible</span>
-            </a>
-            <nav aria-label="Lesson navigation">
-                <a href="#html">HTML</a>
-                <a href="#css">CSS</a>
-                <a href="#javascript">JavaScript</a>
-                <a href="#practice">Practice</a>
-            </nav>
-        </div>
+      <div class="page-width header-content">
+        <a
+          class="wordmark"
+          href="#top"
+          aria-label="JavaScript, Made Visible home"
+        >
+          <span class="wordmark-mark" aria-hidden="true">JS</span>
+          <span>made visible</span>
+        </a>
+        <nav aria-label="Lesson navigation">
+          <a href="#html">HTML</a>
+          <a href="#css">CSS</a>
+          <a href="#javascript">JavaScript</a>
+          <a href="#practice">Practice</a>
+        </nav>
+      </div>
     </header>
 
     <main id="top">
-        <section class="hero page-width" aria-labelledby="page-title">
-            <div class="hero-copy">
-                <p class="eyebrow"><span class="eyebrow-dot"></span> A hands-on beginner's guide</p>
-                <h1 id="page-title">See how the web <span>comes to life.</span></h1>
-                <p class="hero-description">HTML gives a page its structure. CSS shapes how it looks. JavaScript makes it respond. Explore each layer, then try it yourself.</p>
-                <a class="button button-primary" href="#html">Start learning <span aria-hidden="true">↓</span></a>
+      <section class="hero page-width" aria-labelledby="page-title">
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <span class="eyebrow-dot"></span> A hands-on beginner's guide
+          </p>
+          <h1 id="page-title">See how the web <span>comes to life.</span></h1>
+          <p class="hero-description">
+            HTML gives a page its structure. CSS shapes how it looks. JavaScript
+            makes it respond. Explore each layer, then try it yourself.
+          </p>
+          <a class="button button-primary" href="#html"
+            >Start learning <span aria-hidden="true">↓</span></a
+          >
+        </div>
+        <div
+          class="hero-art"
+          aria-label="A visual showing HTML, CSS, and JavaScript working together"
+        >
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="orbit orbit-three"></div>
+          <div class="code-window">
+            <div class="window-top">
+              <span></span><span></span><span></span
+              ><small>your-first-page.html</small>
             </div>
-            <div class="hero-art" aria-label="A visual showing HTML, CSS, and JavaScript working together">
-                <div class="orbit orbit-one"></div>
-                <div class="orbit orbit-two"></div>
-                <div class="orbit orbit-three"></div>
-                <div class="code-window">
-                    <div class="window-top"><span></span><span></span><span></span><small>your-first-page.html</small></div>
-                    <div class="window-code">
-                        <p><span class="code-muted">01</span> <span class="code-pink">&lt;h1&gt;</span>Hello, web!<span class="code-pink">&lt;/h1&gt;</span></p>
-                        <p><span class="code-muted">02</span> <span class="code-purple">.hello</span> { <span class="code-yellow">color</span>: <span class="code-green">coral</span>; }</p>
-                        <p><span class="code-muted">03</span> <span class="code-blue">button</span>.<span class="code-yellow">onclick</span> = <span class="code-green">sayHello</span>;</p>
-                    </div>
-                    <div class="window-result"><span class="result-sparkle" aria-hidden="true">✳</span><span>Hello, web!</span><span class="result-cursor"></span></div>
-                </div>
-                <span class="art-label label-html">HTML <span>structure</span></span>
-                <span class="art-label label-css">CSS <span>style</span></span>
-                <span class="art-label label-js">JS <span>behavior</span></span>
+            <div class="window-code">
+              <p>
+                <span class="code-muted">01</span>
+                <span class="code-pink">&lt;h1&gt;</span>Hello, web!<span
+                  class="code-pink"
+                  >&lt;/h1&gt;</span
+                >
+              </p>
+              <p>
+                <span class="code-muted">02</span>
+                <span class="code-purple">.hello</span> {
+                <span class="code-yellow">color</span>:
+                <span class="code-green">coral</span>; }
+              </p>
+              <p>
+                <span class="code-muted">03</span>
+                <span class="code-blue">button</span>.<span class="code-yellow"
+                  >onclick</span
+                >
+                = <span class="code-green">sayHello</span>;
+              </p>
             </div>
-            <a class="scroll-note" href="#html"><span class="scroll-line"></span> Scroll to explore</a>
-        </section>
+            <div class="window-result">
+              <span class="result-sparkle" aria-hidden="true">✳</span
+              ><span>Hello, web!</span><span class="result-cursor"></span>
+            </div>
+          </div>
+          <span class="art-label label-html">HTML <span>structure</span></span>
+          <span class="art-label label-css">CSS <span>style</span></span>
+          <span class="art-label label-js">JS <span>behavior</span></span>
+        </div>
+        <a class="scroll-note" href="#html"
+          ><span class="scroll-line"></span> Scroll to explore</a
+        >
+      </section>
 
-        <section class="lesson-section html-section" id="html" aria-labelledby="html-title">
-            <div class="page-width lesson-grid">
-                <div class="lesson-copy">
-                    <p class="eyebrow"><span class="lesson-number">01</span> First, the foundation</p>
-                    <h2 id="html-title">HTML is the <span>structure.</span></h2>
-                    <p>HTML gives each piece of a page a purpose. A heading introduces a topic, a paragraph explains it, and a button invites an action.</p>
-                    <p class="small-note">These building blocks are called <strong>elements</strong>. Most elements have an opening tag and a closing tag.</p>
-                    <div class="code-card">
-                        <div class="code-card-heading"><span>HTML ELEMENTS</span><span class="code-language">HTML</span></div>
-                        <pre><code><span class="code-pink">&lt;h2&gt;</span>A heading<span class="code-pink">&lt;/h2&gt;</span>
+      <section
+        class="lesson-section html-section"
+        id="html"
+        aria-labelledby="html-title"
+      >
+        <div class="page-width lesson-grid">
+          <div class="lesson-copy">
+            <p class="eyebrow">
+              <span class="lesson-number">01</span> First, the foundation
+            </p>
+            <h2 id="html-title">HTML is the <span>structure.</span></h2>
+            <p>
+              HTML gives each piece of a page a purpose. A heading introduces a
+              topic, a paragraph explains it, and a button invites an action.
+            </p>
+            <p class="small-note">
+              These building blocks are called <strong>elements</strong>. Most
+              elements have an opening tag and a closing tag.
+            </p>
+            <div class="code-card">
+              <div class="code-card-heading">
+                <span>HTML ELEMENTS</span
+                ><span class="code-language">HTML</span>
+              </div>
+              <pre><code><span class="code-pink">&lt;h2&gt;</span>A heading<span class="code-pink">&lt;/h2&gt;</span>
 <span class="code-pink">&lt;p&gt;</span>A little explanation.<span class="code-pink">&lt;/p&gt;</span>
 <span class="code-pink">&lt;button&gt;</span>Try me<span class="code-pink">&lt;/button&gt;</span>
 <span class="code-pink">&lt;img</span> src="photo.jpg"
      alt="A description"<span class="code-pink">&gt;</span></code></pre>
-                    </div>
-                </div>
-                <div class="demo-card html-demo">
-                    <div class="demo-card-heading"><span class="live-indicator"></span> LIVE EXAMPLE</div>
-                    <div class="demo-stage">
-                        <span class="stage-label">A tiny piece of a page</span>
-                        <div class="sample-page">
-                            <span class="sample-icon" aria-hidden="true">✦</span>
-                            <h3>A little heading</h3>
-                            <p>And a sentence underneath it.</p>
-                            <button class="button button-dark" type="button">A button</button>
-                            <p class="sample-caption">Heading + paragraph + button = HTML elements</p>
-                        </div>
-                    </div>
-                    <p class="demo-caption">The browser reads these elements and turns them into the page you see.</p>
-                </div>
             </div>
-        </section>
+          </div>
+          <div class="demo-card html-demo">
+            <div class="demo-card-heading">
+              <span class="live-indicator"></span> LIVE EXAMPLE
+            </div>
+            <div class="demo-stage">
+              <span class="stage-label">A tiny piece of a page</span>
+              <div class="sample-page">
+                <span class="sample-icon" aria-hidden="true">✦</span>
+                <h3>A little heading</h3>
+                <p>And a sentence underneath it.</p>
+                <button class="button button-dark" type="button" disabled>
+                  Example button
+                </button>
+                <p class="sample-caption">
+                  This HTML button is an example; it has no action yet.
+                </p>
+              </div>
+            </div>
+            <p class="demo-caption">
+              The browser reads these elements and turns them into the page you
+              see.
+            </p>
+          </div>
+        </div>
+      </section>
 
-        <section class="lesson-section css-section" id="css" aria-labelledby="css-title">
-            <div class="page-width lesson-grid">
-                <div class="lesson-copy">
-                    <p class="eyebrow"><span class="lesson-number">02</span> Then, make it yours</p>
-                    <h2 id="css-title">CSS is the <span>style.</span></h2>
-                    <p>CSS rules choose elements and describe how they should look. A class can style a group; an ID can point to one special element.</p>
-                    <div class="code-card">
-                        <div class="code-card-heading"><span>SELECTORS + STYLES</span><span class="code-language">CSS</span></div>
-                        <pre><code><span class="code-purple">.style-sample</span> {
+      <section
+        class="lesson-section css-section"
+        id="css"
+        aria-labelledby="css-title"
+      >
+        <div class="page-width lesson-grid">
+          <div class="lesson-copy">
+            <p class="eyebrow">
+              <span class="lesson-number">02</span> Then, make it yours
+            </p>
+            <h2 id="css-title">CSS is the <span>style.</span></h2>
+            <p>
+              CSS rules choose elements and describe how they should look. A
+              class can style a group; an ID can point to one special element.
+            </p>
+            <div class="code-card">
+              <div class="code-card-heading">
+                <span>SELECTORS + STYLES</span
+                ><span class="code-language">CSS</span>
+              </div>
+              <pre><code><span class="code-purple">.style-sample</span> {
   <span class="code-yellow">background</span>: <span class="code-green">#fff5ed</span>;
   <span class="code-yellow">padding</span>: <span class="code-green">24px</span>;
   <span class="code-yellow">border</span>: <span class="code-green">1px solid coral</span>;
@@ -102,168 +180,317 @@
 <span class="code-pink">#styleSample</span> {
   <span class="code-yellow">width</span>: <span class="code-green">100%</span>;
 }</code></pre>
-                    </div>
-                    <p class="small-note"><strong>.</strong> selects a class · <strong>#</strong> selects an ID</p>
-                </div>
-                <div class="demo-card css-demo">
-                    <div class="demo-card-heading"><span class="live-indicator"></span> LIVE EXAMPLE</div>
-                    <div class="demo-stage">
-                        <span class="stage-label">Same HTML, with a little style</span>
-                        <div class="style-sample" id="styleSample">
-                            <span class="style-sample-icon" aria-hidden="true">✦</span>
-                            <h3>A little heading</h3>
-                            <p>CSS can change the color, spacing, and shape.</p>
-                            <span class="style-tag">.style-sample</span>
-                        </div>
-                    </div>
-                    <p class="demo-caption">The <code>.style-sample</code> class connects this HTML element to a CSS rule.</p>
-                </div>
             </div>
-        </section>
-
-        <section class="chapter-intro" id="javascript">
-            <div class="page-width chapter-content">
-                <p class="eyebrow"><span class="lesson-number">03</span> Now, bring it to life</p>
-                <h2>JavaScript adds <span>behavior.</span></h2>
-                <p>JavaScript can find elements in the page, read what's inside them, and make changes when someone interacts.</p>
-                <div class="three-steps" aria-label="The basic JavaScript process">
-                    <span><b>01</b> Find an element</span><span class="step-arrow" aria-hidden="true">→</span>
-                    <span><b>02</b> Listen for an action</span><span class="step-arrow" aria-hidden="true">→</span>
-                    <span><b>03</b> Change the page</span>
-                </div>
+            <p class="small-note">
+              <strong>.</strong> selects a class · <strong>#</strong> selects an
+              ID
+            </p>
+          </div>
+          <div class="demo-card css-demo">
+            <div class="demo-card-heading">
+              <span class="live-indicator"></span> LIVE EXAMPLE
             </div>
-        </section>
+            <div class="demo-stage">
+              <span class="stage-label">Same HTML, with a little style</span>
+              <div class="style-sample" id="styleSample">
+                <span class="style-sample-icon" aria-hidden="true">✦</span>
+                <h3>A little heading</h3>
+                <p>CSS can change the color, spacing, and shape.</p>
+                <span class="style-tag">.style-sample</span>
+              </div>
+            </div>
+            <p class="demo-caption">
+              The <code>.style-sample</code> class connects this HTML element to
+              a CSS rule.
+            </p>
+          </div>
+        </div>
+      </section>
 
-        <section class="lesson-section select-section" aria-labelledby="select-title">
-            <div class="page-width lesson-grid">
-                <div class="lesson-copy">
-                    <p class="eyebrow"><span class="lesson-number">04</span> Find what you need</p>
-                    <h2 id="select-title">Select an <span>element.</span></h2>
-                    <p>Before JavaScript can change an element, it needs to find it. Use an ID to select one specific element, or a CSS selector to find an element by its tag, class, or ID.</p>
-                    <div class="code-card">
-                        <div class="code-card-heading"><span>FINDING ELEMENTS</span><span class="code-language">JAVASCRIPT</span></div>
-                        <pre><code><span class="code-pink">const</span> title =
+      <section class="chapter-intro" id="javascript">
+        <div class="page-width chapter-content">
+          <p class="eyebrow">
+            <span class="lesson-number">03</span> Now, bring it to life
+          </p>
+          <h2>JavaScript adds <span>behavior.</span></h2>
+          <p>
+            JavaScript can find elements in the page, read what's inside them,
+            and make changes when someone interacts.
+          </p>
+          <div class="three-steps" aria-label="The basic JavaScript process">
+            <span><b>01</b> Find an element</span
+            ><span class="step-arrow" aria-hidden="true">→</span>
+            <span><b>02</b> Listen for an action</span
+            ><span class="step-arrow" aria-hidden="true">→</span>
+            <span><b>03</b> Change the page</span>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="lesson-section select-section"
+        aria-labelledby="select-title"
+      >
+        <div class="page-width lesson-grid">
+          <div class="lesson-copy">
+            <p class="eyebrow">
+              <span class="lesson-number">04</span> Find what you need
+            </p>
+            <h2 id="select-title">Select an <span>element.</span></h2>
+            <p>
+              Before JavaScript can change an element, it needs to find it. Use
+              an ID to select one specific element, or a CSS selector to find an
+              element by its tag, class, or ID.
+            </p>
+            <div class="code-card">
+              <div class="code-card-heading">
+                <span>FINDING ELEMENTS</span
+                ><span class="code-language">JAVASCRIPT</span>
+              </div>
+              <pre><code><span class="code-pink">const</span> title =
   document.<span class="code-blue">getElementById</span>(<span class="code-green">"selectTitle"</span>);
 
 <span class="code-pink">const</span> button =
   document.<span class="code-blue">querySelector</span>(<span class="code-green">"#findButton"</span>);</code></pre>
-                    </div>
-                </div>
-                <div class="demo-card">
-                    <div class="demo-card-heading"><span class="live-indicator"></span> TRY IT</div>
-                    <div class="demo-stage">
-                        <span class="stage-label">1. Click “Select the title” to see what JavaScript found.</span>
-                        <h3 class="interactive-title" id="selectTitle">I have an ID: selectTitle</h3>
-                        <div class="button-row">
-                            <button class="button button-primary" id="findButton" type="button">Select the title</button>
-                            <button class="button button-outline" id="resetSelectionButton" type="button">Reset</button>
-                        </div>
-                        <p class="output-line" id="selectOutput" aria-live="polite">Not selected yet. Click “Select the title” to try it.</p>
-                    </div>
-                    <p class="demo-caption">The outline marks the selected heading; the message shows the text JavaScript read from it.</p>
-                </div>
             </div>
-        </section>
+          </div>
+          <div class="demo-card">
+            <div class="demo-card-heading">
+              <span class="live-indicator"></span> TRY IT
+            </div>
+            <div class="demo-stage">
+              <span class="stage-label"
+                >1. Click “Select the title” to see what JavaScript found.</span
+              >
+              <h3 class="interactive-title" id="selectTitle">
+                I have an ID: selectTitle
+              </h3>
+              <div class="button-row">
+                <button
+                  class="button button-primary"
+                  id="findButton"
+                  type="button"
+                >
+                  Select the title
+                </button>
+                <button
+                  class="button button-outline"
+                  id="resetSelectionButton"
+                  type="button"
+                >
+                  Reset
+                </button>
+              </div>
+              <p class="output-line" id="selectOutput" aria-live="polite">
+                Not selected yet. Click “Select the title” to try it.
+              </p>
+            </div>
+            <p class="demo-caption">
+              The outline marks the selected heading; the message shows the text
+              JavaScript read from it.
+            </p>
+          </div>
+        </div>
+      </section>
 
-        <section class="lesson-section change-section" aria-labelledby="change-title">
-            <div class="page-width lesson-grid">
-                <div class="lesson-copy">
-                    <p class="eyebrow"><span class="lesson-number">05</span> Read what's there</p>
-                    <h2 id="change-title">Elements have <span>content.</span></h2>
-                    <p>The <code>textContent</code> property lets JavaScript read the words inside an element. Try the button to display the paragraph's text below.</p>
-                    <div class="code-card">
-                        <div class="code-card-heading"><span>READING TEXT</span><span class="code-language">JAVASCRIPT</span></div>
-                        <pre><code><span class="code-pink">const</span> paragraph =
+      <section
+        class="lesson-section change-section"
+        aria-labelledby="change-title"
+      >
+        <div class="page-width lesson-grid">
+          <div class="lesson-copy">
+            <p class="eyebrow">
+              <span class="lesson-number">05</span> Read what's there
+            </p>
+            <h2 id="change-title">Elements have <span>content.</span></h2>
+            <p>
+              The <code>textContent</code> property lets JavaScript read the
+              words inside an element. Try the button to display the paragraph's
+              text below.
+            </p>
+            <div class="code-card">
+              <div class="code-card-heading">
+                <span>READING TEXT</span
+                ><span class="code-language">JAVASCRIPT</span>
+              </div>
+              <pre><code><span class="code-pink">const</span> paragraph =
   document.<span class="code-blue">querySelector</span>(<span class="code-green">"#readSample"</span>);
 
 readOutput.<span class="code-yellow">textContent</span> = paragraph.<span class="code-yellow">textContent</span>;</code></pre>
-                    </div>
-                </div>
-                <div class="demo-card">
-                    <div class="demo-card-heading"><span class="live-indicator"></span> TRY IT</div>
-                    <div class="demo-stage">
-                        <span class="stage-label">JavaScript can read this sentence</span>
-                        <p class="read-sample" id="readSample">I am a paragraph on the page.</p>
-                        <button class="button button-secondary" id="readButton" type="button">Read the text</button>
-                        <p class="output-line" id="readOutput" aria-live="polite">Your result will show here.</p>
-                    </div>
-                    <p class="demo-caption">The text is read with the <code>.textContent</code> property.</p>
-                </div>
             </div>
-        </section>
+          </div>
+          <div class="demo-card">
+            <div class="demo-card-heading">
+              <span class="live-indicator"></span> TRY IT
+            </div>
+            <div class="demo-stage">
+              <span class="stage-label">JavaScript can read this sentence</span>
+              <p class="read-sample" id="readSample">
+                I am a paragraph on the page.
+              </p>
+              <button
+                class="button button-secondary"
+                id="readButton"
+                type="button"
+              >
+                Read the text
+              </button>
+              <p class="output-line" id="readOutput" aria-live="polite">
+                Your result will show here.
+              </p>
+            </div>
+            <p class="demo-caption">
+              The text is read with the <code>.textContent</code> property.
+            </p>
+          </div>
+        </div>
+      </section>
 
-        <section class="lesson-section">
-            <div class="page-width lesson-grid">
-                <div class="lesson-copy">
-                    <p class="eyebrow"><span class="lesson-number">06</span> Make a change</p>
-                    <h2>Change the <span>page.</span></h2>
-                    <p>After selecting an element, JavaScript can replace its text. The browser updates the page right away.</p>
-                    <div class="code-card">
-                        <div class="code-card-heading"><span>CHANGING TEXT</span><span class="code-language">JAVASCRIPT</span></div>
-                        <pre><code><span class="code-pink">const</span> message =
+      <section class="lesson-section">
+        <div class="page-width lesson-grid">
+          <div class="lesson-copy">
+            <p class="eyebrow">
+              <span class="lesson-number">06</span> Make a change
+            </p>
+            <h2>Change the <span>page.</span></h2>
+            <p>
+              After selecting an element, JavaScript can replace its text. The
+              browser updates the page right away.
+            </p>
+            <div class="code-card">
+              <div class="code-card-heading">
+                <span>CHANGING TEXT</span
+                ><span class="code-language">JAVASCRIPT</span>
+              </div>
+              <pre><code><span class="code-pink">const</span> message =
   document.<span class="code-blue">querySelector</span>(<span class="code-green">"#changeMessage"</span>);
 
 message.<span class="code-yellow">textContent</span> = <span class="code-green">"It worked!"</span>;</code></pre>
-                    </div>
-                </div>
-                <div class="demo-card">
-                    <div class="demo-card-heading"><span class="live-indicator"></span> TRY IT</div>
-                    <div class="demo-stage">
-                        <span class="stage-label">Click to update the message</span>
-                        <p class="change-message" id="changeMessage">This message is ready to change.</p>
-                        <button class="button button-primary" id="changeButton" type="button">Change the text</button>
-                    </div>
-                    <p class="demo-caption">The button click changes <code>textContent</code> in the paragraph.</p>
-                </div>
             </div>
-        </section>
+          </div>
+          <div class="demo-card">
+            <div class="demo-card-heading">
+              <span class="live-indicator"></span> TRY IT
+            </div>
+            <div class="demo-stage">
+              <span class="stage-label">Click to update the message</span>
+              <p class="change-message" id="changeMessage">
+                This message is ready to change.
+              </p>
+              <button
+                class="button button-primary"
+                id="changeButton"
+                type="button"
+              >
+                Change the text
+              </button>
+            </div>
+            <p class="demo-caption">
+              The button click changes <code>textContent</code> in the
+              paragraph.
+            </p>
+          </div>
+        </div>
+      </section>
 
-        <section class="lesson-section css-js-section" aria-labelledby="css-js-title">
-            <div class="page-width lesson-grid">
-                <div class="lesson-copy">
-                    <p class="eyebrow"><span class="lesson-number">07</span> Behavior meets appearance</p>
-                    <h2 id="css-js-title">Change a <span>style.</span></h2>
-                    <p>JavaScript can set a style directly. For a reusable appearance, it can add or remove a CSS class instead.</p>
-                    <div class="code-card">
-                        <div class="code-card-heading"><span>STYLE OR CLASS</span><span class="code-language">JAVASCRIPT</span></div>
-                        <pre><code>box.style.<span class="code-yellow">backgroundColor</span> = <span class="code-green">"lightblue"</span>;
+      <section
+        class="lesson-section css-js-section"
+        aria-labelledby="css-js-title"
+      >
+        <div class="page-width lesson-grid">
+          <div class="lesson-copy">
+            <p class="eyebrow">
+              <span class="lesson-number">07</span> Behavior meets appearance
+            </p>
+            <h2 id="css-js-title">Change a <span>style.</span></h2>
+            <p>
+              JavaScript can set a style directly. For a reusable appearance, it
+              can add or remove a CSS class instead.
+            </p>
+            <div class="code-card">
+              <div class="code-card-heading">
+                <span>STYLE OR CLASS</span
+                ><span class="code-language">JAVASCRIPT</span>
+              </div>
+              <pre><code>box.style.<span class="code-yellow">backgroundColor</span> = <span class="code-green">"lightblue"</span>;
 
 box.<span class="code-blue">classList</span>.<span class="code-blue">toggle</span>(<span class="code-green">"highlight"</span>);</code></pre>
-                    </div>
-                    <p class="small-note"><strong>JavaScript controls behavior. CSS controls appearance.</strong></p>
-                </div>
-                <div class="demo-card">
-                    <div class="demo-card-heading"><span class="live-indicator"></span> TRY IT</div>
-                    <div class="demo-stage">
-                        <span class="stage-label">Choose an action and watch the box change.</span>
-                        <div class="color-box" id="colorBox">A box to brighten</div>
-                        <div class="button-row">
-                            <button class="button button-secondary" id="colorButton" type="button">Set background to blue</button>
-                            <button class="button button-outline" id="highlightButton" type="button">Toggle purple outline</button>
-                            <button class="button button-outline" id="resetStyleButton" type="button">Reset demo</button>
-                        </div>
-                    </div>
-                    <p class="demo-caption" id="styleOutput" aria-live="polite">The first button fills the box blue. The second adds or removes a purple outline. Reset restores the starting look.</p>
-                </div>
             </div>
-        </section>
+            <p class="small-note">
+              <strong
+                >JavaScript controls behavior. CSS controls appearance.</strong
+              >
+            </p>
+          </div>
+          <div class="demo-card">
+            <div class="demo-card-heading">
+              <span class="live-indicator"></span> TRY IT
+            </div>
+            <div class="demo-stage">
+              <span class="stage-label"
+                >Choose an action and watch the box change.</span
+              >
+              <div class="color-box" id="colorBox">A box to brighten</div>
+              <div class="button-row">
+                <button
+                  class="button button-secondary"
+                  id="colorButton"
+                  type="button"
+                >
+                  Set background to blue
+                </button>
+                <button
+                  class="button button-outline"
+                  id="highlightButton"
+                  type="button"
+                >
+                  Toggle purple outline
+                </button>
+                <button
+                  class="button button-outline"
+                  id="resetStyleButton"
+                  type="button"
+                >
+                  Reset demo
+                </button>
+              </div>
+            </div>
+            <p class="demo-caption" id="styleOutput" aria-live="polite">
+              The first button fills the box blue. The second adds or removes a
+              purple outline. Reset restores the starting look.
+            </p>
+          </div>
+        </div>
+      </section>
 
-        <section class="lesson-section events-section" aria-labelledby="events-title">
-            <div class="page-width lesson-grid">
-                <div class="lesson-copy">
-                    <p class="eyebrow"><span class="lesson-number">08</span> Respond to an action</p>
-                    <h2 id="events-title">Listen for an <span>event.</span></h2>
-                    <p>An event is something that happens on a page. A click, typing into a field, or moving a pointer over a box can each trigger JavaScript.</p>
-                    <div class="code-card">
-                        <div class="code-card-heading"><span>CLICK, INPUT, AND MOUSEOVER</span><span class="code-language">JAVASCRIPT</span></div>
-                        <pre><code><span class="code-pink">const</span> eventButton = document.<span class="code-blue">querySelector</span>(<span class="code-green">"#eventButton"</span>);
+      <section
+        class="lesson-section events-section"
+        aria-labelledby="events-title"
+      >
+        <div class="page-width lesson-grid">
+          <div class="lesson-copy">
+            <p class="eyebrow">
+              <span class="lesson-number">08</span> Respond to an action
+            </p>
+            <h2 id="events-title">Listen for an <span>event.</span></h2>
+            <p>
+              An event is something that happens on a page. A click, typing into
+              a field, or moving a pointer over a box can each trigger
+              JavaScript.
+            </p>
+            <div class="code-card">
+              <div class="code-card-heading">
+                <span>CLICK, INPUT, AND MOUSEOVER</span>
+                <span class="code-language">JAVASCRIPT</span>
+              </div>
+              <pre><code><span class="code-pink">const</span> eventButton = document.<span class="code-blue">querySelector</span>(<span class="code-green">"#eventButton"</span>);
 <span class="code-pink">const</span> eventInput = document.<span class="code-blue">querySelector</span>(<span class="code-green">"#eventInput"</span>);
 <span class="code-pink">const</span> hoverTarget = document.<span class="code-blue">querySelector</span>(<span class="code-green">"#hoverTarget"</span>);
-                        <span class="code-pink">const</span> eventOutput = document.<span class="code-blue">querySelector</span>(<span class="code-green">"#eventOutput"</span>);
+<span class="code-pink">const</span> eventOutput = document.<span class="code-blue">querySelector</span>(<span class="code-green">"#eventOutput"</span>);
 
-                        eventButton.<span class="code-blue">addEventListener</span>(<span class="code-green">"click"</span>, <span class="code-pink">function</span> () {
-                          eventOutput.<span class="code-yellow">textContent</span> = <span class="code-green">"Click event: the button was clicked."</span>;
-                        });
+eventButton.<span class="code-blue">addEventListener</span>(<span class="code-green">"click"</span>, <span class="code-pink">function</span> () {
+  eventOutput.<span class="code-yellow">textContent</span> = <span class="code-green">"Click event: the button was clicked."</span>;
+});
 
 eventInput.<span class="code-blue">addEventListener</span>(<span class="code-green">"input"</span>, <span class="code-pink">function</span> () {
   eventOutput.<span class="code-yellow">textContent</span> = <span class="code-green">"Input event: you typed \""</span> + eventInput.value + <span class="code-green">"\"."</span>;
@@ -272,130 +499,268 @@ eventInput.<span class="code-blue">addEventListener</span>(<span class="code-gre
 hoverTarget.<span class="code-blue">addEventListener</span>(<span class="code-green">"mouseover"</span>, <span class="code-pink">function</span> () {
   eventOutput.<span class="code-yellow">textContent</span> = <span class="code-green">"Mouseover event: the pointer entered the box."</span>;
 });</code></pre>
-                    </div>
-                </div>
-                <div class="demo-card">
-                    <div class="demo-card-heading"><span class="live-indicator"></span> TRY EACH EVENT</div>
-                    <div class="demo-stage event-stage">
-                        <span class="stage-label">Click the button, move over the box, or type below. Watch the result.</span>
-                        <button class="button button-primary" id="eventButton" type="button">Click to test click event</button>
-                        <p class="event-target" id="hoverTarget">Move your pointer over this box</p>
-                        <label class="field-label" for="eventInput">Type something</label>
-                        <input class="text-input" id="eventInput" type="text" placeholder="An input event happens as you type">
-                        <p class="output-line" id="eventOutput" aria-live="polite">Click, hover, or type to see an event.</p>
-                        <button class="button button-outline" id="resetEventButton" type="button">Reset demo</button>
-                    </div>
-                    <p class="demo-caption">Each action updates the result above so you can see which event JavaScript received.</p>
-                </div>
             </div>
-        </section>
+          </div>
+          <div class="demo-card">
+            <div class="demo-card-heading">
+              <span class="live-indicator"></span> TRY EACH EVENT
+            </div>
+            <div class="demo-stage event-stage">
+              <span class="stage-label"
+                >Click the button, move over the box, or type below. Watch the
+                result.</span
+              >
+              <button
+                class="button button-primary"
+                id="eventButton"
+                type="button"
+              >
+                Click to test click event
+              </button>
+              <p class="event-target" id="hoverTarget">
+                Move your pointer over this box
+              </p>
+              <label class="field-label" for="eventInput">Type something</label>
+              <input
+                class="text-input"
+                id="eventInput"
+                type="text"
+                placeholder="An input event happens as you type"
+              />
+              <p class="output-line" id="eventOutput" aria-live="polite">
+                Click, hover, or type to see an event.
+              </p>
+              <button
+                class="button button-outline"
+                id="resetEventButton"
+                type="button"
+              >
+                Reset demo
+              </button>
+            </div>
+            <p class="demo-caption">
+              Each action updates the result above so you can see which event
+              JavaScript received.
+            </p>
+          </div>
+        </div>
+      </section>
 
-        <section class="lesson-section input-section" id="practice" aria-labelledby="input-title">
-            <div class="page-width lesson-grid">
-                <div class="lesson-copy">
-                    <p class="eyebrow"><span class="lesson-number">09</span> Give it a little information</p>
-                    <h2 id="input-title">Read user <span>input.</span></h2>
-                    <p>The input's <code>value</code> is the text the visitor typed. JavaScript checks whether it is empty, then shows either a prompt or a personal greeting.</p>
-                    <div class="code-card">
-                        <div class="code-card-heading"><span>READ INPUT + MAKE A DECISION</span><span class="code-language">JAVASCRIPT</span></div>
-                        <pre><code><span class="code-pink">if</span> (nameInput.<span class="code-yellow">value</span> === <span class="code-green">""</span>) {
+      <section
+        class="lesson-section input-section"
+        id="practice"
+        aria-labelledby="input-title"
+      >
+        <div class="page-width lesson-grid">
+          <div class="lesson-copy">
+            <p class="eyebrow">
+              <span class="lesson-number">09</span> Give it a little information
+            </p>
+            <h2 id="input-title">Read user <span>input.</span></h2>
+            <p>
+              The input's <code>value</code> is the text the visitor typed.
+              JavaScript checks whether it is empty, then shows either a prompt
+              or a personal greeting.
+            </p>
+            <div class="code-card">
+              <div class="code-card-heading">
+                <span>READ INPUT + MAKE A DECISION</span
+                ><span class="code-language">JAVASCRIPT</span>
+              </div>
+              <pre><code><span class="code-pink">if</span> (nameInput.<span class="code-yellow">value</span> === <span class="code-green">""</span>) {
   greeting.<span class="code-yellow">textContent</span> = <span class="code-green">"Please enter your name."</span>;
 } <span class="code-pink">else</span> {
   greeting.<span class="code-yellow">textContent</span> =
     <span class="code-green">"Hello, "</span> + nameInput.<span class="code-yellow">value</span> + <span class="code-green">"!"</span>;
 }</code></pre>
-                    </div>
-                </div>
-                <div class="demo-card input-demo">
-                    <div class="demo-card-heading"><span class="live-indicator"></span> YOUR TURN</div>
-                    <div class="demo-stage">
-                        <span class="stage-label">Leave the field empty or enter a name, then click the button.</span>
-                        <label class="field-label" for="nameInput">Your name</label>
-                        <div class="input-row">
-                            <input class="text-input" id="nameInput" type="text" placeholder="e.g. Ada" autocomplete="given-name">
-                            <button class="button button-primary" id="greetButton" type="button">Greet me</button>
-                        </div>
-                        <p class="greeting-output" id="greeting" aria-live="polite">The greeting or prompt will appear here.</p>
-                    </div>
-                    <p class="demo-caption">Try it once with the field empty and once with your name entered.</p>
-                </div>
             </div>
-        </section>
+          </div>
+          <div class="demo-card input-demo">
+            <div class="demo-card-heading">
+              <span class="live-indicator"></span> YOUR TURN
+            </div>
+            <div class="demo-stage">
+              <span class="stage-label"
+                >Leave the field empty or enter a name, then click the
+                button.</span
+              >
+              <label class="field-label" for="nameInput">Your name</label>
+              <div class="input-row">
+                <input
+                  class="text-input"
+                  id="nameInput"
+                  type="text"
+                  placeholder="e.g. Ada"
+                  autocomplete="given-name"
+                />
+                <button
+                  class="button button-primary"
+                  id="greetButton"
+                  type="button"
+                >
+                  Greet me
+                </button>
+              </div>
+              <p class="greeting-output" id="greeting" aria-live="polite">
+                The greeting or prompt will appear here.
+              </p>
+            </div>
+            <p class="demo-caption">
+              Try it once with the field empty and once with your name entered.
+            </p>
+          </div>
+        </div>
+      </section>
 
-        <section class="lesson-section multiple-section" aria-labelledby="multiple-title">
-            <div class="page-width lesson-grid">
-                <div class="lesson-copy">
-                    <p class="eyebrow"><span class="lesson-number">10</span> Find a group</p>
-                    <h2 id="multiple-title">Select <span>multiple</span> elements.</h2>
-                    <p><code>querySelectorAll()</code> finds every element that matches a selector. Here it finds all the buttons with the <code>topic-button</code> class.</p>
-                    <div class="code-card">
-                        <div class="code-card-heading"><span>SELECT A GROUP</span><span class="code-language">JAVASCRIPT</span></div>
-                        <pre><code><span class="code-pink">const</span> topicButtons =
+      <section
+        class="lesson-section multiple-section"
+        aria-labelledby="multiple-title"
+      >
+        <div class="page-width lesson-grid">
+          <div class="lesson-copy">
+            <p class="eyebrow">
+              <span class="lesson-number">10</span> Find a group
+            </p>
+            <h2 id="multiple-title">Select <span>multiple</span> elements.</h2>
+            <p>
+              <code>querySelectorAll()</code> finds every element that matches a
+              selector. Here it finds all the buttons with the
+              <code>topic-button</code> class.
+            </p>
+            <div class="code-card">
+              <div class="code-card-heading">
+                <span>SELECT A GROUP</span
+                ><span class="code-language">JAVASCRIPT</span>
+              </div>
+              <pre><code><span class="code-pink">const</span> topicButtons =
   document.<span class="code-blue">querySelectorAll</span>(<span class="code-green">".topic-button"</span>);
 
 countOutput.<span class="code-yellow">textContent</span> =
   <span class="code-green">"Found "</span> + topicButtons.<span class="code-yellow">length</span> + <span class="code-green">" buttons."</span>;</code></pre>
-                    </div>
-                </div>
-                <div class="demo-card">
-                    <div class="demo-card-heading"><span class="live-indicator"></span> A GROUP OF ELEMENTS</div>
-                    <div class="demo-stage">
-                        <span class="stage-label">Click the count button to find every matching element.</span>
-                        <div class="topic-buttons">
-                            <button class="topic-button" type="button">HTML</button>
-                            <button class="topic-button" type="button">CSS</button>
-                            <button class="topic-button" type="button">JavaScript</button>
-                        </div>
-                        <button class="button button-secondary" id="countButton" type="button">Count matching buttons</button>
-                        <p class="output-line" id="countOutput" aria-live="polite">The result will appear here.</p>
-                    </div>
-                    <p class="demo-caption">The three labels share the <code>.topic-button</code> class. Click to see how many elements JavaScript finds.</p>
-                </div>
             </div>
-        </section>
+          </div>
+          <div class="demo-card">
+            <div class="demo-card-heading">
+              <span class="live-indicator"></span> A GROUP OF ELEMENTS
+            </div>
+            <div class="demo-stage">
+              <span class="stage-label"
+                >Click the count button to find every matching element.</span
+              >
+              <div class="topic-buttons">
+                <button class="topic-button" type="button">HTML</button>
+                <button class="topic-button" type="button">CSS</button>
+                <button class="topic-button" type="button">JavaScript</button>
+              </div>
+              <button
+                class="button button-secondary"
+                id="countButton"
+                type="button"
+              >
+                Count matching buttons
+              </button>
+              <p class="output-line" id="countOutput" aria-live="polite">
+                The result will appear here.
+              </p>
+            </div>
+            <p class="demo-caption">
+              The three labels share the <code>.topic-button</code> class. Click
+              to see how many elements JavaScript finds.
+            </p>
+          </div>
+        </div>
+      </section>
 
-        <section class="lesson-section console-section" aria-labelledby="console-title">
-            <div class="page-width lesson-grid">
-                <div class="lesson-copy">
-                    <p class="eyebrow"><span class="lesson-number">11</span> Look behind the scenes</p>
-                    <h2 id="console-title">Meet the <span>console.</span></h2>
-                    <p><code>console.log()</code> prints a message in your browser's Developer Tools. It's a handy way to check what JavaScript is reading or when an event happens.</p>
-                    <div class="code-card">
-                        <div class="code-card-heading"><span>PRINT A MESSAGE</span><span class="code-language">JAVASCRIPT</span></div>
-                        <pre><code>console.<span class="code-blue">log</span>(<span class="code-green">"The console demo button was clicked"</span>);</code></pre>
-                    </div>
-                    <p class="small-note"><strong>Open Developer Tools:</strong> right-click the page and choose Inspect, then select the Console tab.</p>
-                </div>
-                <div class="demo-card console-demo">
-                    <div class="demo-card-heading"><span class="live-indicator"></span> BROWSER CONSOLE</div>
-                    <div class="console-window" aria-label="Example browser console output">
-                        <div class="console-title"><span aria-hidden="true">›_</span> Console</div>
-                        <p><span class="console-prompt">&gt;</span> Click the button to log a message</p>
-                        <p><span class="console-prompt">&gt;</span> <span id="consoleDemoMessage" aria-live="polite">Waiting for a click...</span></p>
-                        <div class="console-input-line"><span>&gt;</span><span class="console-caret"></span></div>
-                    </div>
-                    <button class="button button-primary" id="consoleButton" type="button">Write a message to the console</button>
-                    <p class="demo-caption" id="consoleOutput" aria-live="polite">Click the button. A message appears here and in Developer Tools &gt; Console.</p>
-                </div>
+      <section
+        class="lesson-section console-section"
+        aria-labelledby="console-title"
+      >
+        <div class="page-width lesson-grid">
+          <div class="lesson-copy">
+            <p class="eyebrow">
+              <span class="lesson-number">11</span> Look behind the scenes
+            </p>
+            <h2 id="console-title">Meet the <span>console.</span></h2>
+            <p>
+              <code>console.log()</code> prints a message in your browser's
+              Developer Tools. It's a handy way to check what JavaScript is
+              reading or when an event happens.
+            </p>
+            <div class="code-card">
+              <div class="code-card-heading">
+                <span>PRINT A MESSAGE</span
+                ><span class="code-language">JAVASCRIPT</span>
+              </div>
+              <pre><code>console.<span class="code-blue">log</span>(<span class="code-green">"The console demo button was clicked"</span>);</code></pre>
             </div>
-        </section>
+            <p class="small-note">
+              <strong>Open Developer Tools:</strong> right-click the page and
+              choose Inspect, then select the Console tab.
+            </p>
+          </div>
+          <div class="demo-card console-demo">
+            <div class="demo-card-heading">
+              <span class="live-indicator"></span> BROWSER CONSOLE
+            </div>
+            <div
+              class="console-window"
+              aria-label="Example browser console output"
+            >
+              <div class="console-title">
+                <span aria-hidden="true">›_</span> Console
+              </div>
+              <p>
+                <span class="console-prompt">&gt;</span> Click the button to log
+                a message
+              </p>
+              <p>
+                <span class="console-prompt">&gt;</span>
+                <span id="consoleDemoMessage" aria-live="polite"
+                  >Waiting for a click...</span
+                >
+              </p>
+              <div class="console-input-line">
+                <span>&gt;</span><span class="console-caret"></span>
+              </div>
+            </div>
+            <button
+              class="button button-primary"
+              id="consoleButton"
+              type="button"
+            >
+              Write a message to the console
+            </button>
+            <p class="demo-caption" id="consoleOutput" aria-live="polite">
+              Click the button. A message appears here and in Developer Tools
+              &gt; Console.
+            </p>
+          </div>
+        </div>
+      </section>
 
-        <section class="closing-section">
-            <div class="page-width closing-content">
-                <span class="closing-star" aria-hidden="true">✳</span>
-                <p class="eyebrow">That's the basic idea</p>
-                <h2>Structure. Style. <span>Interaction.</span></h2>
-                <p>Every website combines these building blocks. Keep experimenting, and notice how each line of code changes what you see.</p>
-                <a class="button button-primary" href="#top">Back to the top <span aria-hidden="true">↑</span></a>
-            </div>
-        </section>
+      <section class="closing-section">
+        <div class="page-width closing-content">
+          <span class="closing-star" aria-hidden="true">✳</span>
+          <p class="eyebrow">That's the basic idea</p>
+          <h2>Structure. Style. <span>Interaction.</span></h2>
+          <p>
+            Every website combines these building blocks. Keep experimenting,
+            and notice how each line of code changes what you see.
+          </p>
+          <a class="button button-primary" href="#top"
+            >Back to the top <span aria-hidden="true">↑</span></a
+          >
+        </div>
+      </section>
     </main>
 
     <footer class="site-footer">
-        <div class="page-width footer-content">
-            <span>Made for curious minds.</span>
-            <a href="#top">JavaScript, made visible <span aria-hidden="true">↑</span></a>
-        </div>
+      <div class="page-width footer-content">
+        <span>Made for curious minds.</span>
+        <a href="#top"
+          >JavaScript, made visible <span aria-hidden="true">↑</span></a
+        >
+      </div>
     </footer>
-</body>
+  </body>
 </html>

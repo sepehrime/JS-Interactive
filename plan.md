@@ -40,11 +40,13 @@ Build a simple HTML, CSS, and vanilla JavaScript learning website for beginner-t
 - [x] Add `console.log()` examples and explain how to view them in browser Developer Tools
 
 ### Phase 6: Review and validate
-- [ ] Confirm the concept order follows the teaching progression in `Agent.md`
-- [ ] Check that the JavaScript avoids frameworks and advanced concepts
-- [ ] Check that each interactive example works and is easy to connect to its code
-- [ ] Verify the site runs by opening `index.html` directly in a browser
-- [ ] Make final clarity and readability improvements
+- [x] Confirm the concept order follows the teaching progression in `Agent.md`
+- [x] Check that the JavaScript avoids frameworks and advanced concepts
+- [x] Check that each interactive example works and is easy to connect to its code
+- [x] Verify the site runs by opening `index.html` directly in a browser
+- [x] Make final clarity and readability improvements
+
+**Validation completed:** Tested selection and reset, reading and changing text, empty and non-empty name input, inline style changes, CSS class toggling and reset, click/input/mouseover events and reset, `querySelectorAll()` counting, and console output. Confirmed all lesson demos retain the explanation-left/demo-right order on desktop and stack in that order on mobile without horizontal overflow. Checked for duplicate IDs, broken in-page links, unlabeled inputs, unnamed buttons, page errors, and failed network requests; none were found. The HTML-only sample button is explicitly disabled and labeled as an example because it has no JavaScript action.
 
 ## Guiding principles
 - Prefer clear teaching examples over clever, reusable abstractions.

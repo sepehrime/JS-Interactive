@@ -238,6 +238,12 @@ h2 {
     font-size: 10px;
 }
 
+.button-dark:disabled {
+    color: var(--white);
+    background: #77716a;
+    cursor: not-allowed;
+}
+
 .hero-art {
     position: relative;
     display: flex;
