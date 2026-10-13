@@ -48,6 +48,59 @@ Build a simple HTML, CSS, and vanilla JavaScript learning website for beginner-t
 
 **Validation completed:** Tested selection and reset, reading and changing text, empty and non-empty name input, inline style changes, CSS class toggling and reset, click/input/mouseover events and reset, `querySelectorAll()` counting, and console output. Confirmed all lesson demos retain the explanation-left/demo-right order on desktop and stack in that order on mobile without horizontal overflow. Checked for duplicate IDs, broken in-page links, unlabeled inputs, unnamed buttons, page errors, and failed network requests; none were found. The HTML-only sample button is explicitly disabled and labeled as an example because it has no JavaScript action.
 
+## Current project review
+The current version already covers the core beginner learning path: HTML structure, CSS styling, JavaScript selection, DOM reading and writing, basic events, conditional logic, selector groups, and console debugging. This is a strong foundation for a teaching site, but it is still focused on the fundamentals.
+
+The next stage should expand the site from a single-page lesson walkthrough into a more interactive learning experience with guided practice, layered challenges, and more realistic JavaScript behaviors without leaving the plain HTML/CSS/vanilla JavaScript constraint.
+
+## Phase 7: Add advanced learning features
+- [ ] Add a more structured lesson navigation system with visible chapter progress and jump links
+- [ ] Add interactive practice challenges with "Try it" and "Reset" controls for each new concept
+- [ ] Expand the lesson flow beyond the basics into functions, loops, arrays, objects, and event handling patterns
+- [ ] Add guided exercises that show how JavaScript can work with lists, repeated elements, and user data
+- [ ] Introduce a small theme toggle or preference switch to teach CSS variables and interactive styling
+- [ ] Add a lightweight progress tracker that marks completed sections and helps the learner follow the path
+- [ ] Add a simple "developer tools" section explaining console, errors, and debugging workflows in a beginner-friendly way
+- [ ] Improve accessibility by reviewing keyboard focus, semantic labels, and clear button text across the expanded UI
+
+## Advanced feature roadmap
+### 1. Interactive learning flow
+- Add a lesson index at the top of the page showing the full learning path
+- Include breadcrumb-style or chapter markers so learners know where they are in the sequence
+- Add small recap cards after each lesson explaining the key idea in plain language
+
+### 2. Practice and challenge sections
+- Add mini challenges such as "change the text", "count these items", "filter a list", and "show a message when the form is empty"
+- Provide immediate feedback messages instead of only raw output
+- Add a few guided problems that start easy and increase in complexity gradually
+
+### 3. Intermediate JavaScript topics
+- Teach reusable functions and parameter passing
+- Show how `forEach`, `for` loops, and arrays work together
+- Demonstrate object literal data and reading properties from data objects
+- Add examples where JavaScript updates multiple matching elements at once
+
+### 4. More realistic DOM interactions
+- Allow users to add or remove items from a list with buttons
+- Show how to respond to form submissions and validation states
+- Demonstrate how to update multiple elements from one user action
+- Use event delegation patterns in a beginner-safe way
+
+### 5. UI polish and learning support
+- Add a dark mode or color theme toggle to teach CSS custom properties and state changes
+- Include subtle transitions to make the page feel more responsive without overwhelming the learner
+- Add a "reset all" control for practice panels and demonstration blocks
+- Improve the visual hierarchy to make complex explanations easier to scan
+
+### 6. Accessibility and usability improvements
+- Verify contrast and focus styles across all controls
+- Keep all interactive elements clearly labeled and fully keyboard accessible
+- Ensure mobile layouts stay readable and easy to follow
+- Review heading structure and reading order as the page grows
+
+## Planned next milestone
+The next milestone should be to turn the existing core lessons into a richer learning experience with guided practice, checkpoints, and a few intermediate JavaScript examples. The implementation should stay intentionally beginner-friendly and avoid advanced tooling or libraries, while making the tutorial feel more like a complete interactive learning app.
+
 ## Guiding principles
 - Prefer clear teaching examples over clever, reusable abstractions.
 - Keep JavaScript straightforward and use educational comments where helpful.
