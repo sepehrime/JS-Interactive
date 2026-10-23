@@ -53,7 +53,47 @@ The current version already covers the core beginner learning path: HTML structu
 
 The next stage should expand the site from a single-page lesson walkthrough into a more interactive learning experience with guided practice, layered challenges, and more realistic JavaScript behaviors without leaving the plain HTML/CSS/vanilla JavaScript constraint.
 
-## Phase 7: Add advanced learning features
+## Phase 7: Code challenges and new lessons (completed)
+
+**Decisions made:** The code runner lives in a new `challenges.js` file, so `script.js` stays pure beginner lesson code. Every JavaScript lesson (04 onward) and every new lesson ends with one challenge. Challenges are auto-checked and give hints. The new lessons are Functions, Arrays & loops, and Create & remove elements.
+
+### 7a. Challenge runner (`challenges.js`)
+- [x] Each challenge is a `.challenge` block inside a lesson: a task description, a `<textarea>` code editor with starter code and `___` blanks, a small "challenge stage" with its own elements (unique IDs), and the buttons **Run**, **Reset**, **Hint**, and **Show solution**
+- [x] **Run** executes the learner's code with `new Function()` inside `try/catch`, so a mistake never breaks the rest of the page
+- [x] After running, a per-challenge check function inspects the stage (e.g. "does `#chTitle` now say *Hello*?") and shows ✅ "Correct!" or a specific hint
+- [x] Errors are translated into plain words (e.g. `ReferenceError: titel is not defined` → "JavaScript doesn't know a variable named `titel`. Check the spelling.")
+- [x] `console.log()` output from the learner's code also appears in a small on-page output panel, so learners see it without opening DevTools
+- [x] **Reset** restores both the starter code and the stage's original HTML
+- [x] The Tab key inserts spaces in the editor, and every control is keyboard accessible and labeled
+- [x] A small "challenges solved: X / N" counter appears in the header (in memory only, with no localStorage)
+- [x] Comment at the top of `challenges.js`: "This file is the practice tool. You don't need to understand it yet. The lessons are in script.js."
+
+### 7b. Challenges for existing lessons (04–11)
+- [x] 04 Select: fill in the selector to select `#chHeading` and add the `is-selected` class
+- [x] 05 Read: read a paragraph's `textContent` and copy it into an output box
+- [x] 06 Change: change a heading's text to an exact target sentence
+- [x] 07 Style: make a box highlighted using `classList.add` (not inline style)
+- [x] 08 Events: add a click listener so a button changes a message
+- [x] 09 Input + if/else: greet the typed name, or show "Please enter your name." when it is empty (the check runs both cases)
+- [x] 10 Multiple elements: use `querySelectorAll` and `.length` to show how many items there are
+- [x] 11 Console: `console.log()` an input's value (checked through the output panel)
+
+### 7c. New lessons (each with explanation, demo, code snippet, and challenge)
+- [x] 12 Functions: write a simple `function`, call it from more than one button, then use one parameter (`greet(name)`). Challenge: complete a function and call it from a click listener
+- [x] 13 Arrays & loops: an array of strings, `.length`, index `[0]`, a `for` loop that writes each item to the page, then looping over `querySelectorAll` results to change every item. Challenge: loop over an array to build a list's text
+- [x] 14 Create & remove elements: `document.createElement`, `textContent`, `appendChild`, and `element.remove()` in a small to-do list (add from an input, remove a done item). Challenge: complete the code that adds a new `<li>`
+- [x] Update the header nav and the closing summary to include the new lessons
+
+### 7d. Update guidance and validate
+- [x] Update `Agent.md` and `CLAUDE.md`: allow `challenges.js` as tooling, and allow functions with parameters, arrays, `for` loops, `createElement`/`appendChild`/`remove` (still no `map`/`filter`/`reduce`, classes, async, localStorage)
+- [x] Test every challenge: the correct answer passes, common wrong answers give helpful hints, syntax errors are reported clearly, and Reset works
+- [x] Check that the page still works when opened directly from the file, on mobile width, and with keyboard only
+
+**Validation completed:** An automated headless Chrome run covered all 11 challenges. Starter code with blanks asks for the blanks to be filled. 25 common wrong answers (missing `#`, typos, wrong capitalization, style instead of class, wrong event name, querySelector instead of querySelectorAll, logging the element instead of its value, an off-by-one index, a missing appendChild/remove, a wrong tag) each produce the intended hint or plain-language error. Every solution passes, and re-running doesn't stack listeners. Errors in listeners triggered later by the learner are explained. Reset, Hint, Tab/Esc keys, the progress counter, and the lesson 12–14 demos all work. No page errors, and no horizontal overflow at 390px, 800px, or 1280px.
+
+**Known limit:** an infinite loop written by the learner (e.g. in lesson 13) will freeze the tab, and plain JavaScript can't stop it. The loop challenge will warn about this, and its starter code will already include a correct loop condition.
+
+## Later ideas (not scheduled)
 - [ ] Add a more structured lesson navigation system with visible chapter progress and jump links
 - [ ] Add interactive practice challenges with "Try it" and "Reset" controls for each new concept
 - [ ] Expand the lesson flow beyond the basics into functions, loops, arrays, objects, and event handling patterns
@@ -106,3 +146,4 @@ The next milestone should be to turn the existing core lessons into a richer lea
 - Keep JavaScript straightforward and use educational comments where helpful.
 - Keep the code and styling limited to HTML, CSS, and vanilla JavaScript.
 - Do not begin implementation until the development plan is approved.
+- Items under "Later ideas" are not scheduled. Get approval before starting them.

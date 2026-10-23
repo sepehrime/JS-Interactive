@@ -115,3 +115,110 @@ consoleButton.addEventListener("click", function () {
     consoleDemoMessage.textContent = message;
     consoleOutput.textContent = "Message sent. Open Developer Tools > Console to see the console.log() output.";
 });
+
+// Lesson 12: Functions
+// A function is a named block of code. It only runs when you call it.
+const functionOutput = document.querySelector("#functionOutput");
+const adaButton = document.querySelector("#adaButton");
+const graceButton = document.querySelector("#graceButton");
+const resetFunctionButton = document.querySelector("#resetFunctionButton");
+
+// "name" is a parameter: a placeholder for the value passed in each time.
+function sayHello(name) {
+    functionOutput.textContent = "Hello, " + name + "!";
+}
+
+// This function has no parameters. It always does the same thing.
+function resetGreeting() {
+    functionOutput.textContent = "Click a button to call the function.";
+}
+
+adaButton.addEventListener("click", function () {
+    sayHello("Ada");
+});
+
+graceButton.addEventListener("click", function () {
+    sayHello("Grace");
+});
+
+resetFunctionButton.addEventListener("click", function () {
+    resetGreeting();
+});
+
+// Lesson 13: Arrays and loops
+// An array holds a list of values. Positions (indexes) start at 0.
+const topics = ["HTML", "CSS", "JavaScript"];
+const loopCards = document.querySelectorAll(".loop-card");
+const loopOutput = document.querySelector("#loopOutput");
+const firstItemButton = document.querySelector("#firstItemButton");
+const loopArrayButton = document.querySelector("#loopArrayButton");
+const loopCardsButton = document.querySelector("#loopCardsButton");
+const resetLoopButton = document.querySelector("#resetLoopButton");
+
+firstItemButton.addEventListener("click", function () {
+    loopOutput.textContent = "topics[0] is \"" + topics[0] + "\". The array has " + topics.length + " items.";
+});
+
+loopArrayButton.addEventListener("click", function () {
+    loopOutput.textContent = "";
+
+    // Start i at 0, keep going while i is less than 3, add 1 each time.
+    for (let i = 0; i < topics.length; i = i + 1) {
+        loopOutput.textContent = loopOutput.textContent + "[" + i + "] " + topics[i] + "  ";
+    }
+});
+
+loopCardsButton.addEventListener("click", function () {
+    // querySelectorAll gives a list of elements, so a loop can visit each one.
+    for (let i = 0; i < loopCards.length; i = i + 1) {
+        loopCards[i].classList.add("is-highlighted");
+    }
+    loopOutput.textContent = "The loop added a class to " + loopCards.length + " cards.";
+});
+
+resetLoopButton.addEventListener("click", function () {
+    for (let i = 0; i < loopCards.length; i = i + 1) {
+        loopCards[i].classList.remove("is-highlighted");
+    }
+    loopOutput.textContent = "Pick a button to run some code.";
+});
+
+// Lesson 14: Create and remove elements
+const todoInput = document.querySelector("#todoInput");
+const addTodoButton = document.querySelector("#addTodoButton");
+const todoList = document.querySelector("#todoList");
+const todoOutput = document.querySelector("#todoOutput");
+
+addTodoButton.addEventListener("click", function () {
+    if (todoInput.value === "") {
+        todoOutput.textContent = "Type something first.";
+    } else {
+        const itemText = todoInput.value;
+
+        // 1. Create a brand-new <li>. It is not on the page yet.
+        const newItem = document.createElement("li");
+
+        // 2. Give it some text.
+        newItem.textContent = itemText;
+
+        // 3. Create a Remove button for this item.
+        const removeButton = document.createElement("button");
+        removeButton.type = "button";
+        removeButton.className = "todo-remove";
+        removeButton.textContent = "Remove";
+        removeButton.setAttribute("aria-label", "Remove " + itemText);
+
+        // 4. When the Remove button is clicked, take the item off the page.
+        removeButton.addEventListener("click", function () {
+            newItem.remove();
+            todoOutput.textContent = "Removed \"" + itemText + "\".";
+        });
+
+        // 5. Put the button inside the item, and the item inside the list.
+        newItem.appendChild(removeButton);
+        todoList.appendChild(newItem);
+
+        todoOutput.textContent = "Added \"" + itemText + "\" to the list.";
+        todoInput.value = "";
+    }
+});

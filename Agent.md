@@ -63,10 +63,17 @@ javascript-learning/
 │
 ├── index.html
 ├── style.css
-└── script.js
+├── script.js       ← lesson code (beginner-level, the learner reads this)
+└── challenges.js   ← practice tool that runs and checks challenge code
 ```
 
 Do not create additional files unless explicitly requested.
+
+`challenges.js` is tooling, not lesson material. It may use concepts the
+lessons avoid (objects, `new Function()`, `try/catch`) so that `script.js`
+can stay simple. Its header comment tells the learner they don't need to
+understand it yet. Lesson code never goes in `challenges.js`, and challenge
+tooling never goes in `script.js`.
 
 ---
 
@@ -358,6 +365,23 @@ The console should be presented as a useful learning/debugging tool.
 
 ---
 
+# Code Challenges
+
+Every JavaScript lesson ends with a code challenge: starter code with `___`
+blanks in a `<textarea>`, a practice area, and Run / Hint / Show solution /
+Reset buttons. The learner's code runs in the browser, and a check function
+in `challenges.js` inspects the practice area and gives a specific hint.
+
+When adding a challenge:
+
+* Use only concepts the learner has already seen.
+* Use `ch`-prefixed IDs in the practice area so they never clash with lessons.
+* Add a matching entry (hint, solution, check) to `challengeRules` in
+  `challenges.js`, keyed by the block's `data-challenge` value.
+* Make the check's failure messages point at the likely mistake.
+
+---
+
 # Website Design
 
 Create a simple educational interface.
@@ -458,6 +482,11 @@ Do NOT immediately introduce:
 * design patterns
 
 These may be introduced in a future version.
+
+The "Next steps" lessons (12–14) deliberately add a few more concepts:
+functions with parameters, arrays, `for` loops (written as `i = i + 1`),
+and `createElement` / `appendChild` / `remove()`. Array methods such as
+`.map()`, `.filter()`, `.reduce()`, and `.forEach()` are still out of scope.
 
 ---
 
@@ -616,6 +645,12 @@ Introduce concepts roughly in this order:
 10. Selecting multiple elements
        ↓
 11. Simple console debugging
+       ↓
+12. Functions and parameters
+       ↓
+13. Arrays and for loops
+       ↓
+14. Creating and removing elements
 ```
 
 Do not jump ahead unnecessarily.
@@ -692,10 +727,10 @@ Do not create:
 * a package manager
 * a backend
 * a database
-* multiple JavaScript files
+* more JavaScript files (beyond `script.js` and `challenges.js`)
 * multiple CSS files
 
-The entire application should remain understandable by opening:
+The lessons should remain understandable by opening:
 
 ```text
 index.html

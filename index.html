@@ -10,6 +10,7 @@
     <title>JavaScript, Made Visible</title>
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
+    <script src="challenges.js" defer></script>
   </head>
   <body>
     <header class="site-header">
@@ -27,7 +28,12 @@
           <a href="#css">CSS</a>
           <a href="#javascript">JavaScript</a>
           <a href="#practice">Practice</a>
+          <a href="#next-steps">Next steps</a>
         </nav>
+        <span class="progress-pill" aria-live="polite"
+          ><span class="progress-label">Challenges</span>
+          <span id="challengeProgress">0 / 11 solved</span></span
+        >
       </div>
     </header>
 
@@ -40,7 +46,8 @@
           <h1 id="page-title">See how the web <span>comes to life.</span></h1>
           <p class="hero-description">
             HTML gives a page its structure. CSS shapes how it looks. JavaScript
-            makes it respond. Explore each layer, then try it yourself.
+            makes it respond. Explore each layer, then write real code in the
+            challenges.
           </p>
           <a class="button button-primary" href="#html"
             >Start learning <span aria-hidden="true">↓</span></a
@@ -291,6 +298,49 @@
             </p>
           </div>
         </div>
+        <div class="page-width">
+          <div class="challenge" data-challenge="select" role="group" aria-labelledby="challenge-select-title">
+            <div class="challenge-header">
+              <p class="challenge-badge">Challenge · 04</p>
+              <h3 id="challenge-select-title">Select the heading</h3>
+              <span class="challenge-status">Not solved yet</span>
+            </div>
+            <p class="challenge-task">
+              Replace the <code>___</code> with a CSS selector for the heading whose ID is <code>chHeading</code>, then click <strong>Run code</strong>. If it works, the heading gets an outline.
+            </p>
+            <div class="challenge-body">
+              <div class="challenge-editor">
+                <label class="field-label" for="code-select">Your code</label>
+                <textarea class="code-editor" id="code-select" rows="6" spellcheck="false" autocapitalize="off" autocomplete="off" wrap="off">
+// Fill in the blank with a CSS selector for the ID "chHeading".
+const heading = document.querySelector("___");
+
+// This line adds the outline, so you can see it worked.
+heading.classList.add("is-selected");</textarea>
+                <p class="editor-tip">Tab adds spaces · Esc, then Tab, leaves the editor · Ctrl/⌘ + Enter runs</p>
+                <div class="button-row">
+                  <button class="button button-primary" type="button" data-action="run">Run code</button>
+                  <button class="button button-secondary" type="button" data-action="hint">Hint</button>
+                  <button class="button button-outline" type="button" data-action="solution">Show solution</button>
+                  <button class="button button-outline" type="button" data-action="reset">Reset</button>
+                </div>
+              </div>
+              <div class="challenge-result">
+                <span class="stage-label">Practice area</span>
+                <div class="challenge-stage">
+                  <h3 class="interactive-title" id="chHeading">Find me! My ID is chHeading.</h3>
+                </div>
+                <p class="challenge-feedback" aria-live="polite">Fill in the blank, then click Run code.</p>
+                <div class="challenge-console">
+                  <div class="console-title"><span aria-hidden="true">›_</span> Console</div>
+                  <div class="challenge-console-lines" aria-live="polite">
+                    <p class="console-empty">console.log() output will appear here.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section
@@ -344,6 +394,50 @@ readOutput.<span class="code-yellow">textContent</span> = paragraph.<span class=
             </p>
           </div>
         </div>
+        <div class="page-width">
+          <div class="challenge" data-challenge="read" role="group" aria-labelledby="challenge-read-title">
+            <div class="challenge-header">
+              <p class="challenge-badge">Challenge · 05</p>
+              <h3 id="challenge-read-title">Copy the quote</h3>
+              <span class="challenge-status">Not solved yet</span>
+            </div>
+            <p class="challenge-task">
+              Read the words inside the quote and put them into the copy box. Replace the <code>___</code> with the property that holds an element's text.
+            </p>
+            <div class="challenge-body">
+              <div class="challenge-editor">
+                <label class="field-label" for="code-read">Your code</label>
+                <textarea class="code-editor" id="code-read" rows="6" spellcheck="false" autocapitalize="off" autocomplete="off" wrap="off">
+const quote = document.querySelector("#chQuote");
+const copy = document.querySelector("#chCopy");
+
+// Read the words inside the quote and put them in the copy box.
+copy.textContent = quote.___;</textarea>
+                <p class="editor-tip">Tab adds spaces · Esc, then Tab, leaves the editor · Ctrl/⌘ + Enter runs</p>
+                <div class="button-row">
+                  <button class="button button-primary" type="button" data-action="run">Run code</button>
+                  <button class="button button-secondary" type="button" data-action="hint">Hint</button>
+                  <button class="button button-outline" type="button" data-action="solution">Show solution</button>
+                  <button class="button button-outline" type="button" data-action="reset">Reset</button>
+                </div>
+              </div>
+              <div class="challenge-result">
+                <span class="stage-label">Practice area</span>
+                <div class="challenge-stage">
+                  <p class="read-sample" id="chQuote">Reading comes before changing.</p>
+                  <p class="output-line" id="chCopy">The copied text will appear here.</p>
+                </div>
+                <p class="challenge-feedback" aria-live="polite">Fill in the blank, then click Run code.</p>
+                <div class="challenge-console">
+                  <div class="console-title"><span aria-hidden="true">›_</span> Console</div>
+                  <div class="challenge-console-lines" aria-live="polite">
+                    <p class="console-empty">console.log() output will appear here.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section class="lesson-section">
@@ -389,6 +483,49 @@ message.<span class="code-yellow">textContent</span> = <span class="code-green">
               The button click changes <code>textContent</code> in the
               paragraph.
             </p>
+          </div>
+        </div>
+        <div class="page-width">
+          <div class="challenge" data-challenge="change" role="group" aria-labelledby="challenge-change-title">
+            <div class="challenge-header">
+              <p class="challenge-badge">Challenge · 06</p>
+              <h3 id="challenge-change-title">Rewrite the message</h3>
+              <span class="challenge-status">Not solved yet</span>
+            </div>
+            <p class="challenge-task">
+              Fill in both blanks so the paragraph says exactly <code>I changed the page!</code>
+            </p>
+            <div class="challenge-body">
+              <div class="challenge-editor">
+                <label class="field-label" for="code-change">Your code</label>
+                <textarea class="code-editor" id="code-change" rows="6" spellcheck="false" autocapitalize="off" autocomplete="off" wrap="off">
+// 1. Select the paragraph with the ID chMessage.
+const message = document.querySelector("___");
+
+// 2. Change its text to: I changed the page!
+message.textContent = "___";</textarea>
+                <p class="editor-tip">Tab adds spaces · Esc, then Tab, leaves the editor · Ctrl/⌘ + Enter runs</p>
+                <div class="button-row">
+                  <button class="button button-primary" type="button" data-action="run">Run code</button>
+                  <button class="button button-secondary" type="button" data-action="hint">Hint</button>
+                  <button class="button button-outline" type="button" data-action="solution">Show solution</button>
+                  <button class="button button-outline" type="button" data-action="reset">Reset</button>
+                </div>
+              </div>
+              <div class="challenge-result">
+                <span class="stage-label">Practice area</span>
+                <div class="challenge-stage">
+                  <p class="change-message" id="chMessage">Change me, please.</p>
+                </div>
+                <p class="challenge-feedback" aria-live="polite">Fill in the blanks, then click Run code.</p>
+                <div class="challenge-console">
+                  <div class="console-title"><span aria-hidden="true">›_</span> Console</div>
+                  <div class="challenge-console-lines" aria-live="polite">
+                    <p class="console-empty">console.log() output will appear here.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -459,6 +596,49 @@ box.<span class="code-blue">classList</span>.<span class="code-blue">toggle</spa
               The first button fills the box blue. The second adds or removes a
               purple outline. Reset restores the starting look.
             </p>
+          </div>
+        </div>
+        <div class="page-width">
+          <div class="challenge" data-challenge="style" role="group" aria-labelledby="challenge-style-title">
+            <div class="challenge-header">
+              <p class="challenge-badge">Challenge · 07</p>
+              <h3 id="challenge-style-title">Highlight the box with a class</h3>
+              <span class="challenge-status">Not solved yet</span>
+            </div>
+            <p class="challenge-task">
+              Give the box the CSS class <code>highlight</code>. Use <code>classList</code>, not <code>style</code>, so the CSS file decides how it looks.
+            </p>
+            <div class="challenge-body">
+              <div class="challenge-editor">
+                <label class="field-label" for="code-style">Your code</label>
+                <textarea class="code-editor" id="code-style" rows="6" spellcheck="false" autocapitalize="off" autocomplete="off" wrap="off">
+const box = document.querySelector("#chBox");
+
+// Add the CSS class "highlight" to the box.
+// Hint: classList has a method that adds a class.
+box.classList.___("highlight");</textarea>
+                <p class="editor-tip">Tab adds spaces · Esc, then Tab, leaves the editor · Ctrl/⌘ + Enter runs</p>
+                <div class="button-row">
+                  <button class="button button-primary" type="button" data-action="run">Run code</button>
+                  <button class="button button-secondary" type="button" data-action="hint">Hint</button>
+                  <button class="button button-outline" type="button" data-action="solution">Show solution</button>
+                  <button class="button button-outline" type="button" data-action="reset">Reset</button>
+                </div>
+              </div>
+              <div class="challenge-result">
+                <span class="stage-label">Practice area</span>
+                <div class="challenge-stage">
+                  <div class="color-box" id="chBox">Highlight me</div>
+                </div>
+                <p class="challenge-feedback" aria-live="polite">Fill in the blank, then click Run code.</p>
+                <div class="challenge-console">
+                  <div class="console-title"><span aria-hidden="true">›_</span> Console</div>
+                  <div class="challenge-console-lines" aria-live="polite">
+                    <p class="console-empty">console.log() output will appear here.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -544,6 +724,52 @@ hoverTarget.<span class="code-blue">addEventListener</span>(<span class="code-gr
             </p>
           </div>
         </div>
+        <div class="page-width">
+          <div class="challenge" data-challenge="events" role="group" aria-labelledby="challenge-events-title">
+            <div class="challenge-header">
+              <p class="challenge-badge">Challenge · 08</p>
+              <h3 id="challenge-events-title">React to a click</h3>
+              <span class="challenge-status">Not solved yet</span>
+            </div>
+            <p class="challenge-task">
+              Fill in the event name so the message changes to <code>Clicked!</code> only when the button is clicked. When you click <strong>Run code</strong>, the checker clicks the button for you.
+            </p>
+            <div class="challenge-body">
+              <div class="challenge-editor">
+                <label class="field-label" for="code-events">Your code</label>
+                <textarea class="code-editor" id="code-events" rows="8" spellcheck="false" autocapitalize="off" autocomplete="off" wrap="off">
+const button = document.querySelector("#chClickButton");
+const output = document.querySelector("#chClickOutput");
+
+// When the button is clicked, show the text: Clicked!
+button.addEventListener("___", function () {
+    output.textContent = "Clicked!";
+});</textarea>
+                <p class="editor-tip">Tab adds spaces · Esc, then Tab, leaves the editor · Ctrl/⌘ + Enter runs</p>
+                <div class="button-row">
+                  <button class="button button-primary" type="button" data-action="run">Run code</button>
+                  <button class="button button-secondary" type="button" data-action="hint">Hint</button>
+                  <button class="button button-outline" type="button" data-action="solution">Show solution</button>
+                  <button class="button button-outline" type="button" data-action="reset">Reset</button>
+                </div>
+              </div>
+              <div class="challenge-result">
+                <span class="stage-label">Practice area</span>
+                <div class="challenge-stage">
+                  <button class="button button-primary" id="chClickButton" type="button">Click me</button>
+                  <p class="output-line" id="chClickOutput">Waiting for a click...</p>
+                </div>
+                <p class="challenge-feedback" aria-live="polite">Fill in the blank, then click Run code.</p>
+                <div class="challenge-console">
+                  <div class="console-title"><span aria-hidden="true">›_</span> Console</div>
+                  <div class="challenge-console-lines" aria-live="polite">
+                    <p class="console-empty">console.log() output will appear here.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section
@@ -610,6 +836,62 @@ hoverTarget.<span class="code-blue">addEventListener</span>(<span class="code-gr
             </p>
           </div>
         </div>
+        <div class="page-width">
+          <div class="challenge" data-challenge="input" role="group" aria-labelledby="challenge-input-title">
+            <div class="challenge-header">
+              <p class="challenge-badge">Challenge · 09</p>
+              <h3 id="challenge-input-title">Greet the visitor, or ask for a name</h3>
+              <span class="challenge-status">Not solved yet</span>
+            </div>
+            <p class="challenge-task">
+              Complete the <code>if / else</code>. If the field is empty, show <code>Please type a name.</code> Otherwise, show <code>Hi, NAME!</code> using what was typed. The checker tests both cases.
+            </p>
+            <div class="challenge-body">
+              <div class="challenge-editor">
+                <label class="field-label" for="code-input">Your code</label>
+                <textarea class="code-editor" id="code-input" rows="14" spellcheck="false" autocapitalize="off" autocomplete="off" wrap="off">
+const nameInput = document.querySelector("#chName");
+const greetButton = document.querySelector("#chGreet");
+const greeting = document.querySelector("#chGreeting");
+
+greetButton.addEventListener("click", function () {
+    // If the input is empty, ask for a name.
+    // Otherwise, say: Hi, NAME!
+    if (nameInput.value === ___) {
+        greeting.textContent = "Please type a name.";
+    } else {
+        greeting.textContent = "Hi, " + ___ + "!";
+    }
+});</textarea>
+                <p class="editor-tip">Tab adds spaces · Esc, then Tab, leaves the editor · Ctrl/⌘ + Enter runs</p>
+                <div class="button-row">
+                  <button class="button button-primary" type="button" data-action="run">Run code</button>
+                  <button class="button button-secondary" type="button" data-action="hint">Hint</button>
+                  <button class="button button-outline" type="button" data-action="solution">Show solution</button>
+                  <button class="button button-outline" type="button" data-action="reset">Reset</button>
+                </div>
+              </div>
+              <div class="challenge-result">
+                <span class="stage-label">Practice area</span>
+                <div class="challenge-stage">
+                  <label class="field-label" for="chName">Name</label>
+                  <div class="input-row">
+                    <input class="text-input" id="chName" type="text" placeholder="e.g. Grace" autocomplete="off" />
+                    <button class="button button-primary" id="chGreet" type="button">Greet</button>
+                  </div>
+                  <p class="greeting-output" id="chGreeting">The greeting will appear here.</p>
+                </div>
+                <p class="challenge-feedback" aria-live="polite">Fill in the blanks, then click Run code.</p>
+                <div class="challenge-console">
+                  <div class="console-title"><span aria-hidden="true">›_</span> Console</div>
+                  <div class="challenge-console-lines" aria-live="polite">
+                    <p class="console-empty">console.log() output will appear here.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section
@@ -667,6 +949,55 @@ countOutput.<span class="code-yellow">textContent</span> =
               The three labels share the <code>.topic-button</code> class. Click
               to see how many elements JavaScript finds.
             </p>
+          </div>
+        </div>
+        <div class="page-width">
+          <div class="challenge" data-challenge="multiple" role="group" aria-labelledby="challenge-multiple-title">
+            <div class="challenge-header">
+              <p class="challenge-badge">Challenge · 10</p>
+              <h3 id="challenge-multiple-title">Count the list items</h3>
+              <span class="challenge-status">Not solved yet</span>
+            </div>
+            <p class="challenge-task">
+              Find every element with the class <code>ch-item</code> and show how many there are. The output should say <code>There are 4 items.</code>
+            </p>
+            <div class="challenge-body">
+              <div class="challenge-editor">
+                <label class="field-label" for="code-multiple">Your code</label>
+                <textarea class="code-editor" id="code-multiple" rows="6" spellcheck="false" autocapitalize="off" autocomplete="off" wrap="off">
+// Find every element with the class "ch-item".
+const items = document.___(".ch-item");
+const countOutput = document.querySelector("#chCount");
+
+countOutput.textContent = "There are " + items.___ + " items.";</textarea>
+                <p class="editor-tip">Tab adds spaces · Esc, then Tab, leaves the editor · Ctrl/⌘ + Enter runs</p>
+                <div class="button-row">
+                  <button class="button button-primary" type="button" data-action="run">Run code</button>
+                  <button class="button button-secondary" type="button" data-action="hint">Hint</button>
+                  <button class="button button-outline" type="button" data-action="solution">Show solution</button>
+                  <button class="button button-outline" type="button" data-action="reset">Reset</button>
+                </div>
+              </div>
+              <div class="challenge-result">
+                <span class="stage-label">Practice area</span>
+                <div class="challenge-stage">
+                  <ul class="ch-list">
+                    <li class="ch-item">Apples</li>
+                    <li class="ch-item">Bananas</li>
+                    <li class="ch-item">Cherries</li>
+                    <li class="ch-item">Dates</li>
+                  </ul>
+                  <p class="output-line" id="chCount">The count will appear here.</p>
+                </div>
+                <p class="challenge-feedback" aria-live="polite">Fill in the blanks, then click Run code.</p>
+                <div class="challenge-console">
+                  <div class="console-title"><span aria-hidden="true">›_</span> Console</div>
+                  <div class="challenge-console-lines" aria-live="polite">
+                    <p class="console-empty">console.log() output will appear here.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -736,6 +1067,499 @@ countOutput.<span class="code-yellow">textContent</span> =
             </p>
           </div>
         </div>
+        <div class="page-width">
+          <div class="challenge" data-challenge="console" role="group" aria-labelledby="challenge-console-title">
+            <div class="challenge-header">
+              <p class="challenge-badge">Challenge · 11</p>
+              <h3 id="challenge-console-title">Log what's in the input</h3>
+              <span class="challenge-status">Not solved yet</span>
+            </div>
+            <p class="challenge-task">
+              Use <code>console.log()</code> to print the text inside the input. Your output appears in the console panel below the practice area, and in your browser's Developer Tools too.
+            </p>
+            <div class="challenge-body">
+              <div class="challenge-editor">
+                <label class="field-label" for="code-console">Your code</label>
+                <textarea class="code-editor" id="code-console" rows="5" spellcheck="false" autocapitalize="off" autocomplete="off" wrap="off">
+const logInput = document.querySelector("#chLogInput");
+
+// Print the text inside the input to the console.
+console.log(logInput.___);</textarea>
+                <p class="editor-tip">Tab adds spaces · Esc, then Tab, leaves the editor · Ctrl/⌘ + Enter runs</p>
+                <div class="button-row">
+                  <button class="button button-primary" type="button" data-action="run">Run code</button>
+                  <button class="button button-secondary" type="button" data-action="hint">Hint</button>
+                  <button class="button button-outline" type="button" data-action="solution">Show solution</button>
+                  <button class="button button-outline" type="button" data-action="reset">Reset</button>
+                </div>
+              </div>
+              <div class="challenge-result">
+                <span class="stage-label">Practice area</span>
+                <div class="challenge-stage">
+                  <label class="field-label" for="chLogInput">Text to log</label>
+                  <input class="text-input" id="chLogInput" type="text" value="Debugging is a superpower" />
+                </div>
+                <p class="challenge-feedback" aria-live="polite">Fill in the blank, then click Run code.</p>
+                <div class="challenge-console">
+                  <div class="console-title"><span aria-hidden="true">›_</span> Console</div>
+                  <div class="challenge-console-lines" aria-live="polite">
+                    <p class="console-empty">console.log() output will appear here.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="chapter-intro" id="next-steps">
+        <div class="page-width chapter-content">
+          <p class="eyebrow">Next steps</p>
+          <h2>Write code that <span>does more.</span></h2>
+          <p>
+            You can find, read, and change elements. Next, you'll learn to
+            name your code with functions, repeat it with loops, and build
+            brand-new elements.
+          </p>
+          <div class="three-steps" aria-label="The next three lessons">
+            <span><b>12</b> Name your code</span
+            ><span class="step-arrow" aria-hidden="true">→</span>
+            <span><b>13</b> Repeat it</span
+            ><span class="step-arrow" aria-hidden="true">→</span>
+            <span><b>14</b> Build new elements</span>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="lesson-section functions-section"
+        id="functions"
+        aria-labelledby="functions-title"
+      >
+        <div class="page-width lesson-grid">
+          <div class="lesson-copy">
+            <p class="eyebrow">
+              <span class="lesson-number">12</span> Give your code a name
+            </p>
+            <h2 id="functions-title">Write a <span>function.</span></h2>
+            <p>
+              A function is a named block of code. It doesn't run on its own.
+              It runs when you <strong>call</strong> it by writing its name
+              followed by <code>()</code>.
+            </p>
+            <p>
+              A <strong>parameter</strong> is a placeholder inside the
+              parentheses. Each call can pass in a different value, so one
+              function can do a slightly different job each time.
+            </p>
+            <div class="code-card">
+              <div class="code-card-heading">
+                <span>A FUNCTION WITH A PARAMETER</span
+                ><span class="code-language">JAVASCRIPT</span>
+              </div>
+              <pre><code><span class="code-pink">function</span> <span class="code-blue">sayHello</span>(name) {
+  functionOutput.<span class="code-yellow">textContent</span> = <span class="code-green">"Hello, "</span> + name + <span class="code-green">"!"</span>;
+}
+
+adaButton.<span class="code-blue">addEventListener</span>(<span class="code-green">"click"</span>, <span class="code-pink">function</span> () {
+  <span class="code-blue">sayHello</span>(<span class="code-green">"Ada"</span>);
+});
+
+graceButton.<span class="code-blue">addEventListener</span>(<span class="code-green">"click"</span>, <span class="code-pink">function</span> () {
+  <span class="code-blue">sayHello</span>(<span class="code-green">"Grace"</span>);
+});</code></pre>
+            </div>
+            <p class="small-note">
+              <strong>New concept: parameters.</strong> Inside the function,
+              <code>name</code> holds whatever value was passed in: first
+              <code>"Ada"</code>, then <code>"Grace"</code>.
+            </p>
+          </div>
+          <div class="demo-card">
+            <div class="demo-card-heading">
+              <span class="live-indicator"></span> TRY IT
+            </div>
+            <div class="demo-stage">
+              <span class="stage-label"
+                >Both buttons call the same sayHello() function.</span
+              >
+              <div class="button-row">
+                <button
+                  class="button button-primary"
+                  id="adaButton"
+                  type="button"
+                >
+                  Call sayHello("Ada")
+                </button>
+                <button
+                  class="button button-secondary"
+                  id="graceButton"
+                  type="button"
+                >
+                  Call sayHello("Grace")
+                </button>
+                <button
+                  class="button button-outline"
+                  id="resetFunctionButton"
+                  type="button"
+                >
+                  Reset demo
+                </button>
+              </div>
+              <p class="greeting-output" id="functionOutput" aria-live="polite">
+                Click a button to call the function.
+              </p>
+            </div>
+            <p class="demo-caption">
+              The function is written once and called from two places. Reset
+              calls a second function, <code>resetGreeting()</code>, which has
+              no parameters.
+            </p>
+          </div>
+        </div>
+        <div class="page-width">
+          <div class="challenge" data-challenge="functions" role="group" aria-labelledby="challenge-functions-title">
+            <div class="challenge-header">
+              <p class="challenge-badge">Challenge · 12</p>
+              <h3 id="challenge-functions-title">Finish and call a function</h3>
+              <span class="challenge-status">Not solved yet</span>
+            </div>
+            <p class="challenge-task">
+              Complete the <code>greet()</code> function so it uses its parameter, then call it from the Evening button. Morning should show <code>Good morning!</code> and Evening should show <code>Good evening!</code>
+            </p>
+            <div class="challenge-body">
+              <div class="challenge-editor">
+                <label class="field-label" for="code-functions">Your code</label>
+                <textarea class="code-editor" id="code-functions" rows="18" spellcheck="false" autocapitalize="off" autocomplete="off" wrap="off">
+const output = document.querySelector("#chGreetOut");
+const morningButton = document.querySelector("#chMorning");
+const eveningButton = document.querySelector("#chEvening");
+
+// 1. Finish the function: it should show "Good " + timeOfDay + "!"
+function greet(timeOfDay) {
+    output.textContent = "Good " + ___ + "!";
+}
+
+// 2. Call the function with the right word for each button.
+morningButton.addEventListener("click", function () {
+    greet("morning");
+});
+
+eveningButton.addEventListener("click", function () {
+    ___("evening");
+});</textarea>
+                <p class="editor-tip">Tab adds spaces · Esc, then Tab, leaves the editor · Ctrl/⌘ + Enter runs</p>
+                <div class="button-row">
+                  <button class="button button-primary" type="button" data-action="run">Run code</button>
+                  <button class="button button-secondary" type="button" data-action="hint">Hint</button>
+                  <button class="button button-outline" type="button" data-action="solution">Show solution</button>
+                  <button class="button button-outline" type="button" data-action="reset">Reset</button>
+                </div>
+              </div>
+              <div class="challenge-result">
+                <span class="stage-label">Practice area</span>
+                <div class="challenge-stage">
+                  <div class="button-row">
+                    <button class="button button-secondary" id="chMorning" type="button">Morning</button>
+                    <button class="button button-secondary" id="chEvening" type="button">Evening</button>
+                  </div>
+                  <p class="greeting-output" id="chGreetOut">Click a button.</p>
+                </div>
+                <p class="challenge-feedback" aria-live="polite">Fill in the blanks, then click Run code.</p>
+                <div class="challenge-console">
+                  <div class="console-title"><span aria-hidden="true">›_</span> Console</div>
+                  <div class="challenge-console-lines" aria-live="polite">
+                    <p class="console-empty">console.log() output will appear here.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="lesson-section loops-section"
+        id="loops"
+        aria-labelledby="loops-title"
+      >
+        <div class="page-width lesson-grid">
+          <div class="lesson-copy">
+            <p class="eyebrow">
+              <span class="lesson-number">13</span> Repeat yourself, on purpose
+            </p>
+            <h2 id="loops-title">Loop through a <span>list.</span></h2>
+            <p>
+              An <strong>array</strong> stores a list of values in square
+              brackets. Each value has a position number, called an
+              <strong>index</strong>, and the first index is 0.
+            </p>
+            <p>
+              A <code>for</code> loop repeats code. Here, <code>i</code> starts
+              at 0, the loop keeps going while <code>i</code> is less than the
+              array's <code>length</code>, and <code>i</code> goes up by 1 each
+              time around.
+            </p>
+            <div class="code-card">
+              <div class="code-card-heading">
+                <span>AN ARRAY AND A LOOP</span
+                ><span class="code-language">JAVASCRIPT</span>
+              </div>
+              <pre><code><span class="code-pink">const</span> topics = [<span class="code-green">"HTML"</span>, <span class="code-green">"CSS"</span>, <span class="code-green">"JavaScript"</span>];
+
+topics[<span class="code-green">0</span>];       <span class="code-comment">// "HTML"</span>
+topics.<span class="code-yellow">length</span>;   <span class="code-comment">// 3</span>
+
+<span class="code-pink">for</span> (<span class="code-pink">let</span> i = <span class="code-green">0</span>; i &lt; topics.<span class="code-yellow">length</span>; i = i + <span class="code-green">1</span>) {
+  loopOutput.<span class="code-yellow">textContent</span> =
+    loopOutput.<span class="code-yellow">textContent</span> + <span class="code-green">"["</span> + i + <span class="code-green">"] "</span> + topics[i] + <span class="code-green">"  "</span>;
+}
+
+<span class="code-comment">// querySelectorAll gives a list too, so you can loop over it</span>
+<span class="code-pink">for</span> (<span class="code-pink">let</span> i = <span class="code-green">0</span>; i &lt; loopCards.<span class="code-yellow">length</span>; i = i + <span class="code-green">1</span>) {
+  loopCards[i].<span class="code-blue">classList</span>.<span class="code-blue">add</span>(<span class="code-green">"is-highlighted"</span>);
+}</code></pre>
+            </div>
+            <p class="small-note">
+              <strong>Tip:</strong> you'll often see <code>i++</code> in other
+              code. It's a shortcut for <code>i = i + 1</code>.
+            </p>
+          </div>
+          <div class="demo-card">
+            <div class="demo-card-heading">
+              <span class="live-indicator"></span> TRY IT
+            </div>
+            <div class="demo-stage">
+              <span class="stage-label"
+                >The array holds three values. The cards are three HTML
+                elements with the class loop-card.</span
+              >
+              <div class="loop-cards">
+                <span class="loop-card">HTML</span>
+                <span class="loop-card">CSS</span>
+                <span class="loop-card">JavaScript</span>
+              </div>
+              <div class="button-row">
+                <button
+                  class="button button-secondary"
+                  id="firstItemButton"
+                  type="button"
+                >
+                  Read topics[0]
+                </button>
+                <button
+                  class="button button-primary"
+                  id="loopArrayButton"
+                  type="button"
+                >
+                  Loop over the array
+                </button>
+                <button
+                  class="button button-primary"
+                  id="loopCardsButton"
+                  type="button"
+                >
+                  Highlight every card
+                </button>
+                <button
+                  class="button button-outline"
+                  id="resetLoopButton"
+                  type="button"
+                >
+                  Reset demo
+                </button>
+              </div>
+              <p class="output-line" id="loopOutput" aria-live="polite">
+                Pick a button to run some code.
+              </p>
+            </div>
+            <p class="demo-caption">
+              One loop writes every array item into the output. The other
+              visits every card and adds a CSS class to each one.
+            </p>
+          </div>
+        </div>
+        <div class="page-width">
+          <div class="challenge" data-challenge="loops" role="group" aria-labelledby="challenge-loops-title">
+            <div class="challenge-header">
+              <p class="challenge-badge">Challenge · 13</p>
+              <h3 id="challenge-loops-title">Loop over the planets</h3>
+              <span class="challenge-status">Not solved yet</span>
+            </div>
+            <p class="challenge-task">
+              Fill in the blank so the loop adds every planet to the output, in order: <code>Mercury Venus Earth Mars</code>. <strong>Careful:</strong> don't change the loop condition. A loop that never ends will freeze this browser tab.
+            </p>
+            <div class="challenge-body">
+              <div class="challenge-editor">
+                <label class="field-label" for="code-loops">Your code</label>
+                <textarea class="code-editor" id="code-loops" rows="11" spellcheck="false" autocapitalize="off" autocomplete="off" wrap="off">
+const planets = ["Mercury", "Venus", "Earth", "Mars"];
+const output = document.querySelector("#chLoopOut");
+
+output.textContent = "";
+
+// Loop over every planet and add its name to the output.
+// The loop condition is already written for you.
+for (let i = 0; i &lt; planets.length; i = i + 1) {
+    output.textContent = output.textContent + planets[___] + " ";
+}</textarea>
+                <p class="editor-tip">Tab adds spaces · Esc, then Tab, leaves the editor · Ctrl/⌘ + Enter runs</p>
+                <div class="button-row">
+                  <button class="button button-primary" type="button" data-action="run">Run code</button>
+                  <button class="button button-secondary" type="button" data-action="hint">Hint</button>
+                  <button class="button button-outline" type="button" data-action="solution">Show solution</button>
+                  <button class="button button-outline" type="button" data-action="reset">Reset</button>
+                </div>
+              </div>
+              <div class="challenge-result">
+                <span class="stage-label">Practice area</span>
+                <div class="challenge-stage">
+                  <p class="output-line" id="chLoopOut">The planets will appear here.</p>
+                </div>
+                <p class="challenge-feedback" aria-live="polite">Fill in the blank, then click Run code.</p>
+                <div class="challenge-console">
+                  <div class="console-title"><span aria-hidden="true">›_</span> Console</div>
+                  <div class="challenge-console-lines" aria-live="polite">
+                    <p class="console-empty">console.log() output will appear here.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="lesson-section create-section"
+        id="create"
+        aria-labelledby="create-title"
+      >
+        <div class="page-width lesson-grid">
+          <div class="lesson-copy">
+            <p class="eyebrow">
+              <span class="lesson-number">14</span> Build the page with code
+            </p>
+            <h2 id="create-title">Create and remove <span>elements.</span></h2>
+            <p>
+              JavaScript can make brand-new elements.
+              <code>document.createElement()</code> creates one, but it isn't
+              on the page yet. <code>appendChild()</code> puts it inside
+              another element, and then the browser shows it.
+              <code>remove()</code> takes an element off the page.
+            </p>
+            <div class="code-card">
+              <div class="code-card-heading">
+                <span>CREATE, ADD, REMOVE</span
+                ><span class="code-language">JAVASCRIPT</span>
+              </div>
+              <pre><code><span class="code-comment">// 1. Create a new &lt;li&gt; (not on the page yet)</span>
+<span class="code-pink">const</span> newItem = document.<span class="code-blue">createElement</span>(<span class="code-green">"li"</span>);
+
+<span class="code-comment">// 2. Give it some text</span>
+newItem.<span class="code-yellow">textContent</span> = todoInput.<span class="code-yellow">value</span>;
+
+<span class="code-comment">// 3. Put it inside the list, so it appears</span>
+todoList.<span class="code-blue">appendChild</span>(newItem);
+
+<span class="code-comment">// Later: take it off the page</span>
+newItem.<span class="code-blue">remove</span>();</code></pre>
+            </div>
+            <p class="small-note">
+              <strong>Bonus:</strong> each new item also gets its own Remove
+              button, made the same way with <code>createElement("button")</code>.
+            </p>
+          </div>
+          <div class="demo-card input-demo">
+            <div class="demo-card-heading">
+              <span class="live-indicator"></span> A TINY TO-DO LIST
+            </div>
+            <div class="demo-stage">
+              <span class="stage-label"
+                >Add a few items, then remove one.</span
+              >
+              <label class="field-label" for="todoInput">New to-do</label>
+              <div class="input-row">
+                <input
+                  class="text-input"
+                  id="todoInput"
+                  type="text"
+                  placeholder="e.g. Practice loops"
+                  autocomplete="off"
+                />
+                <button
+                  class="button button-primary"
+                  id="addTodoButton"
+                  type="button"
+                >
+                  Add to list
+                </button>
+              </div>
+              <ul class="todo-list" id="todoList"></ul>
+              <p class="output-line" id="todoOutput" aria-live="polite">
+                Your list is empty. Add your first item.
+              </p>
+            </div>
+            <p class="demo-caption">
+              None of the list items exist in the HTML file. JavaScript creates
+              each one when you click Add.
+            </p>
+          </div>
+        </div>
+        <div class="page-width">
+          <div class="challenge" data-challenge="create" role="group" aria-labelledby="challenge-create-title">
+            <div class="challenge-header">
+              <p class="challenge-badge">Challenge · 14</p>
+              <h3 id="challenge-create-title">Update the shopping list</h3>
+              <span class="challenge-status">Not solved yet</span>
+            </div>
+            <p class="challenge-task">
+              Create a new <code>&lt;li&gt;</code> that says <code>Milk</code>, add it to the list, then remove the <em>Old socks</em> item. When you're done, the list should show Bread and Milk.
+            </p>
+            <div class="challenge-body">
+              <div class="challenge-editor">
+                <label class="field-label" for="code-create">Your code</label>
+                <textarea class="code-editor" id="code-create" rows="15" spellcheck="false" autocapitalize="off" autocomplete="off" wrap="off">
+const list = document.querySelector("#chShopping");
+
+// 1. Create a new &lt;li&gt; element.
+const newItem = document.createElement("___");
+
+// 2. Give it the text: Milk
+newItem.textContent = "Milk";
+
+// 3. Add it to the end of the list.
+list.___(newItem);
+
+// 4. Remove the item with the ID chRemoveMe.
+const oldItem = document.querySelector("#chRemoveMe");
+oldItem.___();</textarea>
+                <p class="editor-tip">Tab adds spaces · Esc, then Tab, leaves the editor · Ctrl/⌘ + Enter runs</p>
+                <div class="button-row">
+                  <button class="button button-primary" type="button" data-action="run">Run code</button>
+                  <button class="button button-secondary" type="button" data-action="hint">Hint</button>
+                  <button class="button button-outline" type="button" data-action="solution">Show solution</button>
+                  <button class="button button-outline" type="button" data-action="reset">Reset</button>
+                </div>
+              </div>
+              <div class="challenge-result">
+                <span class="stage-label">Practice area</span>
+                <div class="challenge-stage">
+                  <ul class="ch-list" id="chShopping">
+                    <li>Bread</li>
+                    <li id="chRemoveMe">Old socks</li>
+                  </ul>
+                </div>
+                <p class="challenge-feedback" aria-live="polite">Fill in the blanks, then click Run code.</p>
+                <div class="challenge-console">
+                  <div class="console-title"><span aria-hidden="true">›_</span> Console</div>
+                  <div class="challenge-console-lines" aria-live="polite">
+                    <p class="console-empty">console.log() output will appear here.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section class="closing-section">
@@ -746,6 +1570,9 @@ countOutput.<span class="code-yellow">textContent</span> =
           <p>
             Every website combines these building blocks. Keep experimenting,
             and notice how each line of code changes what you see.
+          </p>
+          <p class="closing-progress" id="closingProgress" aria-live="polite">
+            Solve the code challenges in each lesson to practice.
           </p>
           <a class="button button-primary" href="#top"
             >Back to the top <span aria-hidden="true">↑</span></a
