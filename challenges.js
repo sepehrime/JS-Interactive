@@ -329,7 +329,7 @@ function updateProgress() {
         if (solved === total) {
             closingProgress.textContent = "You solved all " + total + " code challenges. Well done!";
         } else {
-            closingProgress.textContent = "You've solved " + solved + " of " + total + " code challenges. Scroll back up to try the rest.";
+            closingProgress.textContent = "You've solved " + solved + " of " + total + " code challenges. Lessons with a green dot at the top are done. Try the others!";
         }
     }
 }
@@ -396,6 +396,16 @@ function setUpChallenge(challenge) {
     function markSolved() {
         challenge.classList.add("is-solved");
         status.textContent = "Solved ✓";
+
+        // Mark this lesson in the top navigation and the home page outline.
+        const page = challenge.closest(".page");
+        if (page) {
+            const links = document.querySelectorAll('.lesson-nav a[href="#' + page.id + '"], .course-outline a[href="#' + page.id + '"]');
+            for (let i = 0; i < links.length; i = i + 1) {
+                links[i].classList.add("is-solved");
+            }
+        }
+
         if (solvedChallenges.indexOf(name) === -1) {
             solvedChallenges.push(name);
             updateProgress();

@@ -17,28 +17,49 @@
       <div class="page-width header-content">
         <a
           class="wordmark"
-          href="#top"
+          href="#home"
           aria-label="JavaScript, Made Visible home"
         >
           <span class="wordmark-mark" aria-hidden="true">JS</span>
           <span>made visible</span>
         </a>
-        <nav aria-label="Lesson navigation">
-          <a href="#html">HTML</a>
-          <a href="#css">CSS</a>
-          <a href="#javascript">JavaScript</a>
-          <a href="#practice">Practice</a>
-          <a href="#next-steps">Next steps</a>
-        </nav>
         <span class="progress-pill" aria-live="polite"
           ><span class="progress-label">Challenges</span>
           <span id="challengeProgress">0 / 11 solved</span></span
         >
       </div>
+        <nav class="page-width lesson-nav" aria-label="Lessons">
+          <a class="nav-text" href="#home">Home</a>
+          <span class="nav-group">
+            <a class="nav-text nav-group-label" href="#lesson-01">HTML &amp; CSS</a>
+            <a href="#lesson-01" title="01 · HTML is the structure" aria-label="Lesson 1: HTML is the structure">01</a>
+            <a href="#lesson-02" title="02 · CSS is the style" aria-label="Lesson 2: CSS is the style">02</a>
+          </span>
+          <span class="nav-group">
+            <a class="nav-text nav-group-label" href="#lesson-03">JavaScript</a>
+            <a href="#lesson-03" title="03 · JavaScript adds behavior" aria-label="Lesson 3: JavaScript adds behavior">03</a>
+            <a href="#lesson-04" title="04 · Select an element" aria-label="Lesson 4: Select an element">04</a>
+            <a href="#lesson-05" title="05 · Elements have content" aria-label="Lesson 5: Elements have content">05</a>
+            <a href="#lesson-06" title="06 · Change the page" aria-label="Lesson 6: Change the page">06</a>
+            <a href="#lesson-07" title="07 · Change a style" aria-label="Lesson 7: Change a style">07</a>
+            <a href="#lesson-08" title="08 · Listen for an event" aria-label="Lesson 8: Listen for an event">08</a>
+            <a href="#lesson-09" title="09 · Read user input" aria-label="Lesson 9: Read user input">09</a>
+            <a href="#lesson-10" title="10 · Select multiple elements" aria-label="Lesson 10: Select multiple elements">10</a>
+            <a href="#lesson-11" title="11 · Meet the console" aria-label="Lesson 11: Meet the console">11</a>
+          </span>
+          <span class="nav-group">
+            <a class="nav-text nav-group-label" href="#next-steps">Next steps</a>
+            <a href="#lesson-12" title="12 · Write a function" aria-label="Lesson 12: Write a function">12</a>
+            <a href="#lesson-13" title="13 · Loop through a list" aria-label="Lesson 13: Loop through a list">13</a>
+            <a href="#lesson-14" title="14 · Create and remove elements" aria-label="Lesson 14: Create and remove elements">14</a>
+          </span>
+          <a class="nav-text" href="#finish">Finish</a>
+        </nav>
     </header>
 
-    <main id="top">
-      <section class="hero page-width" aria-labelledby="page-title">
+    <main>
+      <section id="home" class="page home-page" aria-labelledby="page-title">
+        <div class="hero page-width">
         <div class="hero-copy">
           <p class="eyebrow">
             <span class="eyebrow-dot"></span> A hands-on beginner's guide
@@ -49,8 +70,8 @@
             makes it respond. Explore each layer, then write real code in the
             challenges.
           </p>
-          <a class="button button-primary" href="#html"
-            >Start learning <span aria-hidden="true">↓</span></a
+          <a class="button button-primary" href="#lesson-01"
+            >Start learning <span aria-hidden="true">→</span></a
           >
         </div>
         <div
@@ -96,16 +117,66 @@
           <span class="art-label label-css">CSS <span>style</span></span>
           <span class="art-label label-js">JS <span>behavior</span></span>
         </div>
-        <a class="scroll-note" href="#html"
-          ><span class="scroll-line"></span> Scroll to explore</a
-        >
+        </div>
+        <div class="page-width course-outline" aria-labelledby="outline-title">
+          <h2 id="outline-title">Course outline</h2>
+          <div class="outline-grid">
+            <div class="outline-group">
+              <h3>HTML &amp; CSS</h3>
+              <ol>
+                <li><a href="#lesson-01"><span class="outline-number">01</span> HTML is the structure</a></li>
+                <li><a href="#lesson-02"><span class="outline-number">02</span> CSS is the style</a></li>
+              </ol>
+            </div>
+            <div class="outline-group">
+              <h3>JavaScript</h3>
+              <ol>
+                <li><a href="#lesson-03"><span class="outline-number">03</span> JavaScript adds behavior</a></li>
+                <li><a href="#lesson-04"><span class="outline-number">04</span> Select an element</a></li>
+                <li><a href="#lesson-05"><span class="outline-number">05</span> Elements have content</a></li>
+                <li><a href="#lesson-06"><span class="outline-number">06</span> Change the page</a></li>
+                <li><a href="#lesson-07"><span class="outline-number">07</span> Change a style</a></li>
+                <li><a href="#lesson-08"><span class="outline-number">08</span> Listen for an event</a></li>
+                <li><a href="#lesson-09"><span class="outline-number">09</span> Read user input</a></li>
+                <li><a href="#lesson-10"><span class="outline-number">10</span> Select multiple elements</a></li>
+                <li><a href="#lesson-11"><span class="outline-number">11</span> Meet the console</a></li>
+              </ol>
+            </div>
+            <div class="outline-group">
+              <h3>Next steps</h3>
+              <ol>
+                <li><a href="#lesson-12"><span class="outline-number">12</span> Write a function</a></li>
+                <li><a href="#lesson-13"><span class="outline-number">13</span> Loop through a list</a></li>
+                <li><a href="#lesson-14"><span class="outline-number">14</span> Create and remove elements</a></li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        <nav class="page-width pager" aria-label="Previous and next page">
+          <span></span>
+          <a class="pager-link pager-next" href="#lesson-01"
+            ><span class="pager-text"><small>Next</small> 01 · HTML is the structure</span
+            ><span class="pager-caret" aria-hidden="true">›</span></a
+          >
+        </nav>
       </section>
 
-      <section
-        class="lesson-section html-section"
-        id="html"
+      <section id="lesson-01"
+        class="page lesson-section html-section"
         aria-labelledby="html-title"
       >
+        <div class="page-width lesson-bar">
+          <a class="caret-link" href="#home" aria-label="Previous: Home"
+            ><span aria-hidden="true">‹</span></a
+          >
+          <p class="lesson-bar-title">
+            <span class="lesson-bar-chapter">HTML & CSS</span>
+            Lesson 1 of 14
+          </p>
+          <a class="caret-link" href="#lesson-02" aria-label="Next: 02 · CSS is the style"
+            ><span aria-hidden="true">›</span></a
+          >
+        </div>
         <div class="page-width lesson-grid">
           <div class="lesson-copy">
             <p class="eyebrow">
@@ -156,13 +227,34 @@
             </p>
           </div>
         </div>
+        <nav class="page-width pager" aria-label="Previous and next page">
+          <a class="pager-link pager-prev" href="#home"
+            ><span class="pager-caret" aria-hidden="true">‹</span
+            ><span class="pager-text"><small>Previous</small> Home</span></a
+          >
+          <a class="pager-link pager-next" href="#lesson-02"
+            ><span class="pager-text"><small>Next</small> 02 · CSS is the style</span
+            ><span class="pager-caret" aria-hidden="true">›</span></a
+          >
+        </nav>
       </section>
 
-      <section
-        class="lesson-section css-section"
-        id="css"
+      <section id="lesson-02"
+        class="page lesson-section css-section"
         aria-labelledby="css-title"
       >
+        <div class="page-width lesson-bar">
+          <a class="caret-link" href="#lesson-01" aria-label="Previous: 01 · HTML is the structure"
+            ><span aria-hidden="true">‹</span></a
+          >
+          <p class="lesson-bar-title">
+            <span class="lesson-bar-chapter">HTML & CSS</span>
+            Lesson 2 of 14
+          </p>
+          <a class="caret-link" href="#lesson-03" aria-label="Next: 03 · JavaScript adds behavior"
+            ><span aria-hidden="true">›</span></a
+          >
+        </div>
         <div class="page-width lesson-grid">
           <div class="lesson-copy">
             <p class="eyebrow">
@@ -212,9 +304,19 @@
             </p>
           </div>
         </div>
+        <nav class="page-width pager" aria-label="Previous and next page">
+          <a class="pager-link pager-prev" href="#lesson-01"
+            ><span class="pager-caret" aria-hidden="true">‹</span
+            ><span class="pager-text"><small>Previous</small> 01 · HTML is the structure</span></a
+          >
+          <a class="pager-link pager-next" href="#lesson-03"
+            ><span class="pager-text"><small>Next</small> 03 · JavaScript adds behavior</span
+            ><span class="pager-caret" aria-hidden="true">›</span></a
+          >
+        </nav>
       </section>
 
-      <section class="chapter-intro" id="javascript">
+      <section id="lesson-03" class="page chapter-intro">
         <div class="page-width chapter-content">
           <p class="eyebrow">
             <span class="lesson-number">03</span> Now, bring it to life
@@ -232,12 +334,34 @@
             <span><b>03</b> Change the page</span>
           </div>
         </div>
+        <nav class="page-width pager" aria-label="Previous and next page">
+          <a class="pager-link pager-prev" href="#lesson-02"
+            ><span class="pager-caret" aria-hidden="true">‹</span
+            ><span class="pager-text"><small>Previous</small> 02 · CSS is the style</span></a
+          >
+          <a class="pager-link pager-next" href="#lesson-04"
+            ><span class="pager-text"><small>Next</small> 04 · Select an element</span
+            ><span class="pager-caret" aria-hidden="true">›</span></a
+          >
+        </nav>
       </section>
 
-      <section
-        class="lesson-section select-section"
+      <section id="lesson-04"
+        class="page lesson-section select-section"
         aria-labelledby="select-title"
       >
+        <div class="page-width lesson-bar">
+          <a class="caret-link" href="#lesson-03" aria-label="Previous: 03 · JavaScript adds behavior"
+            ><span aria-hidden="true">‹</span></a
+          >
+          <p class="lesson-bar-title">
+            <span class="lesson-bar-chapter">JavaScript basics</span>
+            Lesson 4 of 14
+          </p>
+          <a class="caret-link" href="#lesson-05" aria-label="Next: 05 · Elements have content"
+            ><span aria-hidden="true">›</span></a
+          >
+        </div>
         <div class="page-width lesson-grid">
           <div class="lesson-copy">
             <p class="eyebrow">
@@ -341,12 +465,34 @@ heading.classList.add("is-selected");</textarea>
             </div>
           </div>
         </div>
+        <nav class="page-width pager" aria-label="Previous and next page">
+          <a class="pager-link pager-prev" href="#lesson-03"
+            ><span class="pager-caret" aria-hidden="true">‹</span
+            ><span class="pager-text"><small>Previous</small> 03 · JavaScript adds behavior</span></a
+          >
+          <a class="pager-link pager-next" href="#lesson-05"
+            ><span class="pager-text"><small>Next</small> 05 · Elements have content</span
+            ><span class="pager-caret" aria-hidden="true">›</span></a
+          >
+        </nav>
       </section>
 
-      <section
-        class="lesson-section change-section"
+      <section id="lesson-05"
+        class="page lesson-section change-section"
         aria-labelledby="change-title"
       >
+        <div class="page-width lesson-bar">
+          <a class="caret-link" href="#lesson-04" aria-label="Previous: 04 · Select an element"
+            ><span aria-hidden="true">‹</span></a
+          >
+          <p class="lesson-bar-title">
+            <span class="lesson-bar-chapter">JavaScript basics</span>
+            Lesson 5 of 14
+          </p>
+          <a class="caret-link" href="#lesson-06" aria-label="Next: 06 · Change the page"
+            ><span aria-hidden="true">›</span></a
+          >
+        </div>
         <div class="page-width lesson-grid">
           <div class="lesson-copy">
             <p class="eyebrow">
@@ -438,9 +584,31 @@ copy.textContent = quote.___;</textarea>
             </div>
           </div>
         </div>
+        <nav class="page-width pager" aria-label="Previous and next page">
+          <a class="pager-link pager-prev" href="#lesson-04"
+            ><span class="pager-caret" aria-hidden="true">‹</span
+            ><span class="pager-text"><small>Previous</small> 04 · Select an element</span></a
+          >
+          <a class="pager-link pager-next" href="#lesson-06"
+            ><span class="pager-text"><small>Next</small> 06 · Change the page</span
+            ><span class="pager-caret" aria-hidden="true">›</span></a
+          >
+        </nav>
       </section>
 
-      <section class="lesson-section">
+      <section id="lesson-06" class="page lesson-section">
+        <div class="page-width lesson-bar">
+          <a class="caret-link" href="#lesson-05" aria-label="Previous: 05 · Elements have content"
+            ><span aria-hidden="true">‹</span></a
+          >
+          <p class="lesson-bar-title">
+            <span class="lesson-bar-chapter">JavaScript basics</span>
+            Lesson 6 of 14
+          </p>
+          <a class="caret-link" href="#lesson-07" aria-label="Next: 07 · Change a style"
+            ><span aria-hidden="true">›</span></a
+          >
+        </div>
         <div class="page-width lesson-grid">
           <div class="lesson-copy">
             <p class="eyebrow">
@@ -528,12 +696,34 @@ message.textContent = "___";</textarea>
             </div>
           </div>
         </div>
+        <nav class="page-width pager" aria-label="Previous and next page">
+          <a class="pager-link pager-prev" href="#lesson-05"
+            ><span class="pager-caret" aria-hidden="true">‹</span
+            ><span class="pager-text"><small>Previous</small> 05 · Elements have content</span></a
+          >
+          <a class="pager-link pager-next" href="#lesson-07"
+            ><span class="pager-text"><small>Next</small> 07 · Change a style</span
+            ><span class="pager-caret" aria-hidden="true">›</span></a
+          >
+        </nav>
       </section>
 
-      <section
-        class="lesson-section css-js-section"
+      <section id="lesson-07"
+        class="page lesson-section css-js-section"
         aria-labelledby="css-js-title"
       >
+        <div class="page-width lesson-bar">
+          <a class="caret-link" href="#lesson-06" aria-label="Previous: 06 · Change the page"
+            ><span aria-hidden="true">‹</span></a
+          >
+          <p class="lesson-bar-title">
+            <span class="lesson-bar-chapter">JavaScript basics</span>
+            Lesson 7 of 14
+          </p>
+          <a class="caret-link" href="#lesson-08" aria-label="Next: 08 · Listen for an event"
+            ><span aria-hidden="true">›</span></a
+          >
+        </div>
         <div class="page-width lesson-grid">
           <div class="lesson-copy">
             <p class="eyebrow">
@@ -641,12 +831,34 @@ box.classList.___("highlight");</textarea>
             </div>
           </div>
         </div>
+        <nav class="page-width pager" aria-label="Previous and next page">
+          <a class="pager-link pager-prev" href="#lesson-06"
+            ><span class="pager-caret" aria-hidden="true">‹</span
+            ><span class="pager-text"><small>Previous</small> 06 · Change the page</span></a
+          >
+          <a class="pager-link pager-next" href="#lesson-08"
+            ><span class="pager-text"><small>Next</small> 08 · Listen for an event</span
+            ><span class="pager-caret" aria-hidden="true">›</span></a
+          >
+        </nav>
       </section>
 
-      <section
-        class="lesson-section events-section"
+      <section id="lesson-08"
+        class="page lesson-section events-section"
         aria-labelledby="events-title"
       >
+        <div class="page-width lesson-bar">
+          <a class="caret-link" href="#lesson-07" aria-label="Previous: 07 · Change a style"
+            ><span aria-hidden="true">‹</span></a
+          >
+          <p class="lesson-bar-title">
+            <span class="lesson-bar-chapter">JavaScript basics</span>
+            Lesson 8 of 14
+          </p>
+          <a class="caret-link" href="#lesson-09" aria-label="Next: 09 · Read user input"
+            ><span aria-hidden="true">›</span></a
+          >
+        </div>
         <div class="page-width lesson-grid">
           <div class="lesson-copy">
             <p class="eyebrow">
@@ -770,13 +982,34 @@ button.addEventListener("___", function () {
             </div>
           </div>
         </div>
+        <nav class="page-width pager" aria-label="Previous and next page">
+          <a class="pager-link pager-prev" href="#lesson-07"
+            ><span class="pager-caret" aria-hidden="true">‹</span
+            ><span class="pager-text"><small>Previous</small> 07 · Change a style</span></a
+          >
+          <a class="pager-link pager-next" href="#lesson-09"
+            ><span class="pager-text"><small>Next</small> 09 · Read user input</span
+            ><span class="pager-caret" aria-hidden="true">›</span></a
+          >
+        </nav>
       </section>
 
-      <section
-        class="lesson-section input-section"
-        id="practice"
+      <section id="lesson-09"
+        class="page lesson-section input-section"
         aria-labelledby="input-title"
       >
+        <div class="page-width lesson-bar">
+          <a class="caret-link" href="#lesson-08" aria-label="Previous: 08 · Listen for an event"
+            ><span aria-hidden="true">‹</span></a
+          >
+          <p class="lesson-bar-title">
+            <span class="lesson-bar-chapter">JavaScript basics</span>
+            Lesson 9 of 14
+          </p>
+          <a class="caret-link" href="#lesson-10" aria-label="Next: 10 · Select multiple elements"
+            ><span aria-hidden="true">›</span></a
+          >
+        </div>
         <div class="page-width lesson-grid">
           <div class="lesson-copy">
             <p class="eyebrow">
@@ -892,12 +1125,34 @@ greetButton.addEventListener("click", function () {
             </div>
           </div>
         </div>
+        <nav class="page-width pager" aria-label="Previous and next page">
+          <a class="pager-link pager-prev" href="#lesson-08"
+            ><span class="pager-caret" aria-hidden="true">‹</span
+            ><span class="pager-text"><small>Previous</small> 08 · Listen for an event</span></a
+          >
+          <a class="pager-link pager-next" href="#lesson-10"
+            ><span class="pager-text"><small>Next</small> 10 · Select multiple elements</span
+            ><span class="pager-caret" aria-hidden="true">›</span></a
+          >
+        </nav>
       </section>
 
-      <section
-        class="lesson-section multiple-section"
+      <section id="lesson-10"
+        class="page lesson-section multiple-section"
         aria-labelledby="multiple-title"
       >
+        <div class="page-width lesson-bar">
+          <a class="caret-link" href="#lesson-09" aria-label="Previous: 09 · Read user input"
+            ><span aria-hidden="true">‹</span></a
+          >
+          <p class="lesson-bar-title">
+            <span class="lesson-bar-chapter">JavaScript basics</span>
+            Lesson 10 of 14
+          </p>
+          <a class="caret-link" href="#lesson-11" aria-label="Next: 11 · Meet the console"
+            ><span aria-hidden="true">›</span></a
+          >
+        </div>
         <div class="page-width lesson-grid">
           <div class="lesson-copy">
             <p class="eyebrow">
@@ -1000,12 +1255,34 @@ countOutput.textContent = "There are " + items.___ + " items.";</textarea>
             </div>
           </div>
         </div>
+        <nav class="page-width pager" aria-label="Previous and next page">
+          <a class="pager-link pager-prev" href="#lesson-09"
+            ><span class="pager-caret" aria-hidden="true">‹</span
+            ><span class="pager-text"><small>Previous</small> 09 · Read user input</span></a
+          >
+          <a class="pager-link pager-next" href="#lesson-11"
+            ><span class="pager-text"><small>Next</small> 11 · Meet the console</span
+            ><span class="pager-caret" aria-hidden="true">›</span></a
+          >
+        </nav>
       </section>
 
-      <section
-        class="lesson-section console-section"
+      <section id="lesson-11"
+        class="page lesson-section console-section"
         aria-labelledby="console-title"
       >
+        <div class="page-width lesson-bar">
+          <a class="caret-link" href="#lesson-10" aria-label="Previous: 10 · Select multiple elements"
+            ><span aria-hidden="true">‹</span></a
+          >
+          <p class="lesson-bar-title">
+            <span class="lesson-bar-chapter">JavaScript basics</span>
+            Lesson 11 of 14
+          </p>
+          <a class="caret-link" href="#next-steps" aria-label="Next: Next steps"
+            ><span aria-hidden="true">›</span></a
+          >
+        </div>
         <div class="page-width lesson-grid">
           <div class="lesson-copy">
             <p class="eyebrow">
@@ -1110,9 +1387,19 @@ console.log(logInput.___);</textarea>
             </div>
           </div>
         </div>
+        <nav class="page-width pager" aria-label="Previous and next page">
+          <a class="pager-link pager-prev" href="#lesson-10"
+            ><span class="pager-caret" aria-hidden="true">‹</span
+            ><span class="pager-text"><small>Previous</small> 10 · Select multiple elements</span></a
+          >
+          <a class="pager-link pager-next" href="#next-steps"
+            ><span class="pager-text"><small>Next</small> Next steps</span
+            ><span class="pager-caret" aria-hidden="true">›</span></a
+          >
+        </nav>
       </section>
 
-      <section class="chapter-intro" id="next-steps">
+      <section id="next-steps" class="page chapter-intro">
         <div class="page-width chapter-content">
           <p class="eyebrow">Next steps</p>
           <h2>Write code that <span>does more.</span></h2>
@@ -1129,13 +1416,34 @@ console.log(logInput.___);</textarea>
             <span><b>14</b> Build new elements</span>
           </div>
         </div>
+        <nav class="page-width pager" aria-label="Previous and next page">
+          <a class="pager-link pager-prev" href="#lesson-11"
+            ><span class="pager-caret" aria-hidden="true">‹</span
+            ><span class="pager-text"><small>Previous</small> 11 · Meet the console</span></a
+          >
+          <a class="pager-link pager-next" href="#lesson-12"
+            ><span class="pager-text"><small>Next</small> 12 · Write a function</span
+            ><span class="pager-caret" aria-hidden="true">›</span></a
+          >
+        </nav>
       </section>
 
-      <section
-        class="lesson-section functions-section"
-        id="functions"
+      <section id="lesson-12"
+        class="page lesson-section functions-section"
         aria-labelledby="functions-title"
       >
+        <div class="page-width lesson-bar">
+          <a class="caret-link" href="#next-steps" aria-label="Previous: Next steps"
+            ><span aria-hidden="true">‹</span></a
+          >
+          <p class="lesson-bar-title">
+            <span class="lesson-bar-chapter">Next steps</span>
+            Lesson 12 of 14
+          </p>
+          <a class="caret-link" href="#lesson-13" aria-label="Next: 13 · Loop through a list"
+            ><span aria-hidden="true">›</span></a
+          >
+        </div>
         <div class="page-width lesson-grid">
           <div class="lesson-copy">
             <p class="eyebrow">
@@ -1276,13 +1584,34 @@ eveningButton.addEventListener("click", function () {
             </div>
           </div>
         </div>
+        <nav class="page-width pager" aria-label="Previous and next page">
+          <a class="pager-link pager-prev" href="#next-steps"
+            ><span class="pager-caret" aria-hidden="true">‹</span
+            ><span class="pager-text"><small>Previous</small> Next steps</span></a
+          >
+          <a class="pager-link pager-next" href="#lesson-13"
+            ><span class="pager-text"><small>Next</small> 13 · Loop through a list</span
+            ><span class="pager-caret" aria-hidden="true">›</span></a
+          >
+        </nav>
       </section>
 
-      <section
-        class="lesson-section loops-section"
-        id="loops"
+      <section id="lesson-13"
+        class="page lesson-section loops-section"
         aria-labelledby="loops-title"
       >
+        <div class="page-width lesson-bar">
+          <a class="caret-link" href="#lesson-12" aria-label="Previous: 12 · Write a function"
+            ><span aria-hidden="true">‹</span></a
+          >
+          <p class="lesson-bar-title">
+            <span class="lesson-bar-chapter">Next steps</span>
+            Lesson 13 of 14
+          </p>
+          <a class="caret-link" href="#lesson-14" aria-label="Next: 14 · Create and remove elements"
+            ><span aria-hidden="true">›</span></a
+          >
+        </div>
         <div class="page-width lesson-grid">
           <div class="lesson-copy">
             <p class="eyebrow">
@@ -1427,13 +1756,34 @@ for (let i = 0; i &lt; planets.length; i = i + 1) {
             </div>
           </div>
         </div>
+        <nav class="page-width pager" aria-label="Previous and next page">
+          <a class="pager-link pager-prev" href="#lesson-12"
+            ><span class="pager-caret" aria-hidden="true">‹</span
+            ><span class="pager-text"><small>Previous</small> 12 · Write a function</span></a
+          >
+          <a class="pager-link pager-next" href="#lesson-14"
+            ><span class="pager-text"><small>Next</small> 14 · Create and remove elements</span
+            ><span class="pager-caret" aria-hidden="true">›</span></a
+          >
+        </nav>
       </section>
 
-      <section
-        class="lesson-section create-section"
-        id="create"
+      <section id="lesson-14"
+        class="page lesson-section create-section"
         aria-labelledby="create-title"
       >
+        <div class="page-width lesson-bar">
+          <a class="caret-link" href="#lesson-13" aria-label="Previous: 13 · Loop through a list"
+            ><span aria-hidden="true">‹</span></a
+          >
+          <p class="lesson-bar-title">
+            <span class="lesson-bar-chapter">Next steps</span>
+            Lesson 14 of 14
+          </p>
+          <a class="caret-link" href="#finish" aria-label="Next: Finish"
+            ><span aria-hidden="true">›</span></a
+          >
+        </div>
         <div class="page-width lesson-grid">
           <div class="lesson-copy">
             <p class="eyebrow">
@@ -1560,9 +1910,19 @@ oldItem.___();</textarea>
             </div>
           </div>
         </div>
+        <nav class="page-width pager" aria-label="Previous and next page">
+          <a class="pager-link pager-prev" href="#lesson-13"
+            ><span class="pager-caret" aria-hidden="true">‹</span
+            ><span class="pager-text"><small>Previous</small> 13 · Loop through a list</span></a
+          >
+          <a class="pager-link pager-next" href="#finish"
+            ><span class="pager-text"><small>Next</small> Finish</span
+            ><span class="pager-caret" aria-hidden="true">›</span></a
+          >
+        </nav>
       </section>
 
-      <section class="closing-section">
+      <section id="finish" class="page closing-section">
         <div class="page-width closing-content">
           <span class="closing-star" aria-hidden="true">✳</span>
           <p class="eyebrow">That's the basic idea</p>
@@ -1574,18 +1934,26 @@ oldItem.___();</textarea>
           <p class="closing-progress" id="closingProgress" aria-live="polite">
             Solve the code challenges in each lesson to practice.
           </p>
-          <a class="button button-primary" href="#top"
-            >Back to the top <span aria-hidden="true">↑</span></a
-          >
+          <div class="button-row closing-buttons">
+            <a class="button button-primary" href="#home">Back to home</a>
+            <a class="button button-outline" href="#lesson-04">Review the challenges</a>
+          </div>
         </div>
+        <nav class="page-width pager" aria-label="Previous and next page">
+          <a class="pager-link pager-prev" href="#lesson-14"
+            ><span class="pager-caret" aria-hidden="true">‹</span
+            ><span class="pager-text"><small>Previous</small> 14 · Create and remove elements</span></a
+          >
+          <span></span>
+        </nav>
       </section>
     </main>
 
     <footer class="site-footer">
       <div class="page-width footer-content">
         <span>Made for curious minds.</span>
-        <a href="#top"
-          >JavaScript, made visible <span aria-hidden="true">↑</span></a
+        <a href="#home"
+          >JavaScript, made visible</a
         >
       </div>
     </footer>

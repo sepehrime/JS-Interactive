@@ -18,9 +18,6 @@
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
 
 body {
     margin: 0;
@@ -63,9 +60,6 @@ button {
     margin-inline: auto;
 }
 
-#top {
-    scroll-margin-top: 20px;
-}
 
 .site-header {
     min-height: 76px;
@@ -75,7 +69,6 @@ button {
 
 .header-content,
 .wordmark,
-.site-header nav,
 .footer-content {
     display: flex;
     align-items: center;
@@ -105,26 +98,16 @@ button {
     font-size: 14px;
 }
 
-.site-header nav {
-    gap: 30px;
-    color: #69645e;
-    font-size: 13px;
-    font-weight: 600;
-}
 
-.site-header nav a:hover,
-.footer-content a:hover {
-    color: var(--coral-dark);
-}
 
 .hero {
     position: relative;
     display: flex;
-    min-height: 600px;
+    min-height: 520px;
     align-items: center;
     justify-content: space-between;
     gap: 52px;
-    padding-block: 72px 96px;
+    padding-block: 56px 48px;
 }
 
 .hero-copy {
@@ -421,40 +404,13 @@ h2 {
     color: #9d8032;
 }
 
-.scroll-note {
-    position: absolute;
-    bottom: 34px;
-    left: 0;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: #8e8983;
-    font-family: var(--mono);
-    font-size: 9px;
-}
 
-.scroll-line {
-    width: 26px;
-    height: 1px;
-    background: var(--coral);
-}
 
 .lesson-section {
-    padding-block: 100px;
-    border-top: 1px solid #eeece8;
+    padding-block: 28px 56px;
 }
 
-.html-section,
-.select-section,
-.events-section,
-.multiple-section {
-    background: var(--white);
-}
 
-.css-section {
-    background: #f6f4fb;
-    border-color: #eeebf5;
-}
 
 .lesson-grid {
     display: flex;
@@ -800,9 +756,6 @@ h2 {
     overflow-wrap: anywhere;
 }
 
-.change-section {
-    background: #fdfbf8;
-}
 
 .change-message {
     color: #625d56;
@@ -810,10 +763,6 @@ h2 {
     font-weight: 500;
 }
 
-.css-js-section {
-    background: #f6f4fb;
-    border-color: #eeebf5;
-}
 
 .color-box {
     display: flex;
@@ -846,9 +795,6 @@ h2 {
     gap: 8px;
 }
 
-.events-section {
-    background: var(--white);
-}
 
 .event-stage .button {
     margin-bottom: 10px;
@@ -908,10 +854,6 @@ h2 {
     margin-bottom: 0;
 }
 
-.input-section {
-    background: #fff5f0;
-    border-color: #f5e8e0;
-}
 
 .input-section .lesson-number {
     color: var(--coral-dark);
@@ -966,9 +908,6 @@ h2 {
     background: #e7e1f5;
 }
 
-.console-section {
-    background: #f7f5f1;
-}
 
 .console-window {
     min-height: 165px;
@@ -1095,18 +1034,11 @@ h2 {
 
 /* ---------- New lessons: functions, loops, create ---------- */
 
-.functions-section {
-    background: var(--white);
-}
 
 .functions-section .greeting-output {
     margin-top: 18px;
 }
 
-.loops-section {
-    background: #f6f4fb;
-    border-color: #eeebf5;
-}
 
 .loops-section .lesson-number {
     color: var(--lavender-ink);
@@ -1137,9 +1069,6 @@ h2 {
     box-shadow: 0 0 0 3px rgba(239, 112, 85, 0.14);
 }
 
-.create-section {
-    background: #fdfbf8;
-}
 
 .todo-list {
     display: flex;
@@ -1182,7 +1111,7 @@ h2 {
 /* ---------- Code challenges ---------- */
 
 .challenge {
-    margin-top: 64px;
+    margin-top: 48px;
     padding: 24px;
     background: var(--white);
     border: 1px solid #ece9e4;
@@ -1411,6 +1340,352 @@ h2 {
     font-size: 12px;
 }
 
+/* ---------- Pages: one lesson at a time ----------
+   You don't need to understand this part yet.
+   Every page is a <section class="page"> with an ID. A link such as
+   <a href="#lesson-04"> puts "#lesson-04" in the address bar, and the
+   :target selector matches the section with that ID. Only that section is
+   shown. With nothing in the address bar, the home page is shown. */
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: column;
+}
+
+.page {
+    display: none;
+    /* A big margin means the browser scrolls to the very top of the page. */
+    scroll-margin-top: 400px;
+}
+
+.page:target,
+main:not(:has(.page:target)) #home {
+    display: block;
+    /* Fill the space down to the footer. */
+    flex: 1 0 auto;
+}
+
+/* ---------- Header: lesson strip ---------- */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    min-height: 0;
+}
+
+.header-content {
+    min-height: 58px;
+}
+
+.lesson-nav {
+    display: flex;
+    align-items: center;
+    gap: 6px 18px;
+    padding-block: 0 12px;
+    overflow-x: auto;
+    font-size: 12px;
+    scrollbar-width: thin;
+}
+
+.nav-group {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding-left: 18px;
+    border-left: 1px solid var(--line);
+}
+
+.lesson-nav a {
+    position: relative;
+    display: inline-grid;
+    min-width: 30px;
+    height: 30px;
+    flex: 0 0 auto;
+    place-items: center;
+    padding-inline: 4px;
+    color: #625d56;
+    border-radius: 7px;
+    font-family: var(--mono);
+    font-size: 11px;
+}
+
+.lesson-nav .nav-text {
+    padding-inline: 8px;
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.lesson-nav .nav-group-label {
+    color: #8b867f;
+    font-weight: 500;
+}
+
+.lesson-nav a:hover {
+    color: var(--ink);
+    background: #f0ede8;
+}
+
+/* A green dot marks lessons whose challenge is solved (added by challenges.js). */
+.lesson-nav a.is-solved::after {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    width: 6px;
+    height: 6px;
+    background: #4f9a6c;
+    border-radius: 50%;
+    content: "";
+}
+
+/* Highlight the link for the page that is showing. */
+body:has(#lesson-01:target) .lesson-nav a[href="#lesson-01"],
+body:has(#lesson-02:target) .lesson-nav a[href="#lesson-02"],
+body:has(#lesson-03:target) .lesson-nav a[href="#lesson-03"],
+body:has(#lesson-04:target) .lesson-nav a[href="#lesson-04"],
+body:has(#lesson-05:target) .lesson-nav a[href="#lesson-05"],
+body:has(#lesson-06:target) .lesson-nav a[href="#lesson-06"],
+body:has(#lesson-07:target) .lesson-nav a[href="#lesson-07"],
+body:has(#lesson-08:target) .lesson-nav a[href="#lesson-08"],
+body:has(#lesson-09:target) .lesson-nav a[href="#lesson-09"],
+body:has(#lesson-10:target) .lesson-nav a[href="#lesson-10"],
+body:has(#lesson-11:target) .lesson-nav a[href="#lesson-11"],
+body:has(#next-steps:target) .lesson-nav a[href="#next-steps"],
+body:has(#lesson-12:target) .lesson-nav a[href="#lesson-12"],
+body:has(#lesson-13:target) .lesson-nav a[href="#lesson-13"],
+body:has(#lesson-14:target) .lesson-nav a[href="#lesson-14"],
+body:has(#finish:target) .lesson-nav a[href="#finish"],
+body:not(:has(.page:target)) .lesson-nav a[href="#home"] {
+    color: var(--white);
+    background: var(--coral);
+}
+
+.footer-content a:hover {
+    color: var(--coral-dark);
+}
+
+/* ---------- Lesson bar (top) and pager (bottom) ---------- */
+
+.lesson-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 36px;
+    padding: 6px;
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+}
+
+.lesson-bar-title {
+    margin: 0;
+    color: #625d56;
+    font-size: 12px;
+    text-align: center;
+}
+
+.lesson-bar-chapter {
+    margin-right: 6px;
+    color: #8b867f;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.caret-link {
+    display: grid;
+    width: 40px;
+    height: 40px;
+    flex: 0 0 auto;
+    place-items: center;
+    color: #504a43;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    font-size: 22px;
+    line-height: 1;
+}
+
+.caret-link:hover {
+    color: var(--white);
+    background: var(--coral);
+    border-color: var(--coral);
+}
+
+.pager {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+}
+
+.pager-link {
+    display: flex;
+    max-width: 48%;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 16px;
+    color: var(--ink);
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.pager-link:hover {
+    border-color: var(--coral);
+}
+
+.pager-next {
+    margin-left: auto;
+    text-align: right;
+}
+
+.pager-text small {
+    display: block;
+    color: #8b867f;
+    font-family: var(--mono);
+    font-size: 9px;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.pager-caret {
+    color: var(--coral);
+    font-size: 24px;
+    line-height: 1;
+}
+
+.chapter-intro .pager,
+.closing-section .pager {
+    border-top-color: #45434a;
+    text-align: left;
+}
+
+.chapter-intro .pager-link,
+.closing-section .pager-link {
+    color: var(--white);
+    background: #343338;
+    border-color: #4a4850;
+}
+
+.chapter-intro .pager-text small,
+.closing-section .pager-text small {
+    color: #b3adb7;
+}
+
+.chapter-intro .pager-next {
+    text-align: right;
+}
+
+/* ---------- Home: course outline ---------- */
+
+.course-outline {
+    padding-block: 8px 24px;
+}
+
+.course-outline h2 {
+    margin-bottom: 18px;
+    font-size: 24px;
+    letter-spacing: -0.03em;
+}
+
+.outline-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.outline-group {
+    flex: 1 1 260px;
+    padding: 18px 20px;
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+}
+
+.outline-group h3 {
+    margin-bottom: 8px;
+    color: #8b867f;
+    font-family: var(--mono);
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.outline-group ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.outline-group a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 4px;
+    border-radius: 6px;
+    font-size: 13px;
+}
+
+.outline-group a:hover {
+    color: var(--coral-dark);
+}
+
+.outline-group a.is-solved::after {
+    margin-left: auto;
+    color: #4f9a6c;
+    font-size: 11px;
+    content: "✓";
+}
+
+.outline-number {
+    display: inline-grid;
+    width: 24px;
+    height: 24px;
+    flex: 0 0 auto;
+    place-items: center;
+    color: var(--coral-dark);
+    background: #fff0e9;
+    border-radius: 50%;
+    font-family: var(--mono);
+    font-size: 9px;
+}
+
+.home-page .pager {
+    display: none;
+}
+
+/* ---------- Chapter and closing pages ---------- */
+
+.chapter-intro {
+    padding-block: 96px 48px;
+}
+
+.closing-section {
+    padding-block: 96px 48px;
+}
+
+.closing-buttons {
+    justify-content: center;
+}
+
 @media (max-width: 850px) {
     .hero {
         min-height: 530px;
@@ -1457,7 +1732,45 @@ h2 {
     }
 
     .site-header {
-        min-height: 68px;
+        position: static;
+    }
+
+    .header-content {
+        min-height: 54px;
+    }
+
+    /* On phones the lesson strip wraps onto a few lines. */
+    .lesson-nav {
+        flex-wrap: wrap;
+        gap: 2px 8px;
+        overflow: visible;
+    }
+
+    .nav-group {
+        flex-wrap: wrap;
+        gap: 2px;
+        padding-left: 0;
+        border-left: 0;
+    }
+
+    .lesson-nav a {
+        min-width: 28px;
+        height: 28px;
+    }
+
+    .lesson-nav .nav-text {
+        padding-inline: 6px;
+    }
+
+    .lesson-bar {
+        margin-bottom: 24px;
+    }
+
+    .pager-link {
+        max-width: none;
+        flex: 1 1 0;
+        padding: 10px 12px;
+        font-size: 12px;
     }
 
     .header-content {
@@ -1470,11 +1783,6 @@ h2 {
         font-size: 14px;
     }
 
-    .site-header nav {
-        flex-wrap: wrap;
-        gap: 10px 15px;
-        font-size: 10px;
-    }
 
     .hero {
         min-height: 0;
@@ -1529,12 +1837,9 @@ h2 {
         right: 0;
     }
 
-    .scroll-note {
-        bottom: 24px;
-    }
 
     .lesson-section {
-        padding-block: 68px;
+        padding-block: 20px 40px;
     }
 
     .lesson-grid {
@@ -1594,8 +1899,3 @@ h2 {
     }
 }
 
-@media (prefers-reduced-motion: reduce) {
-    html {
-        scroll-behavior: auto;
-    }
-}
