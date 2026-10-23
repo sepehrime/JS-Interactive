@@ -1,15 +1,18 @@
 :root {
     color-scheme: light;
     --ink: #262421;
-    --muted: #77716a;
+    --muted: #6b665f;
     --paper: #fbfaf8;
     --white: #ffffff;
     --line: #e9e5df;
     --coral: #ef7055;
     --coral-dark: #d95d43;
+    /* Darker coral for white text on coral and small coral text, so it is easy to read. */
+    --coral-strong: #c4502f;
+    --coral-text: #b5432a;
     --peach: #fff1e9;
     --lavender: #f0edfb;
-    --lavender-ink: #7562b7;
+    --lavender-ink: #6550a8;
     --mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
     --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
@@ -62,21 +65,18 @@ button {
 
 
 .site-header {
-    min-height: 76px;
     background: var(--paper);
     border-bottom: 1px solid var(--line);
 }
 
 .header-content,
-.wordmark,
-.footer-content {
+.wordmark {
     display: flex;
     align-items: center;
 }
 
-.header-content,
-.footer-content {
-    min-height: inherit;
+.header-content {
+    min-height: 64px;
     justify-content: space-between;
 }
 
@@ -95,7 +95,7 @@ button {
     background: var(--coral);
     border-radius: 9px;
     font-family: var(--mono);
-    font-size: 14px;
+    font-size: 16px;
 }
 
 
@@ -121,7 +121,7 @@ button {
     margin: 0 0 18px;
     color: var(--muted);
     font-family: var(--mono);
-    font-size: 10px;
+    font-size: 13px;
     letter-spacing: 0.08em;
     text-transform: uppercase;
 }
@@ -160,7 +160,7 @@ h2 {
 .lesson-copy h2 span,
 .chapter-content h2 span,
 .closing-content h2 span {
-    color: var(--coral);
+    color: var(--coral-dark);
 }
 
 .hero-description {
@@ -180,18 +180,18 @@ h2 {
     padding: 10px 17px;
     border: 1px solid transparent;
     border-radius: 7px;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 700;
     line-height: 1.3;
 }
 
 .button-primary {
     color: var(--white);
-    background: var(--coral);
+    background: var(--coral-strong);
 }
 
 .button-primary:hover {
-    background: var(--coral-dark);
+    background: #a8432a;
 }
 
 .button-secondary {
@@ -218,7 +218,7 @@ h2 {
     padding: 7px 14px;
     color: var(--white);
     background: var(--ink);
-    font-size: 10px;
+    font-size: 13px;
 }
 
 .button-dark:disabled {
@@ -231,41 +231,21 @@ h2 {
     position: relative;
     display: flex;
     width: 48%;
-    min-height: 360px;
-    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
     justify-content: center;
+    gap: 10px;
 }
 
-.orbit {
-    position: absolute;
-    width: 340px;
-    height: 340px;
-    border: 1px solid #eeebe7;
-    border-radius: 50%;
-}
 
-.orbit-two {
-    width: 275px;
-    height: 275px;
-    border-style: dashed;
-    border-color: #e8e1d9;
-}
 
-.orbit-three {
-    width: 210px;
-    height: 210px;
-    border-color: #f2e1d9;
-}
 
 .code-window {
-    position: relative;
-    z-index: 1;
-    width: min(390px, 100%);
+    width: min(420px, 100%);
     overflow: hidden;
     background: var(--white);
-    border: 1px solid #ede9e3;
+    border: 1px solid var(--line);
     border-radius: 12px;
-    box-shadow: 0 18px 48px rgba(51, 41, 34, 0.1);
 }
 
 .window-top {
@@ -299,47 +279,48 @@ h2 {
 
 .window-top small {
     margin-left: 28px;
-    color: #8c867f;
+    color: var(--muted);
     font-family: var(--mono);
-    font-size: 9px;
+    font-size: 11px;
 }
 
 .window-code {
-    padding: 24px 18px 13px;
-    background: #2c2b30;
+    padding: 20px 18px 8px;
+    background: #fbfaf8;
+    border-bottom: 1px solid #eeece8;
 }
 
 .window-code p {
     margin-bottom: 12px;
-    color: #e6e1dc;
+    color: #302d32;
     font-family: var(--mono);
-    font-size: 10px;
+    font-size: 12px;
     white-space: nowrap;
 }
 
 .code-muted {
     padding-right: 8px;
-    color: #89848d;
+    color: #6f6a63;
 }
 
 .code-pink {
-    color: #e98ca3;
+    color: #a52f51;
 }
 
 .code-purple {
-    color: #c3a1ed;
+    color: #62439a;
 }
 
 .code-yellow {
-    color: #f1ce83;
+    color: #785200;
 }
 
 .code-green {
-    color: #9ac98f;
+    color: #28683a;
 }
 
 .code-blue {
-    color: #8ec6df;
+    color: #205f7a;
 }
 
 .window-result {
@@ -365,8 +346,6 @@ h2 {
 }
 
 .art-label {
-    position: absolute;
-    z-index: 2;
     display: flex;
     align-items: center;
     gap: 6px;
@@ -374,40 +353,33 @@ h2 {
     background: var(--white);
     border: 1px solid var(--line);
     border-radius: 6px;
-    box-shadow: 0 5px 15px rgba(51, 41, 34, 0.06);
     font-family: var(--mono);
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 500;
 }
 
 .art-label span {
-    color: #928c85;
-    font-size: 8px;
+    color: var(--muted);
+    font-size: 11px;
     font-weight: 400;
 }
 
 .label-html {
-    top: 47px;
-    right: 30px;
-    color: #e16f5c;
+    color: #c4502f;
 }
 
 .label-css {
-    bottom: 51px;
-    left: 10px;
-    color: #8972c5;
+    color: #6550a8;
 }
 
 .label-js {
-    right: 4px;
-    bottom: 73px;
-    color: #9d8032;
+    color: #7a6220;
 }
 
 
 
 .lesson-section {
-    padding-block: 28px 56px;
+    padding-block: 48px 0;
 }
 
 
@@ -440,14 +412,14 @@ h2 {
 .chapter-content > p:not(.eyebrow),
 .closing-content > p:not(.eyebrow) {
     color: var(--muted);
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.85;
 }
 
 .small-note {
     margin-top: 22px;
-    color: #807b74;
-    font-size: 12px;
+    color: var(--muted);
+    font-size: 14px;
     line-height: 1.8;
 }
 
@@ -461,18 +433,12 @@ h2 {
     height: 25px;
     flex: 0 0 auto;
     place-items: center;
-    color: var(--coral-dark);
+    color: var(--coral-text);
     background: #fff0e9;
     border-radius: 50%;
     font-family: var(--mono);
-    font-size: 9px;
+    font-size: 11px;
     letter-spacing: 0;
-}
-
-.css-section .lesson-number,
-.css-js-section .lesson-number {
-    color: var(--lavender-ink);
-    background: #e8e4f6;
 }
 
 .code-card {
@@ -495,13 +461,17 @@ h2 {
     background: #ece9e3;
     border-bottom: 1px solid #ddd7ce;
     font-family: var(--mono);
-    font-size: 8px;
+    font-size: 11px;
     letter-spacing: 0.08em;
 }
 
 .code-language {
     color: #625c54;
-    font-size: 8px;
+    font-size: 11px;
+}
+
+.code-comment {
+    color: #6f6a64;
 }
 
 .code-card pre {
@@ -511,8 +481,8 @@ h2 {
     color: #302d32;
     background: #fbfaf8;
     font-family: var(--mono);
-    font-size: 10px;
-    line-height: 1.95;
+    font-size: 13px;
+    line-height: 1.75;
     tab-size: 2;
 }
 
@@ -520,25 +490,10 @@ h2 {
     font-family: inherit;
 }
 
-.code-card .code-pink {
-    color: #a52f51;
-}
 
-.code-card .code-purple {
-    color: #62439a;
-}
 
-.code-card .code-yellow {
-    color: #785200;
-}
 
-.code-card .code-green {
-    color: #28683a;
-}
 
-.code-card .code-blue {
-    color: #205f7a;
-}
 
 .demo-card {
     min-width: 0;
@@ -549,18 +504,14 @@ h2 {
     box-shadow: 0 16px 40px rgba(47, 39, 33, 0.06);
 }
 
-.css-demo {
-    border-color: #e6e1f1;
-}
-
 .demo-card-heading {
     display: flex;
     align-items: center;
     gap: 8px;
     padding: 1px 2px 15px;
-    color: #8b867f;
+    color: var(--muted);
     font-family: var(--mono);
-    font-size: 8px;
+    font-size: 11px;
     letter-spacing: 0.1em;
 }
 
@@ -580,9 +531,9 @@ h2 {
 .stage-label {
     display: block;
     margin-bottom: 19px;
-    color: #8d877f;
+    color: var(--muted);
     font-family: var(--mono);
-    font-size: 9px;
+    font-size: 11px;
 }
 
 .sample-page {
@@ -609,20 +560,20 @@ h2 {
 .sample-page p,
 .style-sample p {
     margin-bottom: 13px;
-    color: #77716a;
-    font-size: 10px;
+    color: var(--muted);
+    font-size: 13px;
 }
 
 .sample-page .sample-caption {
     margin: 16px 0 0;
-    color: #77716a;
-    font-size: 8px;
+    color: var(--muted);
+    font-size: 11px;
 }
 
 .demo-caption {
     margin: 13px 2px 0;
-    color: #77716a;
-    font-size: 10px;
+    color: var(--muted);
+    font-size: 13px;
     line-height: 1.65;
 }
 
@@ -659,13 +610,11 @@ h2 {
     border: 1px solid #f0dfd4;
     border-radius: 4px;
     font-family: var(--mono);
-    font-size: 8px;
+    font-size: 11px;
 }
 
 .chapter-intro {
-    padding-block: 92px 86px;
-    color: var(--white);
-    background: #29282d;
+    padding-block: 56px 0;
     text-align: center;
 }
 
@@ -676,27 +625,16 @@ h2 {
 .chapter-content .eyebrow,
 .closing-content .eyebrow {
     justify-content: center;
-    color: #cbc7ce;
 }
 
-.chapter-content .lesson-number {
-    color: #f4a08d;
-    background: #44323a;
-}
 
 .chapter-content h2 {
     margin-bottom: 13px;
 }
 
-.chapter-content h2 span,
-.closing-content h2 span {
-    color: #f18a70;
-}
-
 .chapter-content > p:not(.eyebrow) {
-    max-width: 560px;
+    max-width: 600px;
     margin-inline: auto;
-    color: #d0cbd2;
 }
 
 .three-steps {
@@ -705,8 +643,8 @@ h2 {
     justify-content: center;
     gap: 17px;
     margin-top: 33px;
-    color: #f0ecef;
-    font-size: 10px;
+    color: var(--ink);
+    font-size: 13px;
 }
 
 .three-steps span:not(.step-arrow) {
@@ -716,14 +654,14 @@ h2 {
 }
 
 .three-steps b {
-    color: #f0987f;
+    color: var(--coral-text);
     font-family: var(--mono);
-    font-size: 9px;
+    font-size: 11px;
     font-weight: 400;
 }
 
 .step-arrow {
-    color: #a8a2ac;
+    color: var(--muted);
 }
 
 .interactive-title,
@@ -733,7 +671,7 @@ h2 {
     background: var(--white);
     border: 1px solid #eeeae4;
     border-radius: 6px;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 700;
 }
 
@@ -752,14 +690,14 @@ h2 {
     margin: 15px 0 0;
     color: #675597;
     font-family: var(--mono);
-    font-size: 10px;
+    font-size: 13px;
     overflow-wrap: anywhere;
 }
 
 
 .change-message {
     color: #625d56;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 500;
 }
 
@@ -775,7 +713,7 @@ h2 {
     background: #fff5ed;
     border: 1px solid #f2dfd2;
     border-radius: 7px;
-    font-size: 12px;
+    font-size: 14px;
     text-align: center;
 }
 
@@ -807,7 +745,7 @@ h2 {
     background: #f0edfb;
     border: 1px dashed #cfc5eb;
     border-radius: 6px;
-    font-size: 11px;
+    font-size: 13px;
     text-align: center;
 }
 
@@ -825,7 +763,7 @@ h2 {
     display: block;
     margin-bottom: 6px;
     color: #625d56;
-    font-size: 10px;
+    font-size: 13px;
     font-weight: 700;
 }
 
@@ -838,11 +776,11 @@ h2 {
     background: var(--white);
     border: 1px solid #cfc9c0;
     border-radius: 6px;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .text-input::placeholder {
-    color: #77716a;
+    color: var(--muted);
     opacity: 1;
 }
 
@@ -854,19 +792,6 @@ h2 {
     margin-bottom: 0;
 }
 
-
-.input-section .lesson-number {
-    color: var(--coral-dark);
-    background: #ffe4d9;
-}
-
-.input-demo {
-    border-color: #f3ded5;
-}
-
-.input-demo .demo-stage {
-    background: #fffaf7;
-}
 
 .input-row {
     display: flex;
@@ -901,7 +826,7 @@ h2 {
     background: #f1eef9;
     border: 1px solid #d9d1eb;
     border-radius: 5px;
-    font-size: 10px;
+    font-size: 13px;
 }
 
 .topic-button:hover {
@@ -913,24 +838,26 @@ h2 {
     min-height: 165px;
     margin-bottom: 14px;
     padding: 0 15px 13px;
-    color: #e5e1e7;
-    background: #29282d;
+    color: #302d32;
+    background: #fbfaf8;
+    border: 1px solid #e2ddd5;
     border-radius: 6px;
     font-family: var(--mono);
-    font-size: 9px;
+    font-size: 13px;
 }
 
 .console-title {
     margin-inline: -15px;
     padding: 10px 15px;
-    color: #d0cbd2;
-    border-bottom: 1px solid #514e56;
+    color: #514c45;
+    background: #ece9e3;
+    border-bottom: 1px solid #ddd7ce;
 }
 
 .console-title span,
 .console-prompt,
 .console-input-line > span:first-child {
-    color: #b69ae9;
+    color: var(--lavender-ink);
 }
 
 .console-window p {
@@ -950,7 +877,7 @@ h2 {
 .console-caret {
     width: 5px;
     height: 12px;
-    background: #b69ae9;
+    background: var(--lavender-ink);
 }
 
 .console-demo > .button {
@@ -958,8 +885,7 @@ h2 {
 }
 
 .closing-section {
-    padding-block: 93px;
-    background: #29282d;
+    padding-block: 56px 0;
     text-align: center;
 }
 
@@ -970,37 +896,38 @@ h2 {
 .closing-star {
     display: inline-block;
     margin-bottom: 17px;
-    color: #f18a70;
+    color: var(--coral-strong);
     font-size: 27px;
 }
 
 .closing-content h2 {
-    color: var(--white);
     font-size: clamp(34px, 4vw, 46px);
 }
 
 .closing-content > p:not(.eyebrow) {
-    max-width: 500px;
+    max-width: 560px;
     margin: 0 auto 25px;
-    color: #d0cbd2;
 }
 
 .site-footer {
-    min-height: 65px;
-    color: #b9b3aa;
-    background: #222125;
-    font-size: 10px;
+    padding-block: 28px;
+    color: var(--muted);
+    background: var(--paper);
+    border-top: 1px solid var(--line);
+    font-size: 13px;
 }
 
-.footer-content a {
-    color: #e1dcd5;
+.footer-heading {
+    margin: 0 0 10px;
+    color: var(--muted);
     font-family: var(--mono);
-    font-size: 9px;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
 }
 
-.footer-content a span {
-    padding-left: 6px;
-    color: #f18a70;
+.footer-note {
+    margin: 18px 0 0;
 }
 
 /* ---------- Header progress ---------- */
@@ -1015,22 +942,19 @@ h2 {
     border: 1px solid #cfe8d8;
     border-radius: 999px;
     font-family: var(--mono);
-    font-size: 10px;
+    font-size: 13px;
     font-weight: 700;
     white-space: nowrap;
 }
 
 .progress-label {
-    color: #4f7a60;
+    color: #3f6a50;
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    font-size: 8px;
+    font-size: 11px;
 }
 
-.code-card .code-comment {
-    color: #6f6a64;
-}
 
 /* ---------- New lessons: functions, loops, create ---------- */
 
@@ -1039,11 +963,6 @@ h2 {
     margin-top: 18px;
 }
 
-
-.loops-section .lesson-number {
-    color: var(--lavender-ink);
-    background: #e8e4f6;
-}
 
 .loop-cards {
     display: flex;
@@ -1058,12 +977,12 @@ h2 {
     background: var(--white);
     border: 1px solid #e6e1d9;
     border-radius: 6px;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 700;
 }
 
 .loop-card.is-highlighted {
-    color: var(--coral-dark);
+    color: var(--coral-text);
     background: var(--peach);
     border-color: var(--coral);
     box-shadow: 0 0 0 3px rgba(239, 112, 85, 0.14);
@@ -1088,7 +1007,7 @@ h2 {
     background: var(--white);
     border: 1px solid #eeeae4;
     border-radius: 6px;
-    font-size: 12px;
+    font-size: 14px;
     overflow-wrap: anywhere;
 }
 
@@ -1100,12 +1019,73 @@ h2 {
     background: #fdeeee;
     border: 1px solid #f3d0d0;
     border-radius: 5px;
-    font-size: 10px;
+    font-size: 13px;
     font-weight: 700;
 }
 
 .todo-remove:hover {
     background: #fadcdc;
+}
+
+/* ---------- Lesson details: how it works, more examples, watch out ---------- */
+
+.lesson-more {
+    margin-top: 56px;
+    padding-top: 40px;
+    border-top: 1px solid var(--line);
+    text-align: left;
+}
+
+.more-block {
+    max-width: 760px;
+}
+
+/* On the chapter pages the text column sits in the middle. */
+.chapter-intro .more-block,
+.closing-section .more-block {
+    margin-inline: auto;
+}
+
+.more-block + .more-block {
+    margin-top: 40px;
+}
+
+.more-block h3 {
+    margin-bottom: 12px;
+    font-size: 22px;
+    letter-spacing: -0.03em;
+}
+
+.more-block p,
+.more-block li {
+    color: #4d4842;
+    font-size: 16px;
+    line-height: 1.75;
+}
+
+.more-block ol,
+.more-block ul {
+    margin: 0 0 16px;
+    padding-left: 22px;
+}
+
+.more-block li + li {
+    margin-top: 8px;
+}
+
+.more-block code {
+    color: #6f5cac;
+    font-family: var(--mono);
+    font-size: 0.9em;
+}
+
+.more-block pre code {
+    color: inherit;
+    font-size: inherit;
+}
+
+.more-block .code-card {
+    margin: 4px 0 20px;
 }
 
 /* ---------- Code challenges ---------- */
@@ -1135,11 +1115,11 @@ h2 {
 .challenge-badge {
     margin: 0;
     padding: 4px 8px;
-    color: var(--coral-dark);
+    color: var(--coral-text);
     background: var(--peach);
     border-radius: 4px;
     font-family: var(--mono);
-    font-size: 9px;
+    font-size: 11px;
     letter-spacing: 0.08em;
     text-transform: uppercase;
 }
@@ -1156,7 +1136,7 @@ h2 {
     color: #6b665f;
     background: #f3f1ed;
     border-radius: 999px;
-    font-size: 10px;
+    font-size: 13px;
     font-weight: 700;
 }
 
@@ -1169,7 +1149,7 @@ h2 {
     max-width: 780px;
     margin-bottom: 20px;
     color: var(--muted);
-    font-size: 13px;
+    font-size: 15px;
     line-height: 1.8;
 }
 
@@ -1201,13 +1181,13 @@ h2 {
     width: 100%;
     min-height: 160px;
     padding: 14px 16px;
-    color: #ece8ef;
-    background: #29282d;
-    border: 1px solid #29282d;
+    color: #302d32;
+    background: #fbfaf8;
+    border: 1px solid #cfc9c0;
     border-radius: 7px;
-    caret-color: #f18a70;
+    caret-color: var(--coral-strong);
     font-family: var(--mono);
-    font-size: 12px;
+    font-size: 14px;
     line-height: 1.75;
     tab-size: 4;
     white-space: pre;
@@ -1222,9 +1202,18 @@ h2 {
 
 .editor-tip {
     margin: 8px 0 14px;
-    color: #77716a;
+    color: var(--muted);
     font-family: var(--mono);
-    font-size: 9px;
+    font-size: 11px;
+}
+
+/* "Practice area" uses the same label style as "Your code" next to it. */
+.challenge-result .stage-label {
+    margin-bottom: 6px;
+    color: #625d56;
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 700;
 }
 
 .challenge-stage {
@@ -1250,7 +1239,7 @@ h2 {
     margin: 0 0 12px;
     padding-left: 20px;
     color: #4d4842;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .challenge-feedback {
@@ -1260,7 +1249,7 @@ h2 {
     background: #f7f5f1;
     border-left: 4px solid #d8d2c9;
     border-radius: 6px;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 1.7;
     overflow-wrap: anywhere;
 }
@@ -1293,23 +1282,24 @@ h2 {
     display: block;
     margin-top: 6px;
     font-family: var(--mono);
-    font-size: 10px;
+    font-size: 13px;
 }
 
 .challenge-console {
     margin-top: 14px;
     padding: 0 14px 12px;
-    color: #e5e1e7;
-    background: #29282d;
+    color: #302d32;
+    background: #fbfaf8;
+    border: 1px solid #e2ddd5;
     border-radius: 6px;
     font-family: var(--mono);
-    font-size: 10px;
+    font-size: 13px;
 }
 
 .challenge-console .console-title {
     margin-inline: -14px;
     padding: 8px 14px;
-    font-size: 9px;
+    font-size: 11px;
 }
 
 .challenge-console p {
@@ -1319,25 +1309,25 @@ h2 {
 }
 
 .challenge-console .console-empty {
-    color: #b3adb7;
+    color: var(--muted);
 }
 
 .console-line.is-warn {
-    color: #f1ce83;
+    color: #785200;
 }
 
 .console-line.is-error {
-    color: #f49b85;
+    color: #a3302a;
 }
 
 .closing-content > .closing-progress {
     max-width: 500px;
     margin: 0 auto 25px;
     padding: 10px 14px;
-    color: #cfe8d8;
-    background: #2f3b34;
+    color: #24563a;
+    background: #e9f6ee;
     border-radius: 7px;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 /* ---------- Pages: one lesson at a time ----------
@@ -1367,31 +1357,20 @@ main {
 
 .page:target,
 main:not(:has(.page:target)) #home {
-    display: block;
+    display: flex;
+    flex-direction: column;
     /* Fill the space down to the footer. */
     flex: 1 0 auto;
 }
 
-/* ---------- Header: lesson strip ---------- */
-
-.site-header {
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    min-height: 0;
-}
-
-.header-content {
-    min-height: 58px;
-}
+/* ---------- Footer: the list of all lessons ---------- */
 
 .lesson-nav {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 6px 18px;
-    padding-block: 0 12px;
-    overflow-x: auto;
-    font-size: 12px;
+    font-size: 14px;
     scrollbar-width: thin;
 }
 
@@ -1414,19 +1393,19 @@ main:not(:has(.page:target)) #home {
     color: #625d56;
     border-radius: 7px;
     font-family: var(--mono);
-    font-size: 11px;
+    font-size: 13px;
 }
 
 .lesson-nav .nav-text {
     padding-inline: 8px;
     font-family: var(--sans);
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 600;
     white-space: nowrap;
 }
 
 .lesson-nav .nav-group-label {
-    color: #8b867f;
+    color: var(--muted);
     font-weight: 500;
 }
 
@@ -1466,83 +1445,49 @@ body:has(#lesson-14:target) .lesson-nav a[href="#lesson-14"],
 body:has(#finish:target) .lesson-nav a[href="#finish"],
 body:not(:has(.page:target)) .lesson-nav a[href="#home"] {
     color: var(--white);
-    background: var(--coral);
+    background: var(--coral-strong);
 }
 
-.footer-content a:hover {
-    color: var(--coral-dark);
+/* ---------- Bottom navigation ----------
+   Every page ends with a <nav class="pager">. "position: sticky" with
+   "bottom: 0" keeps it stuck to the bottom of the window while you scroll
+   through the page, so Previous and Next are always in reach. */
+
+.pager {
+    position: sticky;
+    bottom: 0;
+    z-index: 10;
+    /* "auto" pushes the bar down to the bottom on short pages. */
+    margin-top: auto;
+    padding-block: 10px;
+    background: var(--paper);
+    border-top: 1px solid var(--line);
 }
 
-/* ---------- Lesson bar (top) and pager (bottom) ---------- */
-
-.lesson-bar {
+.pager-inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 12px;
-    margin-bottom: 36px;
-    padding: 6px;
-    background: var(--white);
-    border: 1px solid var(--line);
-    border-radius: 10px;
 }
 
-.lesson-bar-title {
-    margin: 0;
-    color: #625d56;
-    font-size: 12px;
-    text-align: center;
-}
-
-.lesson-bar-chapter {
-    margin-right: 6px;
-    color: #8b867f;
-    font-family: var(--mono);
-    font-size: 10px;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-}
-
-.caret-link {
-    display: grid;
-    width: 40px;
-    height: 40px;
-    flex: 0 0 auto;
-    place-items: center;
-    color: #504a43;
-    background: var(--paper);
-    border: 1px solid var(--line);
-    border-radius: 8px;
-    font-size: 22px;
-    line-height: 1;
-}
-
-.caret-link:hover {
-    color: var(--white);
-    background: var(--coral);
-    border-color: var(--coral);
-}
-
-.pager {
-    display: flex;
-    justify-content: space-between;
-    gap: 12px;
-    margin-top: 48px;
-    padding-top: 24px;
-    border-top: 1px solid var(--line);
+.pager-link,
+.pager-spacer {
+    flex: 1 1 0;
+    min-width: 0;
+    max-width: 340px;
 }
 
 .pager-link {
     display: flex;
-    max-width: 48%;
     align-items: center;
-    gap: 14px;
-    padding: 12px 16px;
+    gap: 12px;
+    padding: 8px 14px;
     color: var(--ink);
     background: var(--white);
     border: 1px solid var(--line);
     border-radius: 10px;
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 700;
 }
 
@@ -1551,46 +1496,58 @@ body:not(:has(.page:target)) .lesson-nav a[href="#home"] {
 }
 
 .pager-next {
-    margin-left: auto;
+    justify-content: flex-end;
     text-align: right;
+}
+
+.pager-text {
+    min-width: 0;
 }
 
 .pager-text small {
     display: block;
-    color: #8b867f;
+    color: var(--muted);
     font-family: var(--mono);
-    font-size: 9px;
+    font-size: 11px;
     font-weight: 400;
     letter-spacing: 0.08em;
     text-transform: uppercase;
 }
 
+/* Leave some room between the page content and the bottom bar. */
+.page > :has(+ .pager) {
+    margin-bottom: 56px;
+}
+
+/* Long titles end with "…" instead of wrapping onto a second line. */
+.pager-title {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
 .pager-caret {
-    color: var(--coral);
+    color: var(--coral-strong);
     font-size: 24px;
     line-height: 1;
 }
 
-.chapter-intro .pager,
-.closing-section .pager {
-    border-top-color: #45434a;
-    text-align: left;
+.pager-position {
+    flex: 0 0 auto;
+    margin: 0;
+    color: #625d56;
+    font-size: 14px;
+    text-align: center;
 }
 
-.chapter-intro .pager-link,
-.closing-section .pager-link {
-    color: var(--white);
-    background: #343338;
-    border-color: #4a4850;
-}
-
-.chapter-intro .pager-text small,
-.closing-section .pager-text small {
-    color: #b3adb7;
-}
-
-.chapter-intro .pager-next {
-    text-align: right;
+.pager-chapter {
+    display: block;
+    color: var(--muted);
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
 }
 
 /* ---------- Home: course outline ---------- */
@@ -1621,9 +1578,9 @@ body:not(:has(.page:target)) .lesson-nav a[href="#home"] {
 
 .outline-group h3 {
     margin-bottom: 8px;
-    color: #8b867f;
+    color: var(--muted);
     font-family: var(--mono);
-    font-size: 10px;
+    font-size: 13px;
     font-weight: 400;
     letter-spacing: 0.08em;
     text-transform: uppercase;
@@ -1641,7 +1598,7 @@ body:not(:has(.page:target)) .lesson-nav a[href="#home"] {
     gap: 10px;
     padding: 6px 4px;
     border-radius: 6px;
-    font-size: 13px;
+    font-size: 15px;
 }
 
 .outline-group a:hover {
@@ -1651,7 +1608,7 @@ body:not(:has(.page:target)) .lesson-nav a[href="#home"] {
 .outline-group a.is-solved::after {
     margin-left: auto;
     color: #4f9a6c;
-    font-size: 11px;
+    font-size: 13px;
     content: "✓";
 }
 
@@ -1661,11 +1618,11 @@ body:not(:has(.page:target)) .lesson-nav a[href="#home"] {
     height: 24px;
     flex: 0 0 auto;
     place-items: center;
-    color: var(--coral-dark);
+    color: var(--coral-text);
     background: #fff0e9;
     border-radius: 50%;
     font-family: var(--mono);
-    font-size: 9px;
+    font-size: 11px;
 }
 
 .home-page .pager {
@@ -1673,14 +1630,6 @@ body:not(:has(.page:target)) .lesson-nav a[href="#home"] {
 }
 
 /* ---------- Chapter and closing pages ---------- */
-
-.chapter-intro {
-    padding-block: 96px 48px;
-}
-
-.closing-section {
-    padding-block: 96px 48px;
-}
 
 .closing-buttons {
     justify-content: center;
@@ -1692,27 +1641,19 @@ body:not(:has(.page:target)) .lesson-nav a[href="#home"] {
         gap: 25px;
     }
 
-    .hero-art {
-        min-height: 300px;
-    }
 
-    .orbit {
-        width: 290px;
-        height: 290px;
-    }
-
-    .orbit-two {
-        width: 240px;
-        height: 240px;
-    }
-
-    .orbit-three {
-        width: 185px;
-        height: 185px;
-    }
-
+    /* Stack the explanation above the demo on tablets too, so code
+       snippets have room and don't need to scroll sideways. */
     .lesson-grid {
+        flex-direction: column;
+        align-items: stretch;
         gap: 38px;
+    }
+
+    .lesson-copy,
+    .lesson-grid > .demo-card {
+        width: 100%;
+        flex: auto;
     }
 
     .challenge-body {
@@ -1731,15 +1672,7 @@ body:not(:has(.page:target)) .lesson-nav a[href="#home"] {
         width: min(100% - 36px, 520px);
     }
 
-    .site-header {
-        position: static;
-    }
-
-    .header-content {
-        min-height: 54px;
-    }
-
-    /* On phones the lesson strip wraps onto a few lines. */
+    /* On phones the lesson list wraps onto a few lines. */
     .lesson-nav {
         flex-wrap: wrap;
         gap: 2px 8px;
@@ -1762,15 +1695,25 @@ body:not(:has(.page:target)) .lesson-nav a[href="#home"] {
         padding-inline: 6px;
     }
 
-    .lesson-bar {
-        margin-bottom: 24px;
+    /* The bottom bar is short on phones: just Previous, the lesson
+       number, and Next. The lesson titles are hidden. */
+    .pager-title,
+    .pager-chapter {
+        display: none;
     }
 
     .pager-link {
-        max-width: none;
-        flex: 1 1 0;
         padding: 10px 12px;
-        font-size: 12px;
+        font-size: 14px;
+    }
+
+    .pager-text small {
+        color: var(--ink);
+        font-family: var(--sans);
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0;
+        text-transform: none;
     }
 
     .header-content {
@@ -1780,7 +1723,7 @@ body:not(:has(.page:target)) .lesson-nav a[href="#home"] {
     }
 
     .wordmark {
-        font-size: 14px;
+        font-size: 16px;
     }
 
 
@@ -1802,44 +1745,13 @@ body:not(:has(.page:target)) .lesson-nav a[href="#home"] {
         font-size: clamp(46px, 12vw, 64px);
     }
 
-    .hero-art {
-        min-height: 310px;
-    }
-
-    .orbit {
-        width: 285px;
-        height: 285px;
-    }
-
-    .orbit-two {
-        width: 235px;
-        height: 235px;
-    }
-
-    .orbit-three {
-        width: 185px;
-        height: 185px;
-    }
-
-    .code-window {
-        width: min(370px, 88%);
-    }
-
-    .label-html {
-        right: 2px;
-    }
-
-    .label-css {
-        left: 0;
-    }
-
-    .label-js {
-        right: 0;
+    .window-code p {
+        font-size: 11px;
     }
 
 
     .lesson-section {
-        padding-block: 20px 40px;
+        padding-block: 32px 0;
     }
 
     .lesson-grid {
@@ -1854,13 +1766,13 @@ body:not(:has(.page:target)) .lesson-nav a[href="#home"] {
     }
 
     .chapter-intro {
-        padding-block: 70px;
+        padding-block: 40px 0;
     }
 
     .three-steps {
         flex-wrap: wrap;
         gap: 10px;
-        font-size: 9px;
+        font-size: 11px;
     }
 
     .three-steps span:not(.step-arrow) {
@@ -1888,14 +1800,20 @@ body:not(:has(.page:target)) .lesson-nav a[href="#home"] {
         font-size: 18px;
     }
 
-    .closing-section {
-        padding-block: 72px;
+    /* Two buttons per row, so no button ends up alone on a line. */
+    .challenge-editor .button-row .button {
+        flex: 1 1 calc(50% - 4px);
     }
 
-    .footer-content {
-        flex-wrap: wrap;
-        gap: 8px;
-        padding-block: 15px;
+    /* 16px text stops phones from zooming in when you tap a field. */
+    .text-input,
+    .code-editor {
+        font-size: 16px;
     }
+
+    .closing-section {
+        padding-block: 40px 0;
+    }
+
 }
 

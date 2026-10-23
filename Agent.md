@@ -389,8 +389,8 @@ page. Every page is a `<section class="page" id="lesson-04">`, and CSS
 shows only the section named in the address bar (`index.html#lesson-04`)
 using the `:target` selector. No JavaScript is needed to switch pages.
 
-Each lesson page has ‹ › carets at the top, Previous / Next links at the
-bottom, and the header lists every lesson. When adding a lesson, update all
+Each page ends with a Previous / Next bar that stays at the bottom of the
+window, and the footer lists every lesson. When adding a lesson, update all
 of these, the home page outline, and the "current page" selector list in
 `style.css`.
 

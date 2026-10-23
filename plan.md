@@ -93,6 +93,13 @@ The next stage should expand the site from a single-page lesson walkthrough into
 
 **Known limit:** an infinite loop written by the learner (e.g. in lesson 13) will freeze the tab, and plain JavaScript can't stop it. The loop challenge will warn about this, and its starter code will already include a correct loop condition.
 
+## Phase 8: UI/UX polish (completed)
+- [x] Raise the smallest text sizes (code snippets 13px, labels 11px) and fix low-contrast colors
+- [x] One light design on every page: no dark chapter pages, footer, editors, or consoles; one accent color
+- [x] Navigation at the bottom: a sticky Previous / Next bar on every page, and the full lesson list in the footer
+- [x] Longer lessons: "How it works", "More examples", and "Watch out for" sections on every page
+- [x] Phone and tablet fixes: stacked layout below 850px, no zoom on input focus, no hidden navigation links
+
 ## Later ideas (not scheduled)
 - [ ] Add a more structured lesson navigation system with visible chapter progress and jump links
 - [ ] Add interactive practice challenges with "Try it" and "Reset" controls for each new concept

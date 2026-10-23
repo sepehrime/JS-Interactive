@@ -28,33 +28,6 @@
           <span id="challengeProgress">0 / 11 solved</span></span
         >
       </div>
-        <nav class="page-width lesson-nav" aria-label="Lessons">
-          <a class="nav-text" href="#home">Home</a>
-          <span class="nav-group">
-            <a class="nav-text nav-group-label" href="#lesson-01">HTML &amp; CSS</a>
-            <a href="#lesson-01" title="01 · HTML is the structure" aria-label="Lesson 1: HTML is the structure">01</a>
-            <a href="#lesson-02" title="02 · CSS is the style" aria-label="Lesson 2: CSS is the style">02</a>
-          </span>
-          <span class="nav-group">
-            <a class="nav-text nav-group-label" href="#lesson-03">JavaScript</a>
-            <a href="#lesson-03" title="03 · JavaScript adds behavior" aria-label="Lesson 3: JavaScript adds behavior">03</a>
-            <a href="#lesson-04" title="04 · Select an element" aria-label="Lesson 4: Select an element">04</a>
-            <a href="#lesson-05" title="05 · Elements have content" aria-label="Lesson 5: Elements have content">05</a>
-            <a href="#lesson-06" title="06 · Change the page" aria-label="Lesson 6: Change the page">06</a>
-            <a href="#lesson-07" title="07 · Change a style" aria-label="Lesson 7: Change a style">07</a>
-            <a href="#lesson-08" title="08 · Listen for an event" aria-label="Lesson 8: Listen for an event">08</a>
-            <a href="#lesson-09" title="09 · Read user input" aria-label="Lesson 9: Read user input">09</a>
-            <a href="#lesson-10" title="10 · Select multiple elements" aria-label="Lesson 10: Select multiple elements">10</a>
-            <a href="#lesson-11" title="11 · Meet the console" aria-label="Lesson 11: Meet the console">11</a>
-          </span>
-          <span class="nav-group">
-            <a class="nav-text nav-group-label" href="#next-steps">Next steps</a>
-            <a href="#lesson-12" title="12 · Write a function" aria-label="Lesson 12: Write a function">12</a>
-            <a href="#lesson-13" title="13 · Loop through a list" aria-label="Lesson 13: Loop through a list">13</a>
-            <a href="#lesson-14" title="14 · Create and remove elements" aria-label="Lesson 14: Create and remove elements">14</a>
-          </span>
-          <a class="nav-text" href="#finish">Finish</a>
-        </nav>
     </header>
 
     <main>
@@ -78,9 +51,6 @@
           class="hero-art"
           aria-label="A visual showing HTML, CSS, and JavaScript working together"
         >
-          <div class="orbit orbit-one"></div>
-          <div class="orbit orbit-two"></div>
-          <div class="orbit orbit-three"></div>
           <div class="code-window">
             <div class="window-top">
               <span></span><span></span><span></span
@@ -103,9 +73,8 @@
               <p>
                 <span class="code-muted">03</span>
                 <span class="code-blue">button</span>.<span class="code-yellow"
-                  >onclick</span
-                >
-                = <span class="code-green">sayHello</span>;
+                  >addEventListener</span
+                >(<span class="code-green">"click"</span>, sayHello);
               </p>
             </div>
             <div class="window-result">
@@ -152,12 +121,15 @@
             </div>
           </div>
         </div>
-        <nav class="page-width pager" aria-label="Previous and next page">
-          <span></span>
-          <a class="pager-link pager-next" href="#lesson-01"
-            ><span class="pager-text"><small>Next</small> 01 · HTML is the structure</span
-            ><span class="pager-caret" aria-hidden="true">›</span></a
-          >
+        <nav class="pager" aria-label="Previous and next page">
+          <div class="page-width pager-inner">
+            <span class="pager-spacer"></span>
+            <p class="pager-position"><span class="pager-chapter"></span> </p>
+            <a class="pager-link pager-next" href="#lesson-01"
+              ><span class="pager-text"><small>Next</small> <span class="pager-title">01 · HTML is the structure</span></span
+              ><span class="pager-caret" aria-hidden="true">›</span></a
+            >
+          </div>
         </nav>
       </section>
 
@@ -165,18 +137,6 @@
         class="page lesson-section html-section"
         aria-labelledby="html-title"
       >
-        <div class="page-width lesson-bar">
-          <a class="caret-link" href="#home" aria-label="Previous: Home"
-            ><span aria-hidden="true">‹</span></a
-          >
-          <p class="lesson-bar-title">
-            <span class="lesson-bar-chapter">HTML & CSS</span>
-            Lesson 1 of 14
-          </p>
-          <a class="caret-link" href="#lesson-02" aria-label="Next: 02 · CSS is the style"
-            ><span aria-hidden="true">›</span></a
-          >
-        </div>
         <div class="page-width lesson-grid">
           <div class="lesson-copy">
             <p class="eyebrow">
@@ -227,15 +187,71 @@
             </p>
           </div>
         </div>
-        <nav class="page-width pager" aria-label="Previous and next page">
-          <a class="pager-link pager-prev" href="#home"
-            ><span class="pager-caret" aria-hidden="true">‹</span
-            ><span class="pager-text"><small>Previous</small> Home</span></a
-          >
-          <a class="pager-link pager-next" href="#lesson-02"
-            ><span class="pager-text"><small>Next</small> 02 · CSS is the style</span
-            ><span class="pager-caret" aria-hidden="true">›</span></a
-          >
+        <div class="page-width lesson-more">
+          <div class="more-block">
+            <h3>How it works</h3>
+            <p>An HTML file is plain text. The browser reads it from top to bottom and turns every tag it finds into an <strong>element</strong> on the page. Each element has a job: <code>&lt;h1&gt;</code> is the main heading, <code>&lt;p&gt;</code> is a paragraph, <code>&lt;button&gt;</code> is something you can press.</p>
+            <p>Most elements are written as a pair of tags with content in between:</p>
+            <ol>
+              <li>The <strong>opening tag</strong>, such as <code>&lt;p&gt;</code>, says where the element starts.</li>
+              <li>The <strong>content</strong> is the text (or other elements) inside it.</li>
+              <li>The <strong>closing tag</strong>, such as <code>&lt;/p&gt;</code>, has a slash and says where it ends.</li>
+            </ol>
+            <p>Some elements, like <code>&lt;img&gt;</code> and <code>&lt;input&gt;</code>, have no content, so they have no closing tag.</p>
+          </div>
+          <div class="more-block">
+            <h3>More examples</h3>
+            <p>Tags can hold extra information called <strong>attributes</strong>. An attribute is written inside the opening tag as <code>name="value"</code>. Two attributes matter a lot later: <code>id</code> gives one element a unique name, and <code>class</code> puts an element into a group.</p>
+            <div class="code-card">
+              <div class="code-card-heading">
+                <span>ATTRIBUTES: ID AND CLASS</span
+                ><span class="code-language">HTML</span>
+              </div>
+              <pre><code><span class="code-pink">&lt;h1</span> id=<span class="code-green">"pageTitle"</span><span class="code-pink">&gt;</span>My first page<span class="code-pink">&lt;/h1&gt;</span>
+
+<span class="code-pink">&lt;p</span> class=<span class="code-green">"note"</span><span class="code-pink">&gt;</span>This paragraph is in the "note" group.<span class="code-pink">&lt;/p&gt;</span>
+<span class="code-pink">&lt;p</span> class=<span class="code-green">"note"</span><span class="code-pink">&gt;</span>So is this one.<span class="code-pink">&lt;/p&gt;</span>
+
+<span class="code-pink">&lt;a</span> href=<span class="code-green">"https://example.com"</span><span class="code-pink">&gt;</span>A link to another page<span class="code-pink">&lt;/a&gt;</span></code></pre>
+            </div>
+            <p>Elements can also sit inside other elements. This is called <strong>nesting</strong>. A list is a good example: the <code>&lt;ul&gt;</code> element holds several <code>&lt;li&gt;</code> (list item) elements.</p>
+            <div class="code-card">
+              <div class="code-card-heading">
+                <span>ELEMENTS INSIDE ELEMENTS</span
+                ><span class="code-language">HTML</span>
+              </div>
+              <pre><code><span class="code-pink">&lt;ul&gt;</span>
+  <span class="code-pink">&lt;li&gt;</span>Learn HTML<span class="code-pink">&lt;/li&gt;</span>
+  <span class="code-pink">&lt;li&gt;</span>Learn CSS<span class="code-pink">&lt;/li&gt;</span>
+  <span class="code-pink">&lt;li&gt;</span>Learn JavaScript<span class="code-pink">&lt;/li&gt;</span>
+<span class="code-pink">&lt;/ul&gt;</span>
+
+<span class="code-pink">&lt;label</span> for=<span class="code-green">"nameInput"</span><span class="code-pink">&gt;</span>Your name<span class="code-pink">&lt;/label&gt;</span>
+<span class="code-pink">&lt;input</span> id=<span class="code-green">"nameInput"</span> type=<span class="code-green">"text"</span><span class="code-pink">&gt;</span></code></pre>
+            </div>
+            <p>The <code>&lt;label&gt;</code> describes the input next to it. Its <code>for</code> attribute matches the input's <code>id</code>, so clicking the label puts the cursor in the field.</p>
+          </div>
+          <div class="more-block">
+            <h3>Watch out for</h3>
+            <ul>
+              <li><strong>Forgetting a closing tag.</strong> If you leave out <code>&lt;/p&gt;</code>, the browser guesses where the paragraph ends, and it may guess wrong.</li>
+              <li><strong>Closing in the wrong order.</strong> Close the inner element first: <code>&lt;p&gt;&lt;strong&gt;Hi&lt;/strong&gt;&lt;/p&gt;</code>, not <code>&lt;p&gt;&lt;strong&gt;Hi&lt;/p&gt;&lt;/strong&gt;</code>.</li>
+              <li><strong>Reusing an id.</strong> An <code>id</code> must be unique on the page. Use a <code>class</code> when several elements belong together.</li>
+            </ul>
+          </div>
+        </div>
+        <nav class="pager" aria-label="Previous and next page">
+          <div class="page-width pager-inner">
+            <a class="pager-link pager-prev" href="#home"
+              ><span class="pager-caret" aria-hidden="true">‹</span
+              ><span class="pager-text"><small>Previous</small> <span class="pager-title">Home</span></span></a
+            >
+            <p class="pager-position"><span class="pager-chapter">HTML &amp; CSS</span> Lesson 1 of 14</p>
+            <a class="pager-link pager-next" href="#lesson-02"
+              ><span class="pager-text"><small>Next</small> <span class="pager-title">02 · CSS is the style</span></span
+              ><span class="pager-caret" aria-hidden="true">›</span></a
+            >
+          </div>
         </nav>
       </section>
 
@@ -243,18 +259,6 @@
         class="page lesson-section css-section"
         aria-labelledby="css-title"
       >
-        <div class="page-width lesson-bar">
-          <a class="caret-link" href="#lesson-01" aria-label="Previous: 01 · HTML is the structure"
-            ><span aria-hidden="true">‹</span></a
-          >
-          <p class="lesson-bar-title">
-            <span class="lesson-bar-chapter">HTML & CSS</span>
-            Lesson 2 of 14
-          </p>
-          <a class="caret-link" href="#lesson-03" aria-label="Next: 03 · JavaScript adds behavior"
-            ><span aria-hidden="true">›</span></a
-          >
-        </div>
         <div class="page-width lesson-grid">
           <div class="lesson-copy">
             <p class="eyebrow">
@@ -304,15 +308,81 @@
             </p>
           </div>
         </div>
-        <nav class="page-width pager" aria-label="Previous and next page">
-          <a class="pager-link pager-prev" href="#lesson-01"
-            ><span class="pager-caret" aria-hidden="true">‹</span
-            ><span class="pager-text"><small>Previous</small> 01 · HTML is the structure</span></a
-          >
-          <a class="pager-link pager-next" href="#lesson-03"
-            ><span class="pager-text"><small>Next</small> 03 · JavaScript adds behavior</span
-            ><span class="pager-caret" aria-hidden="true">›</span></a
-          >
+        <div class="page-width lesson-more">
+          <div class="more-block">
+            <h3>How it works</h3>
+            <p>A CSS file is a list of <strong>rules</strong>. Each rule has two parts: a <strong>selector</strong> that says which elements to style, and a block of <strong>declarations</strong> in curly braces that says how they should look.</p>
+            <div class="code-card">
+              <div class="code-card-heading">
+                <span>THE PARTS OF A RULE</span
+                ><span class="code-language">CSS</span>
+              </div>
+              <pre><code><span class="code-comment">/* selector */</span>
+<span class="code-purple">.note</span> {
+  <span class="code-yellow">color</span>: <span class="code-green">gray;          /* property: value; */</span>
+  <span class="code-yellow">font-size</span>: <span class="code-green">14px</span>;
+}</code></pre>
+            </div>
+            <p>Every declaration is a <strong>property</strong> (what to change), a colon, a <strong>value</strong> (what to change it to), and a semicolon. The browser goes through every rule and applies it to every element the selector matches.</p>
+          </div>
+          <div class="more-block">
+            <h3>More examples</h3>
+            <p>There are three selectors you will use all the time. The same three work in JavaScript later, so they are worth learning well.</p>
+            <div class="code-card">
+              <div class="code-card-heading">
+                <span>TAG, CLASS, AND ID SELECTORS</span
+                ><span class="code-language">CSS</span>
+              </div>
+              <pre><code><span class="code-comment">/* A tag name: every &lt;p&gt; on the page */</span>
+<span class="code-blue">p</span> {
+  <span class="code-yellow">line-height</span>: <span class="code-green">1.6</span>;
+}
+
+<span class="code-comment">/* A dot + class name: every element with class="note" */</span>
+<span class="code-purple">.note</span> {
+  <span class="code-yellow">background</span>: <span class="code-green">lightyellow</span>;
+}
+
+<span class="code-comment">/* A hash + id: the one element with id="pageTitle" */</span>
+<span class="code-pink">#pageTitle</span> {
+  <span class="code-yellow">color</span>: <span class="code-green">coral</span>;
+}</code></pre>
+            </div>
+            <p>Spacing is controlled by the <strong>box</strong> around each element. <code>padding</code> is the space inside the border, <code>border</code> is the line around the element, and <code>margin</code> is the space outside it, between this element and its neighbors.</p>
+            <div class="code-card">
+              <div class="code-card-heading">
+                <span>PADDING, BORDER, AND MARGIN</span
+                ><span class="code-language">CSS</span>
+              </div>
+              <pre><code><span class="code-purple">.card</span> {
+  <span class="code-yellow">padding</span>: <span class="code-green">16px;              /* space inside */</span>
+  <span class="code-yellow">border</span>: <span class="code-green">1px solid #dddddd;  /* the edge */</span>
+  <span class="code-yellow">margin-bottom</span>: <span class="code-green">24px;        /* space outside */</span>
+  <span class="code-yellow">border-radius</span>: <span class="code-green">8px;         /* rounded corners */</span>
+}</code></pre>
+            </div>
+          </div>
+          <div class="more-block">
+            <h3>Watch out for</h3>
+            <ul>
+              <li><strong>Mixing up <code>.</code> and <code>#</code>.</strong> <code>.note</code> looks for a class, <code>#note</code> looks for an id. If nothing changes, check which one the HTML uses.</li>
+              <li><strong>A missing semicolon or brace.</strong> One missing <code>;</code> or <code>}</code> can stop the next lines from working.</li>
+              <li><strong>Forgetting units.</strong> Write <code>16px</code>, not <code>16</code>. Only <code>0</code> works without a unit.</li>
+            </ul>
+          </div>
+        </div>
+        <nav class="pager" aria-label="Previous and next page">
+          <div class="page-width pager-inner">
+            <a class="pager-link pager-prev" href="#lesson-01"
+              ><span class="pager-caret" aria-hidden="true">‹</span
+              ><span class="pager-text"><small>Previous</small> <span class="pager-title">01 · HTML is the structure</span></span></a
+            >
+            <p class="pager-position"><span class="pager-chapter">HTML &amp; CSS</span> Lesson 2 of 14</p>
+            <a class="pager-link pager-next" href="#lesson-03"
+              ><span class="pager-text"><small>Next</small> <span class="pager-title">03 · JavaScript adds behavior</span></span
+              ><span class="pager-caret" aria-hidden="true">›</span></a
+            >
+          </div>
         </nav>
       </section>
 
@@ -334,15 +404,72 @@
             <span><b>03</b> Change the page</span>
           </div>
         </div>
-        <nav class="page-width pager" aria-label="Previous and next page">
-          <a class="pager-link pager-prev" href="#lesson-02"
-            ><span class="pager-caret" aria-hidden="true">‹</span
-            ><span class="pager-text"><small>Previous</small> 02 · CSS is the style</span></a
-          >
-          <a class="pager-link pager-next" href="#lesson-04"
-            ><span class="pager-text"><small>Next</small> 04 · Select an element</span
-            ><span class="pager-caret" aria-hidden="true">›</span></a
-          >
+        <div class="page-width lesson-more">
+          <div class="more-block">
+            <h3>Where JavaScript lives</h3>
+            <p>JavaScript usually goes in its own file, such as <code>script.js</code>. A <code>&lt;script&gt;</code> tag in the HTML tells the browser to load it. The <code>defer</code> attribute means "wait until the whole page is read before running the script", so every element already exists when your code looks for it.</p>
+            <div class="code-card">
+              <div class="code-card-heading">
+                <span>LINKING A SCRIPT TO THE PAGE</span
+                ><span class="code-language">HTML</span>
+              </div>
+              <pre><code><span class="code-pink">&lt;head&gt;</span>
+  <span class="code-pink">&lt;link</span> rel=<span class="code-green">"stylesheet"</span> href=<span class="code-green">"style.css"</span><span class="code-pink">&gt;</span>
+  <span class="code-pink">&lt;script</span> src=<span class="code-green">"script.js"</span> defer<span class="code-pink">&gt;</span><span class="code-pink">&lt;/script&gt;</span>
+<span class="code-pink">&lt;/head&gt;</span></code></pre>
+            </div>
+            <p>This website works the same way: open <code>index.html</code>, <code>style.css</code>, and <code>script.js</code> side by side to see all three layers.</p>
+          </div>
+          <div class="more-block">
+            <h3>The three steps, in one example</h3>
+            <p>Almost every lesson that follows uses the same pattern. Here it is with all three steps in a few lines:</p>
+            <div class="code-card">
+              <div class="code-card-heading">
+                <span>HTML</span
+                ><span class="code-language">HTML</span>
+              </div>
+              <pre><code><span class="code-pink">&lt;p</span> id=<span class="code-green">"message"</span><span class="code-pink">&gt;</span>Waiting...<span class="code-pink">&lt;/p&gt;</span>
+<span class="code-pink">&lt;button</span> id=<span class="code-green">"helloButton"</span><span class="code-pink">&gt;</span>Say hello<span class="code-pink">&lt;/button&gt;</span></code></pre>
+            </div>
+            <div class="code-card">
+              <div class="code-card-heading">
+                <span>JAVASCRIPT</span
+                ><span class="code-language">JAVASCRIPT</span>
+              </div>
+              <pre><code><span class="code-comment">// 1. Find the elements</span>
+<span class="code-pink">const</span> message = document.<span class="code-blue">querySelector</span>(<span class="code-green">"#message"</span>);
+<span class="code-pink">const</span> helloButton = document.<span class="code-blue">querySelector</span>(<span class="code-green">"#helloButton"</span>);
+
+<span class="code-comment">// 2. Listen for an action</span>
+helloButton.<span class="code-blue">addEventListener</span>(<span class="code-green">"click"</span>, <span class="code-pink">function</span> () {
+  <span class="code-comment">// 3. Change the page</span>
+  message.<span class="code-yellow">textContent</span> = <span class="code-green">"Hello!"</span>;
+});</code></pre>
+            </div>
+            <p>When the visitor clicks the button, the paragraph changes from "Waiting..." to "Hello!". Lessons 4 to 8 take this example apart one step at a time.</p>
+          </div>
+          <div class="more-block">
+            <h3>A few words you'll see a lot</h3>
+            <ul>
+              <li><code>const</code> creates a <strong>variable</strong>: a name that holds a value, so you can use it again later. <code>const message = ...</code> means "from now on, <code>message</code> is this element".</li>
+              <li>Text in quotes, like <code>"Hello!"</code>, is called a <strong>string</strong>.</li>
+              <li>A <code>;</code> ends a statement, like a full stop ends a sentence.</li>
+              <li><code>//</code> starts a <strong>comment</strong>. The browser ignores it. It's a note for people reading the code.</li>
+            </ul>
+          </div>
+        </div>
+        <nav class="pager" aria-label="Previous and next page">
+          <div class="page-width pager-inner">
+            <a class="pager-link pager-prev" href="#lesson-02"
+              ><span class="pager-caret" aria-hidden="true">‹</span
+              ><span class="pager-text"><small>Previous</small> <span class="pager-title">02 · CSS is the style</span></span></a
+            >
+            <p class="pager-position"><span class="pager-chapter">JavaScript basics</span> Lesson 3 of 14</p>
+            <a class="pager-link pager-next" href="#lesson-04"
+              ><span class="pager-text"><small>Next</small> <span class="pager-title">04 · Select an element</span></span
+              ><span class="pager-caret" aria-hidden="true">›</span></a
+            >
+          </div>
         </nav>
       </section>
 
@@ -350,18 +477,6 @@
         class="page lesson-section select-section"
         aria-labelledby="select-title"
       >
-        <div class="page-width lesson-bar">
-          <a class="caret-link" href="#lesson-03" aria-label="Previous: 03 · JavaScript adds behavior"
-            ><span aria-hidden="true">‹</span></a
-          >
-          <p class="lesson-bar-title">
-            <span class="lesson-bar-chapter">JavaScript basics</span>
-            Lesson 4 of 14
-          </p>
-          <a class="caret-link" href="#lesson-05" aria-label="Next: 05 · Elements have content"
-            ><span aria-hidden="true">›</span></a
-          >
-        </div>
         <div class="page-width lesson-grid">
           <div class="lesson-copy">
             <p class="eyebrow">
@@ -422,6 +537,52 @@
             </p>
           </div>
         </div>
+        <div class="page-width lesson-more">
+          <div class="more-block">
+            <h3>How it works</h3>
+            <p><code>document</code> is JavaScript's name for the whole web page. Asking it for an element is like asking "which element on this page matches this description?" The answer is saved in a variable, so you can use the element on the next lines.</p>
+            <ul>
+              <li><code>document.getElementById("selectTitle")</code> takes just the id, with <strong>no</strong> <code>#</code>.</li>
+              <li><code>document.querySelector("#findButton")</code> takes a <strong>CSS selector</strong>, exactly like the ones from lesson 2. That's why it needs the <code>#</code>.</li>
+              <li>If several elements match, <code>querySelector</code> returns the <strong>first</strong> one.</li>
+            </ul>
+          </div>
+          <div class="more-block">
+            <h3>More examples</h3>
+            <p>Because <code>querySelector</code> understands CSS selectors, it can find elements by tag, class, or id:</p>
+            <div class="code-card">
+              <div class="code-card-heading">
+                <span>THREE WAYS TO SELECT</span
+                ><span class="code-language">JAVASCRIPT</span>
+              </div>
+              <pre><code><span class="code-comment">// By id: the element with id="pageTitle"</span>
+<span class="code-pink">const</span> title = document.<span class="code-blue">querySelector</span>(<span class="code-green">"#pageTitle"</span>);
+
+<span class="code-comment">// By class: the first element with class="note"</span>
+<span class="code-pink">const</span> firstNote = document.<span class="code-blue">querySelector</span>(<span class="code-green">".note"</span>);
+
+<span class="code-comment">// By tag: the first &lt;button&gt; on the page</span>
+<span class="code-pink">const</span> firstButton = document.<span class="code-blue">querySelector</span>(<span class="code-green">"button"</span>);</code></pre>
+            </div>
+            <p>These two lines find the same element. Most people use <code>querySelector</code> for everything, because one method handles every kind of selector.</p>
+            <div class="code-card">
+              <div class="code-card-heading">
+                <span>SAME ELEMENT, TWO METHODS</span
+                ><span class="code-language">JAVASCRIPT</span>
+              </div>
+              <pre><code><span class="code-pink">const</span> a = document.<span class="code-blue">getElementById</span>(<span class="code-green">"pageTitle"</span>);
+<span class="code-pink">const</span> b = document.<span class="code-blue">querySelector</span>(<span class="code-green">"#pageTitle"</span>);</code></pre>
+            </div>
+          </div>
+          <div class="more-block">
+            <h3>Watch out for</h3>
+            <ul>
+              <li><strong>The <code>#</code> rule.</strong> <code>querySelector</code> needs <code>#</code> for an id. <code>getElementById</code> must not have it.</li>
+              <li><strong>Spelling and capitals.</strong> <code>"#SelectTitle"</code> does not match <code>id="selectTitle"</code>. JavaScript is case-sensitive.</li>
+              <li><strong>Nothing found.</strong> If no element matches, you get <code>null</code>. Using it later shows an error such as "Cannot read properties of null". That message almost always means the selector is wrong.</li>
+            </ul>
+          </div>
+        </div>
         <div class="page-width">
           <div class="challenge" data-challenge="select" role="group" aria-labelledby="challenge-select-title">
             <div class="challenge-header">
@@ -465,15 +626,18 @@ heading.classList.add("is-selected");</textarea>
             </div>
           </div>
         </div>
-        <nav class="page-width pager" aria-label="Previous and next page">
-          <a class="pager-link pager-prev" href="#lesson-03"
-            ><span class="pager-caret" aria-hidden="true">‹</span
-            ><span class="pager-text"><small>Previous</small> 03 · JavaScript adds behavior</span></a
-          >
-          <a class="pager-link pager-next" href="#lesson-05"
-            ><span class="pager-text"><small>Next</small> 05 · Elements have content</span
-            ><span class="pager-caret" aria-hidden="true">›</span></a
-          >
+        <nav class="pager" aria-label="Previous and next page">
+          <div class="page-width pager-inner">
+            <a class="pager-link pager-prev" href="#lesson-03"
+              ><span class="pager-caret" aria-hidden="true">‹</span
+              ><span class="pager-text"><small>Previous</small> <span class="pager-title">03 · JavaScript adds behavior</span></span></a
+            >
+            <p class="pager-position"><span class="pager-chapter">JavaScript basics</span> Lesson 4 of 14</p>
+            <a class="pager-link pager-next" href="#lesson-05"
+              ><span class="pager-text"><small>Next</small> <span class="pager-title">05 · Elements have content</span></span
+              ><span class="pager-caret" aria-hidden="true">›</span></a
+            >
+          </div>
         </nav>
       </section>
 
@@ -481,18 +645,6 @@ heading.classList.add("is-selected");</textarea>
         class="page lesson-section change-section"
         aria-labelledby="change-title"
       >
-        <div class="page-width lesson-bar">
-          <a class="caret-link" href="#lesson-04" aria-label="Previous: 04 · Select an element"
-            ><span aria-hidden="true">‹</span></a
-          >
-          <p class="lesson-bar-title">
-            <span class="lesson-bar-chapter">JavaScript basics</span>
-            Lesson 5 of 14
-          </p>
-          <a class="caret-link" href="#lesson-06" aria-label="Next: 06 · Change the page"
-            ><span aria-hidden="true">›</span></a
-          >
-        </div>
         <div class="page-width lesson-grid">
           <div class="lesson-copy">
             <p class="eyebrow">
@@ -540,6 +692,46 @@ readOutput.<span class="code-yellow">textContent</span> = paragraph.<span class=
             </p>
           </div>
         </div>
+        <div class="page-width lesson-more">
+          <div class="more-block">
+            <h3>How it works</h3>
+            <p>Once you have an element in a variable, you can ask it questions. <code>textContent</code> is one of its <strong>properties</strong>: a piece of information the element carries. You read it by writing the variable name, a dot, and the property name.</p>
+            <p>The value you get back is a string: the visible text inside the element, without any tags.</p>
+          </div>
+          <div class="more-block">
+            <h3>More examples</h3>
+            <p>You can save the text in a variable, then use it somewhere else on the page:</p>
+            <div class="code-card">
+              <div class="code-card-heading">
+                <span>READ, SAVE, AND REUSE</span
+                ><span class="code-language">JAVASCRIPT</span>
+              </div>
+              <pre><code><span class="code-pink">const</span> heading = document.<span class="code-blue">querySelector</span>(<span class="code-green">"#pageTitle"</span>);
+<span class="code-pink">const</span> copy = document.<span class="code-blue">querySelector</span>(<span class="code-green">"#copy"</span>);
+
+<span class="code-comment">// Read the heading's text and keep it in a variable</span>
+<span class="code-pink">const</span> words = heading.<span class="code-yellow">textContent</span>;
+
+<span class="code-comment">// Put the same words in another element</span>
+copy.<span class="code-yellow">textContent</span> = words;</code></pre>
+            </div>
+            <p><code>textContent</code> includes the text of everything inside the element. For this HTML, reading the paragraph gives <code>"Hello, world"</code>, even though part of it is inside <code>&lt;strong&gt;</code>:</p>
+            <div class="code-card">
+              <div class="code-card-heading">
+                <span>TEXT INSIDE NESTED ELEMENTS</span
+                ><span class="code-language">HTML</span>
+              </div>
+              <pre><code><span class="code-pink">&lt;p</span> id=<span class="code-green">"greeting"</span><span class="code-pink">&gt;</span>Hello, <span class="code-pink">&lt;strong&gt;</span>world<span class="code-pink">&lt;/strong&gt;</span><span class="code-pink">&lt;/p&gt;</span></code></pre>
+            </div>
+          </div>
+          <div class="more-block">
+            <h3>Watch out for</h3>
+            <ul>
+              <li><strong>Capital C.</strong> It's <code>textContent</code>. <code>textcontent</code> or <code>TextContent</code> gives <code>undefined</code>, which means "there's nothing with that name".</li>
+              <li><strong>Reading the element instead of its text.</strong> <code>copy.textContent = heading</code> puts something like "[object HTMLHeadingElement]" on the page. Add <code>.textContent</code> to read the words.</li>
+            </ul>
+          </div>
+        </div>
         <div class="page-width">
           <div class="challenge" data-challenge="read" role="group" aria-labelledby="challenge-read-title">
             <div class="challenge-header">
@@ -584,31 +776,22 @@ copy.textContent = quote.___;</textarea>
             </div>
           </div>
         </div>
-        <nav class="page-width pager" aria-label="Previous and next page">
-          <a class="pager-link pager-prev" href="#lesson-04"
-            ><span class="pager-caret" aria-hidden="true">‹</span
-            ><span class="pager-text"><small>Previous</small> 04 · Select an element</span></a
-          >
-          <a class="pager-link pager-next" href="#lesson-06"
-            ><span class="pager-text"><small>Next</small> 06 · Change the page</span
-            ><span class="pager-caret" aria-hidden="true">›</span></a
-          >
+        <nav class="pager" aria-label="Previous and next page">
+          <div class="page-width pager-inner">
+            <a class="pager-link pager-prev" href="#lesson-04"
+              ><span class="pager-caret" aria-hidden="true">‹</span
+              ><span class="pager-text"><small>Previous</small> <span class="pager-title">04 · Select an element</span></span></a
+            >
+            <p class="pager-position"><span class="pager-chapter">JavaScript basics</span> Lesson 5 of 14</p>
+            <a class="pager-link pager-next" href="#lesson-06"
+              ><span class="pager-text"><small>Next</small> <span class="pager-title">06 · Change the page</span></span
+              ><span class="pager-caret" aria-hidden="true">›</span></a
+            >
+          </div>
         </nav>
       </section>
 
       <section id="lesson-06" class="page lesson-section">
-        <div class="page-width lesson-bar">
-          <a class="caret-link" href="#lesson-05" aria-label="Previous: 05 · Elements have content"
-            ><span aria-hidden="true">‹</span></a
-          >
-          <p class="lesson-bar-title">
-            <span class="lesson-bar-chapter">JavaScript basics</span>
-            Lesson 6 of 14
-          </p>
-          <a class="caret-link" href="#lesson-07" aria-label="Next: 07 · Change a style"
-            ><span aria-hidden="true">›</span></a
-          >
-        </div>
         <div class="page-width lesson-grid">
           <div class="lesson-copy">
             <p class="eyebrow">
@@ -651,6 +834,53 @@ message.<span class="code-yellow">textContent</span> = <span class="code-green">
               The button click changes <code>textContent</code> in the
               paragraph.
             </p>
+          </div>
+        </div>
+        <div class="page-width lesson-more">
+          <div class="more-block">
+            <h3>How it works</h3>
+            <p>Reading and changing use the same property. The difference is which side of the <code>=</code> it's on:</p>
+            <ul>
+              <li>On the <strong>right</strong> of <code>=</code>, you <strong>read</strong> it: <code>const words = message.textContent;</code></li>
+              <li>On the <strong>left</strong> of <code>=</code>, you <strong>change</strong> it: <code>message.textContent = "It worked!";</code></li>
+            </ul>
+            <p>The new text replaces everything that was inside the element. The browser redraws that part of the page immediately, so the visitor sees the change right away. The HTML file itself doesn't change. Reload the page and the original text is back.</p>
+          </div>
+          <div class="more-block">
+            <h3>More examples</h3>
+            <p>You can join strings with <code>+</code> to build a sentence:</p>
+            <div class="code-card">
+              <div class="code-card-heading">
+                <span>BUILDING TEXT WITH +</span
+                ><span class="code-language">JAVASCRIPT</span>
+              </div>
+              <pre><code><span class="code-pink">const</span> status = document.<span class="code-blue">querySelector</span>(<span class="code-green">"#status"</span>);
+
+status.<span class="code-yellow">textContent</span> = <span class="code-green">"Saved at "</span> + <span class="code-green">"3:15 pm"</span>;
+<span class="code-comment">// The page shows: Saved at 3:15 pm</span></code></pre>
+            </div>
+            <p>Setting the text to an empty string clears it. Inputs work a little differently: their text lives in <code>value</code>, not <code>textContent</code>.</p>
+            <div class="code-card">
+              <div class="code-card-heading">
+                <span>CLEARING TEXT AND INPUTS</span
+                ><span class="code-language">JAVASCRIPT</span>
+              </div>
+              <pre><code><span class="code-comment">// Remove all the text from an element</span>
+status.<span class="code-yellow">textContent</span> = <span class="code-green">""</span>;
+
+<span class="code-comment">// Fill in a text field, then empty it again</span>
+<span class="code-pink">const</span> nameInput = document.<span class="code-blue">querySelector</span>(<span class="code-green">"#nameInput"</span>);
+nameInput.<span class="code-yellow">value</span> = <span class="code-green">"Ada"</span>;
+nameInput.<span class="code-yellow">value</span> = <span class="code-green">""</span>;</code></pre>
+            </div>
+          </div>
+          <div class="more-block">
+            <h3>Watch out for</h3>
+            <ul>
+              <li><strong>Quotes around text.</strong> <code>message.textContent = It worked!</code> is an error. Text needs quotes: <code>"It worked!"</code>.</li>
+              <li><strong>Spaces when joining.</strong> <code>"Hello," + "Ada"</code> gives <code>"Hello,Ada"</code>. Add the space inside a quote: <code>"Hello, " + "Ada"</code>.</li>
+              <li><strong>Changing too early.</strong> If the code runs before the element exists, the selector finds nothing. The <code>defer</code> attribute from lesson 3 prevents this.</li>
+            </ul>
           </div>
         </div>
         <div class="page-width">
@@ -696,15 +926,18 @@ message.textContent = "___";</textarea>
             </div>
           </div>
         </div>
-        <nav class="page-width pager" aria-label="Previous and next page">
-          <a class="pager-link pager-prev" href="#lesson-05"
-            ><span class="pager-caret" aria-hidden="true">‹</span
-            ><span class="pager-text"><small>Previous</small> 05 · Elements have content</span></a
-          >
-          <a class="pager-link pager-next" href="#lesson-07"
-            ><span class="pager-text"><small>Next</small> 07 · Change a style</span
-            ><span class="pager-caret" aria-hidden="true">›</span></a
-          >
+        <nav class="pager" aria-label="Previous and next page">
+          <div class="page-width pager-inner">
+            <a class="pager-link pager-prev" href="#lesson-05"
+              ><span class="pager-caret" aria-hidden="true">‹</span
+              ><span class="pager-text"><small>Previous</small> <span class="pager-title">05 · Elements have content</span></span></a
+            >
+            <p class="pager-position"><span class="pager-chapter">JavaScript basics</span> Lesson 6 of 14</p>
+            <a class="pager-link pager-next" href="#lesson-07"
+              ><span class="pager-text"><small>Next</small> <span class="pager-title">07 · Change a style</span></span
+              ><span class="pager-caret" aria-hidden="true">›</span></a
+            >
+          </div>
         </nav>
       </section>
 
@@ -712,18 +945,6 @@ message.textContent = "___";</textarea>
         class="page lesson-section css-js-section"
         aria-labelledby="css-js-title"
       >
-        <div class="page-width lesson-bar">
-          <a class="caret-link" href="#lesson-06" aria-label="Previous: 06 · Change the page"
-            ><span aria-hidden="true">‹</span></a
-          >
-          <p class="lesson-bar-title">
-            <span class="lesson-bar-chapter">JavaScript basics</span>
-            Lesson 7 of 14
-          </p>
-          <a class="caret-link" href="#lesson-08" aria-label="Next: 08 · Listen for an event"
-            ><span aria-hidden="true">›</span></a
-          >
-        </div>
         <div class="page-width lesson-grid">
           <div class="lesson-copy">
             <p class="eyebrow">
@@ -788,6 +1009,63 @@ box.<span class="code-blue">classList</span>.<span class="code-blue">toggle</spa
             </p>
           </div>
         </div>
+        <div class="page-width lesson-more">
+          <div class="more-block">
+            <h3>How it works</h3>
+            <p>There are two ways to change how an element looks:</p>
+            <ol>
+              <li><strong><code>element.style</code></strong> sets one CSS property directly on the element. It's quick, but the look now lives in your JavaScript.</li>
+              <li><strong><code>element.classList</code></strong> adds or removes a class. The look stays in your CSS file, and JavaScript only decides <em>when</em> it applies.</li>
+            </ol>
+            <p>The second way is usually better. If you later want the highlight to be green instead of blue, you change one CSS rule, and every piece of JavaScript that uses the class gets the new look.</p>
+          </div>
+          <div class="more-block">
+            <h3>More examples</h3>
+            <p>With <code>style</code>, CSS property names lose their dashes and the next letter becomes a capital. Values are strings, and sizes need units:</p>
+            <div class="code-card">
+              <div class="code-card-heading">
+                <span>CSS NAMES IN JAVASCRIPT</span
+                ><span class="code-language">JAVASCRIPT</span>
+              </div>
+              <pre><code><span class="code-comment">// CSS: background-color   →  JavaScript: backgroundColor</span>
+box.<span class="code-yellow">style</span>.<span class="code-yellow">backgroundColor</span> = <span class="code-green">"lightblue"</span>;
+
+<span class="code-comment">// CSS: font-size           →  JavaScript: fontSize</span>
+box.<span class="code-yellow">style</span>.<span class="code-yellow">fontSize</span> = <span class="code-green">"20px"</span>;
+
+<span class="code-comment">// CSS: border-radius       →  JavaScript: borderRadius</span>
+box.<span class="code-yellow">style</span>.<span class="code-yellow">borderRadius</span> = <span class="code-green">"12px"</span>;</code></pre>
+            </div>
+            <p>With <code>classList</code>, the look is written once in CSS:</p>
+            <div class="code-card">
+              <div class="code-card-heading">
+                <span>THE CSS</span
+                ><span class="code-language">CSS</span>
+              </div>
+              <pre><code><span class="code-purple">.highlight</span> {
+  <span class="code-yellow">background</span>: <span class="code-green">lightblue</span>;
+  <span class="code-yellow">border</span>: <span class="code-green">2px solid steelblue</span>;
+}</code></pre>
+            </div>
+            <div class="code-card">
+              <div class="code-card-heading">
+                <span>THE JAVASCRIPT</span
+                ><span class="code-language">JAVASCRIPT</span>
+              </div>
+              <pre><code>box.<span class="code-yellow">classList</span>.<span class="code-blue">add</span>(<span class="code-green">"highlight"</span>);     <span class="code-comment">// turn it on</span>
+box.<span class="code-yellow">classList</span>.<span class="code-blue">remove</span>(<span class="code-green">"highlight"</span>);  <span class="code-comment">// turn it off</span>
+box.<span class="code-yellow">classList</span>.<span class="code-blue">toggle</span>(<span class="code-green">"highlight"</span>);  <span class="code-comment">// on if off, off if on</span></code></pre>
+            </div>
+          </div>
+          <div class="more-block">
+            <h3>Watch out for</h3>
+            <ul>
+              <li><strong>No dot in classList.</strong> Write <code>classList.add("highlight")</code>, not <code>classList.add(".highlight")</code>. The dot belongs only in CSS selectors.</li>
+              <li><strong>Missing units.</strong> <code>box.style.width = "200"</code> does nothing. Use <code>"200px"</code>.</li>
+              <li><strong>Dashes in style names.</strong> <code>box.style.background-color</code> is an error. Use <code>backgroundColor</code>.</li>
+            </ul>
+          </div>
+        </div>
         <div class="page-width">
           <div class="challenge" data-challenge="style" role="group" aria-labelledby="challenge-style-title">
             <div class="challenge-header">
@@ -831,15 +1109,18 @@ box.classList.___("highlight");</textarea>
             </div>
           </div>
         </div>
-        <nav class="page-width pager" aria-label="Previous and next page">
-          <a class="pager-link pager-prev" href="#lesson-06"
-            ><span class="pager-caret" aria-hidden="true">‹</span
-            ><span class="pager-text"><small>Previous</small> 06 · Change the page</span></a
-          >
-          <a class="pager-link pager-next" href="#lesson-08"
-            ><span class="pager-text"><small>Next</small> 08 · Listen for an event</span
-            ><span class="pager-caret" aria-hidden="true">›</span></a
-          >
+        <nav class="pager" aria-label="Previous and next page">
+          <div class="page-width pager-inner">
+            <a class="pager-link pager-prev" href="#lesson-06"
+              ><span class="pager-caret" aria-hidden="true">‹</span
+              ><span class="pager-text"><small>Previous</small> <span class="pager-title">06 · Change the page</span></span></a
+            >
+            <p class="pager-position"><span class="pager-chapter">JavaScript basics</span> Lesson 7 of 14</p>
+            <a class="pager-link pager-next" href="#lesson-08"
+              ><span class="pager-text"><small>Next</small> <span class="pager-title">08 · Listen for an event</span></span
+              ><span class="pager-caret" aria-hidden="true">›</span></a
+            >
+          </div>
         </nav>
       </section>
 
@@ -847,18 +1128,6 @@ box.classList.___("highlight");</textarea>
         class="page lesson-section events-section"
         aria-labelledby="events-title"
       >
-        <div class="page-width lesson-bar">
-          <a class="caret-link" href="#lesson-07" aria-label="Previous: 07 · Change a style"
-            ><span aria-hidden="true">‹</span></a
-          >
-          <p class="lesson-bar-title">
-            <span class="lesson-bar-chapter">JavaScript basics</span>
-            Lesson 8 of 14
-          </p>
-          <a class="caret-link" href="#lesson-09" aria-label="Next: 09 · Read user input"
-            ><span aria-hidden="true">›</span></a
-          >
-        </div>
         <div class="page-width lesson-grid">
           <div class="lesson-copy">
             <p class="eyebrow">
@@ -936,6 +1205,61 @@ hoverTarget.<span class="code-blue">addEventListener</span>(<span class="code-gr
             </p>
           </div>
         </div>
+        <div class="page-width lesson-more">
+          <div class="more-block">
+            <h3>How it works</h3>
+            <p><code>addEventListener</code> tells an element: "when this happens to you, run this code". It takes two things in its parentheses:</p>
+            <ol>
+              <li>The <strong>event name</strong> as a string, such as <code>"click"</code>.</li>
+              <li>A <strong>function</strong>: the block of code between <code>function () {</code> and <code>}</code> that should run.</li>
+            </ol>
+            <p>The important idea is <strong>timing</strong>. The code inside the function does not run when the page loads. The browser keeps it and runs it later, every time the event happens. Click five times and it runs five times.</p>
+          </div>
+          <div class="more-block">
+            <h3>More examples</h3>
+            <p>The three events from the demo, with what triggers each one:</p>
+            <ul>
+              <li><code>"click"</code>: the visitor clicks or taps the element (or presses Enter on a focused button).</li>
+              <li><code>"input"</code>: the text in a field changes, once for every key typed or deleted.</li>
+              <li><code>"mouseover"</code>: the mouse pointer moves onto the element.</li>
+            </ul>
+            <p>The <code>input</code> event is great for live previews. This copies whatever you type into a paragraph, letter by letter:</p>
+            <div class="code-card">
+              <div class="code-card-heading">
+                <span>A LIVE PREVIEW</span
+                ><span class="code-language">JAVASCRIPT</span>
+              </div>
+              <pre><code><span class="code-pink">const</span> titleInput = document.<span class="code-blue">querySelector</span>(<span class="code-green">"#titleInput"</span>);
+<span class="code-pink">const</span> preview = document.<span class="code-blue">querySelector</span>(<span class="code-green">"#preview"</span>);
+
+titleInput.<span class="code-blue">addEventListener</span>(<span class="code-green">"input"</span>, <span class="code-pink">function</span> () {
+  preview.<span class="code-yellow">textContent</span> = titleInput.<span class="code-yellow">value</span>;
+});</code></pre>
+            </div>
+            <p>Several elements can each have their own listener, and one element can have more than one:</p>
+            <div class="code-card">
+              <div class="code-card-heading">
+                <span>TWO BUTTONS, TWO LISTENERS</span
+                ><span class="code-language">JAVASCRIPT</span>
+              </div>
+              <pre><code>yesButton.<span class="code-blue">addEventListener</span>(<span class="code-green">"click"</span>, <span class="code-pink">function</span> () {
+  answer.<span class="code-yellow">textContent</span> = <span class="code-green">"You said yes."</span>;
+});
+
+noButton.<span class="code-blue">addEventListener</span>(<span class="code-green">"click"</span>, <span class="code-pink">function</span> () {
+  answer.<span class="code-yellow">textContent</span> = <span class="code-green">"You said no."</span>;
+});</code></pre>
+            </div>
+          </div>
+          <div class="more-block">
+            <h3>Watch out for</h3>
+            <ul>
+              <li><strong>Event names have no "on".</strong> Use <code>"click"</code>, not <code>"onclick"</code>. A wrong name is ignored without any error, so nothing happens.</li>
+              <li><strong>Brackets and parentheses.</strong> The listener ends with <code>});</code>: the <code>}</code> closes the function, the <code>)</code> closes <code>addEventListener(</code>.</li>
+              <li><strong>Mouseover on phones.</strong> Touch screens have no pointer to hover, so use <code>"click"</code> for anything important.</li>
+            </ul>
+          </div>
+        </div>
         <div class="page-width">
           <div class="challenge" data-challenge="events" role="group" aria-labelledby="challenge-events-title">
             <div class="challenge-header">
@@ -982,15 +1306,18 @@ button.addEventListener("___", function () {
             </div>
           </div>
         </div>
-        <nav class="page-width pager" aria-label="Previous and next page">
-          <a class="pager-link pager-prev" href="#lesson-07"
-            ><span class="pager-caret" aria-hidden="true">‹</span
-            ><span class="pager-text"><small>Previous</small> 07 · Change a style</span></a
-          >
-          <a class="pager-link pager-next" href="#lesson-09"
-            ><span class="pager-text"><small>Next</small> 09 · Read user input</span
-            ><span class="pager-caret" aria-hidden="true">›</span></a
-          >
+        <nav class="pager" aria-label="Previous and next page">
+          <div class="page-width pager-inner">
+            <a class="pager-link pager-prev" href="#lesson-07"
+              ><span class="pager-caret" aria-hidden="true">‹</span
+              ><span class="pager-text"><small>Previous</small> <span class="pager-title">07 · Change a style</span></span></a
+            >
+            <p class="pager-position"><span class="pager-chapter">JavaScript basics</span> Lesson 8 of 14</p>
+            <a class="pager-link pager-next" href="#lesson-09"
+              ><span class="pager-text"><small>Next</small> <span class="pager-title">09 · Read user input</span></span
+              ><span class="pager-caret" aria-hidden="true">›</span></a
+            >
+          </div>
         </nav>
       </section>
 
@@ -998,18 +1325,6 @@ button.addEventListener("___", function () {
         class="page lesson-section input-section"
         aria-labelledby="input-title"
       >
-        <div class="page-width lesson-bar">
-          <a class="caret-link" href="#lesson-08" aria-label="Previous: 08 · Listen for an event"
-            ><span aria-hidden="true">‹</span></a
-          >
-          <p class="lesson-bar-title">
-            <span class="lesson-bar-chapter">JavaScript basics</span>
-            Lesson 9 of 14
-          </p>
-          <a class="caret-link" href="#lesson-10" aria-label="Next: 10 · Select multiple elements"
-            ><span aria-hidden="true">›</span></a
-          >
-        </div>
         <div class="page-width lesson-grid">
           <div class="lesson-copy">
             <p class="eyebrow">
@@ -1069,6 +1384,54 @@ button.addEventListener("___", function () {
             </p>
           </div>
         </div>
+        <div class="page-width lesson-more">
+          <div class="more-block">
+            <h3>How it works</h3>
+            <p>An <code>&lt;input&gt;</code> stores what the visitor typed in its <code>value</code> property. The value is read <strong>at the moment the line runs</strong>. That's why the code reads it inside the click listener: at click time, the field holds what the visitor typed.</p>
+            <p><code>if</code> lets the code make a decision:</p>
+            <ol>
+              <li>The part in parentheses is a <strong>question</strong> with a yes or no answer. <code>nameInput.value === ""</code> asks "is the field empty?"</li>
+              <li>If the answer is yes, the code in the first <code>{ }</code> runs.</li>
+              <li>Otherwise, the code after <code>else</code> runs. Exactly one of the two runs, never both.</li>
+            </ol>
+          </div>
+          <div class="more-block">
+            <h3>More examples</h3>
+            <p><code>===</code> checks whether two values are exactly the same. Here's a tiny quiz that compares the typed answer with the right one:</p>
+            <div class="code-card">
+              <div class="code-card-heading">
+                <span>CHECK AN ANSWER</span
+                ><span class="code-language">JAVASCRIPT</span>
+              </div>
+              <pre><code>checkButton.<span class="code-blue">addEventListener</span>(<span class="code-green">"click"</span>, <span class="code-pink">function</span> () {
+  <span class="code-pink">if</span> (answerInput.<span class="code-yellow">value</span> === <span class="code-green">"blue"</span>) {
+    result.<span class="code-yellow">textContent</span> = <span class="code-green">"Correct!"</span>;
+  } <span class="code-pink">else</span> {
+    result.<span class="code-yellow">textContent</span> = <span class="code-green">"Not quite. Try again."</span>;
+  }
+});</code></pre>
+            </div>
+            <p>After using the value, you can clear the field so it's ready for the next entry:</p>
+            <div class="code-card">
+              <div class="code-card-heading">
+                <span>USE THE VALUE, THEN CLEAR THE FIELD</span
+                ><span class="code-language">JAVASCRIPT</span>
+              </div>
+              <pre><code>greetButton.<span class="code-blue">addEventListener</span>(<span class="code-green">"click"</span>, <span class="code-pink">function</span> () {
+  greeting.<span class="code-yellow">textContent</span> = <span class="code-green">"Hello, "</span> + nameInput.<span class="code-yellow">value</span> + <span class="code-green">"!"</span>;
+  nameInput.<span class="code-yellow">value</span> = <span class="code-green">""</span>;
+});</code></pre>
+            </div>
+          </div>
+          <div class="more-block">
+            <h3>Watch out for</h3>
+            <ul>
+              <li><strong>Reading the value too early.</strong> <code>const name = nameInput.value;</code> at the top of the file runs once, when the page loads and the field is still empty. Read it inside the listener.</li>
+              <li><strong><code>=</code> versus <code>===</code>.</strong> One <code>=</code> <em>sets</em> a value. Three <code>===</code> <em>compares</em> two values. Inside <code>if ( )</code> you almost always want <code>===</code>.</li>
+              <li><strong>Exact matches.</strong> <code>"Blue" === "blue"</code> is false, and so is <code>"blue " === "blue"</code> (extra space). Comparisons are exact.</li>
+            </ul>
+          </div>
+        </div>
         <div class="page-width">
           <div class="challenge" data-challenge="input" role="group" aria-labelledby="challenge-input-title">
             <div class="challenge-header">
@@ -1125,15 +1488,18 @@ greetButton.addEventListener("click", function () {
             </div>
           </div>
         </div>
-        <nav class="page-width pager" aria-label="Previous and next page">
-          <a class="pager-link pager-prev" href="#lesson-08"
-            ><span class="pager-caret" aria-hidden="true">‹</span
-            ><span class="pager-text"><small>Previous</small> 08 · Listen for an event</span></a
-          >
-          <a class="pager-link pager-next" href="#lesson-10"
-            ><span class="pager-text"><small>Next</small> 10 · Select multiple elements</span
-            ><span class="pager-caret" aria-hidden="true">›</span></a
-          >
+        <nav class="pager" aria-label="Previous and next page">
+          <div class="page-width pager-inner">
+            <a class="pager-link pager-prev" href="#lesson-08"
+              ><span class="pager-caret" aria-hidden="true">‹</span
+              ><span class="pager-text"><small>Previous</small> <span class="pager-title">08 · Listen for an event</span></span></a
+            >
+            <p class="pager-position"><span class="pager-chapter">JavaScript basics</span> Lesson 9 of 14</p>
+            <a class="pager-link pager-next" href="#lesson-10"
+              ><span class="pager-text"><small>Next</small> <span class="pager-title">10 · Select multiple elements</span></span
+              ><span class="pager-caret" aria-hidden="true">›</span></a
+            >
+          </div>
         </nav>
       </section>
 
@@ -1141,18 +1507,6 @@ greetButton.addEventListener("click", function () {
         class="page lesson-section multiple-section"
         aria-labelledby="multiple-title"
       >
-        <div class="page-width lesson-bar">
-          <a class="caret-link" href="#lesson-09" aria-label="Previous: 09 · Read user input"
-            ><span aria-hidden="true">‹</span></a
-          >
-          <p class="lesson-bar-title">
-            <span class="lesson-bar-chapter">JavaScript basics</span>
-            Lesson 10 of 14
-          </p>
-          <a class="caret-link" href="#lesson-11" aria-label="Next: 11 · Meet the console"
-            ><span aria-hidden="true">›</span></a
-          >
-        </div>
         <div class="page-width lesson-grid">
           <div class="lesson-copy">
             <p class="eyebrow">
@@ -1206,6 +1560,45 @@ countOutput.<span class="code-yellow">textContent</span> =
             </p>
           </div>
         </div>
+        <div class="page-width lesson-more">
+          <div class="more-block">
+            <h3>How it works</h3>
+            <p><code>querySelector</code> stops at the first match. <code>querySelectorAll</code> keeps going and collects <strong>every</strong> matching element into a list (its proper name is a <em>NodeList</em>).</p>
+            <p>The list has a <code>length</code> property that tells you how many elements it holds. If nothing matches, you get an empty list with a length of 0, not an error.</p>
+          </div>
+          <div class="more-block">
+            <h3>More examples</h3>
+            <p>Any CSS selector works, so you can count different groups:</p>
+            <div class="code-card">
+              <div class="code-card-heading">
+                <span>COUNTING GROUPS</span
+                ><span class="code-language">JAVASCRIPT</span>
+              </div>
+              <pre><code><span class="code-pink">const</span> allItems = document.<span class="code-blue">querySelectorAll</span>(<span class="code-green">"li"</span>);
+<span class="code-pink">const</span> notes = document.<span class="code-blue">querySelectorAll</span>(<span class="code-green">".note"</span>);
+<span class="code-pink">const</span> buttonsInCard = document.<span class="code-blue">querySelectorAll</span>(<span class="code-green">".card button"</span>);
+
+summary.<span class="code-yellow">textContent</span> = <span class="code-green">"There are "</span> + allItems.<span class="code-yellow">length</span> + <span class="code-green">" list items."</span>;</code></pre>
+            </div>
+            <p>The last selector, <code>".card button"</code>, means "buttons that are inside an element with the class card". That's the same space-separated selector CSS uses.</p>
+            <p>A list is not a single element, so you can't change all of them at once like this. Lesson 13 shows how to go through the list with a loop and change each one:</p>
+            <div class="code-card">
+              <div class="code-card-heading">
+                <span>THIS DOES NOT WORK (YET)</span
+                ><span class="code-language">JAVASCRIPT</span>
+              </div>
+              <pre><code><span class="code-comment">// A list has no textContent, so nothing changes:</span>
+notes.<span class="code-yellow">textContent</span> = <span class="code-green">"Changed!"</span>;</code></pre>
+            </div>
+          </div>
+          <div class="more-block">
+            <h3>Watch out for</h3>
+            <ul>
+              <li><strong>Using <code>querySelector</code> by mistake.</strong> It returns one element, so <code>.length</code> gives <code>undefined</code>. Check for the word <code>All</code>.</li>
+              <li><strong>Treating the list like one element.</strong> <code>notes.classList.add(...)</code> on a list is an error. Loop over it instead (lesson 13).</li>
+            </ul>
+          </div>
+        </div>
         <div class="page-width">
           <div class="challenge" data-challenge="multiple" role="group" aria-labelledby="challenge-multiple-title">
             <div class="challenge-header">
@@ -1255,15 +1648,18 @@ countOutput.textContent = "There are " + items.___ + " items.";</textarea>
             </div>
           </div>
         </div>
-        <nav class="page-width pager" aria-label="Previous and next page">
-          <a class="pager-link pager-prev" href="#lesson-09"
-            ><span class="pager-caret" aria-hidden="true">‹</span
-            ><span class="pager-text"><small>Previous</small> 09 · Read user input</span></a
-          >
-          <a class="pager-link pager-next" href="#lesson-11"
-            ><span class="pager-text"><small>Next</small> 11 · Meet the console</span
-            ><span class="pager-caret" aria-hidden="true">›</span></a
-          >
+        <nav class="pager" aria-label="Previous and next page">
+          <div class="page-width pager-inner">
+            <a class="pager-link pager-prev" href="#lesson-09"
+              ><span class="pager-caret" aria-hidden="true">‹</span
+              ><span class="pager-text"><small>Previous</small> <span class="pager-title">09 · Read user input</span></span></a
+            >
+            <p class="pager-position"><span class="pager-chapter">JavaScript basics</span> Lesson 10 of 14</p>
+            <a class="pager-link pager-next" href="#lesson-11"
+              ><span class="pager-text"><small>Next</small> <span class="pager-title">11 · Meet the console</span></span
+              ><span class="pager-caret" aria-hidden="true">›</span></a
+            >
+          </div>
         </nav>
       </section>
 
@@ -1271,18 +1667,6 @@ countOutput.textContent = "There are " + items.___ + " items.";</textarea>
         class="page lesson-section console-section"
         aria-labelledby="console-title"
       >
-        <div class="page-width lesson-bar">
-          <a class="caret-link" href="#lesson-10" aria-label="Previous: 10 · Select multiple elements"
-            ><span aria-hidden="true">‹</span></a
-          >
-          <p class="lesson-bar-title">
-            <span class="lesson-bar-chapter">JavaScript basics</span>
-            Lesson 11 of 14
-          </p>
-          <a class="caret-link" href="#next-steps" aria-label="Next: Next steps"
-            ><span aria-hidden="true">›</span></a
-          >
-        </div>
         <div class="page-width lesson-grid">
           <div class="lesson-copy">
             <p class="eyebrow">
@@ -1344,6 +1728,49 @@ countOutput.textContent = "There are " + items.___ + " items.";</textarea>
             </p>
           </div>
         </div>
+        <div class="page-width lesson-more">
+          <div class="more-block">
+            <h3>How it works</h3>
+            <p><code>console.log()</code> prints whatever you put in its parentheses to the <strong>console</strong>, a panel in the browser's Developer Tools. Visitors never see it. It's your private window into what the code is doing.</p>
+            <ol>
+              <li>Open the page in Chrome, Firefox, Edge, or Safari.</li>
+              <li>Right-click anywhere and choose <strong>Inspect</strong> (or press <code>F12</code>, or <code>Cmd + Option + I</code> on a Mac).</li>
+              <li>Click the <strong>Console</strong> tab. Messages from <code>console.log()</code> appear here, together with any errors.</li>
+            </ol>
+          </div>
+          <div class="more-block">
+            <h3>More examples</h3>
+            <p>Log a value to see what JavaScript really has. A label in front makes it easy to find:</p>
+            <div class="code-card">
+              <div class="code-card-heading">
+                <span>LOGGING VALUES</span
+                ><span class="code-language">JAVASCRIPT</span>
+              </div>
+              <pre><code>console.<span class="code-blue">log</span>(<span class="code-green">"Hello from script.js"</span>);
+console.<span class="code-blue">log</span>(<span class="code-green">"Name typed:"</span>, nameInput.<span class="code-yellow">value</span>);
+console.<span class="code-blue">log</span>(<span class="code-green">"Items found:"</span>, items.<span class="code-yellow">length</span>);</code></pre>
+            </div>
+            <p>Log inside a listener to check that it runs. If you click and nothing appears in the console, the listener isn't attached (check the selector and the event name):</p>
+            <div class="code-card">
+              <div class="code-card-heading">
+                <span>IS MY LISTENER RUNNING?</span
+                ><span class="code-language">JAVASCRIPT</span>
+              </div>
+              <pre><code>saveButton.<span class="code-blue">addEventListener</span>(<span class="code-green">"click"</span>, <span class="code-pink">function</span> () {
+  console.<span class="code-blue">log</span>(<span class="code-green">"Save button clicked"</span>);
+  status.<span class="code-yellow">textContent</span> = <span class="code-green">"Saved!"</span>;
+});</code></pre>
+            </div>
+          </div>
+          <div class="more-block">
+            <h3>Reading errors</h3>
+            <p>When something breaks, the console shows a red message with a file name and line number. Two you'll meet often:</p>
+            <ul>
+              <li><strong>"X is not defined"</strong>: JavaScript doesn't know a variable with that name. Look for a typo, or a variable used before the line that creates it.</li>
+              <li><strong>"Cannot read properties of null"</strong>: a selector found nothing, so the variable holds <code>null</code>. Check the <code>#</code> or <code>.</code> and the spelling of the id or class.</li>
+            </ul>
+          </div>
+        </div>
         <div class="page-width">
           <div class="challenge" data-challenge="console" role="group" aria-labelledby="challenge-console-title">
             <div class="challenge-header">
@@ -1387,15 +1814,18 @@ console.log(logInput.___);</textarea>
             </div>
           </div>
         </div>
-        <nav class="page-width pager" aria-label="Previous and next page">
-          <a class="pager-link pager-prev" href="#lesson-10"
-            ><span class="pager-caret" aria-hidden="true">‹</span
-            ><span class="pager-text"><small>Previous</small> 10 · Select multiple elements</span></a
-          >
-          <a class="pager-link pager-next" href="#next-steps"
-            ><span class="pager-text"><small>Next</small> Next steps</span
-            ><span class="pager-caret" aria-hidden="true">›</span></a
-          >
+        <nav class="pager" aria-label="Previous and next page">
+          <div class="page-width pager-inner">
+            <a class="pager-link pager-prev" href="#lesson-10"
+              ><span class="pager-caret" aria-hidden="true">‹</span
+              ><span class="pager-text"><small>Previous</small> <span class="pager-title">10 · Select multiple elements</span></span></a
+            >
+            <p class="pager-position"><span class="pager-chapter">JavaScript basics</span> Lesson 11 of 14</p>
+            <a class="pager-link pager-next" href="#next-steps"
+              ><span class="pager-text"><small>Next</small> <span class="pager-title">Next steps</span></span
+              ><span class="pager-caret" aria-hidden="true">›</span></a
+            >
+          </div>
         </nav>
       </section>
 
@@ -1416,15 +1846,33 @@ console.log(logInput.___);</textarea>
             <span><b>14</b> Build new elements</span>
           </div>
         </div>
-        <nav class="page-width pager" aria-label="Previous and next page">
-          <a class="pager-link pager-prev" href="#lesson-11"
-            ><span class="pager-caret" aria-hidden="true">‹</span
-            ><span class="pager-text"><small>Previous</small> 11 · Meet the console</span></a
-          >
-          <a class="pager-link pager-next" href="#lesson-12"
-            ><span class="pager-text"><small>Next</small> 12 · Write a function</span
-            ><span class="pager-caret" aria-hidden="true">›</span></a
-          >
+        <div class="page-width lesson-more">
+          <div class="more-block">
+            <h3>What you can already do</h3>
+            <p>You've learned the whole cycle: find an element, listen for an event, read some information, and change the page. That's enough to build a lot of small interactive features.</p>
+          </div>
+          <div class="more-block">
+            <h3>What's new in the next three lessons</h3>
+            <ul>
+              <li><strong>Functions with parameters (lesson 12).</strong> Give a block of code a name and reuse it with different values, instead of copying it.</li>
+              <li><strong>Arrays and <code>for</code> loops (lesson 13).</strong> Keep a list of values in one variable, and repeat code once for every item.</li>
+              <li><strong>Creating and removing elements (lesson 14).</strong> Add brand-new elements to the page, and take them away again.</li>
+            </ul>
+            <p>Each of these lessons points out the new idea when it first appears, so you always know what's new and what you've seen before.</p>
+          </div>
+        </div>
+        <nav class="pager" aria-label="Previous and next page">
+          <div class="page-width pager-inner">
+            <a class="pager-link pager-prev" href="#lesson-11"
+              ><span class="pager-caret" aria-hidden="true">‹</span
+              ><span class="pager-text"><small>Previous</small> <span class="pager-title">11 · Meet the console</span></span></a
+            >
+            <p class="pager-position"><span class="pager-chapter">Next steps</span> Chapter intro</p>
+            <a class="pager-link pager-next" href="#lesson-12"
+              ><span class="pager-text"><small>Next</small> <span class="pager-title">12 · Write a function</span></span
+              ><span class="pager-caret" aria-hidden="true">›</span></a
+            >
+          </div>
         </nav>
       </section>
 
@@ -1432,18 +1880,6 @@ console.log(logInput.___);</textarea>
         class="page lesson-section functions-section"
         aria-labelledby="functions-title"
       >
-        <div class="page-width lesson-bar">
-          <a class="caret-link" href="#next-steps" aria-label="Previous: Next steps"
-            ><span aria-hidden="true">‹</span></a
-          >
-          <p class="lesson-bar-title">
-            <span class="lesson-bar-chapter">Next steps</span>
-            Lesson 12 of 14
-          </p>
-          <a class="caret-link" href="#lesson-13" aria-label="Next: 13 · Loop through a list"
-            ><span aria-hidden="true">›</span></a
-          >
-        </div>
         <div class="page-width lesson-grid">
           <div class="lesson-copy">
             <p class="eyebrow">
@@ -1525,6 +1961,64 @@ graceButton.<span class="code-blue">addEventListener</span>(<span class="code-gr
             </p>
           </div>
         </div>
+        <div class="page-width lesson-more">
+          <div class="more-block">
+            <h3>How it works</h3>
+            <p>Writing a function happens in two separate steps:</p>
+            <ol>
+              <li><strong>Define</strong> it: <code>function sayHello(name) { ... }</code> gives a block of code a name. Nothing runs yet.</li>
+              <li><strong>Call</strong> it: <code>sayHello("Ada")</code> runs the block. The value in the parentheses goes into the parameter <code>name</code>.</li>
+            </ol>
+            <p>You can call a function as many times as you like, from as many places as you like. When the code inside needs to change, you change it in one place.</p>
+          </div>
+          <div class="more-block">
+            <h3>More examples</h3>
+            <p>A function without parameters always does the same thing:</p>
+            <div class="code-card">
+              <div class="code-card-heading">
+                <span>NO PARAMETERS</span
+                ><span class="code-language">JAVASCRIPT</span>
+              </div>
+              <pre><code><span class="code-pink">function</span> <span class="code-blue">clearMessage</span>() {
+  message.<span class="code-yellow">textContent</span> = <span class="code-green">""</span>;
+}
+
+clearButton.<span class="code-blue">addEventListener</span>(<span class="code-green">"click"</span>, <span class="code-pink">function</span> () {
+  <span class="code-blue">clearMessage</span>();
+});</code></pre>
+            </div>
+            <p>A parameter makes one function useful in many situations. Here one function shows any message, and three buttons each pass a different one:</p>
+            <div class="code-card">
+              <div class="code-card-heading">
+                <span>ONE FUNCTION, MANY MESSAGES</span
+                ><span class="code-language">JAVASCRIPT</span>
+              </div>
+              <pre><code><span class="code-pink">function</span> <span class="code-blue">showMessage</span>(text) {
+  message.<span class="code-yellow">textContent</span> = text;
+}
+
+saveButton.<span class="code-blue">addEventListener</span>(<span class="code-green">"click"</span>, <span class="code-pink">function</span> () {
+  <span class="code-blue">showMessage</span>(<span class="code-green">"Saved!"</span>);
+});
+
+deleteButton.<span class="code-blue">addEventListener</span>(<span class="code-green">"click"</span>, <span class="code-pink">function</span> () {
+  <span class="code-blue">showMessage</span>(<span class="code-green">"Deleted."</span>);
+});
+
+helpButton.<span class="code-blue">addEventListener</span>(<span class="code-green">"click"</span>, <span class="code-pink">function</span> () {
+  <span class="code-blue">showMessage</span>(<span class="code-green">"Click Save to keep your work."</span>);
+});</code></pre>
+            </div>
+          </div>
+          <div class="more-block">
+            <h3>Watch out for</h3>
+            <ul>
+              <li><strong>Forgetting the <code>()</code>.</strong> <code>clearMessage;</code> only names the function. <code>clearMessage();</code> runs it.</li>
+              <li><strong>Quotes around values.</strong> <code>showMessage(Saved)</code> looks for a variable called <code>Saved</code>. For text, write <code>showMessage("Saved")</code>.</li>
+              <li><strong>Parameter names are local.</strong> <code>text</code> only exists inside <code>showMessage</code>. Using it outside gives "text is not defined".</li>
+            </ul>
+          </div>
+        </div>
         <div class="page-width">
           <div class="challenge" data-challenge="functions" role="group" aria-labelledby="challenge-functions-title">
             <div class="challenge-header">
@@ -1584,15 +2078,18 @@ eveningButton.addEventListener("click", function () {
             </div>
           </div>
         </div>
-        <nav class="page-width pager" aria-label="Previous and next page">
-          <a class="pager-link pager-prev" href="#next-steps"
-            ><span class="pager-caret" aria-hidden="true">‹</span
-            ><span class="pager-text"><small>Previous</small> Next steps</span></a
-          >
-          <a class="pager-link pager-next" href="#lesson-13"
-            ><span class="pager-text"><small>Next</small> 13 · Loop through a list</span
-            ><span class="pager-caret" aria-hidden="true">›</span></a
-          >
+        <nav class="pager" aria-label="Previous and next page">
+          <div class="page-width pager-inner">
+            <a class="pager-link pager-prev" href="#next-steps"
+              ><span class="pager-caret" aria-hidden="true">‹</span
+              ><span class="pager-text"><small>Previous</small> <span class="pager-title">Next steps</span></span></a
+            >
+            <p class="pager-position"><span class="pager-chapter">Next steps</span> Lesson 12 of 14</p>
+            <a class="pager-link pager-next" href="#lesson-13"
+              ><span class="pager-text"><small>Next</small> <span class="pager-title">13 · Loop through a list</span></span
+              ><span class="pager-caret" aria-hidden="true">›</span></a
+            >
+          </div>
         </nav>
       </section>
 
@@ -1600,18 +2097,6 @@ eveningButton.addEventListener("click", function () {
         class="page lesson-section loops-section"
         aria-labelledby="loops-title"
       >
-        <div class="page-width lesson-bar">
-          <a class="caret-link" href="#lesson-12" aria-label="Previous: 12 · Write a function"
-            ><span aria-hidden="true">‹</span></a
-          >
-          <p class="lesson-bar-title">
-            <span class="lesson-bar-chapter">Next steps</span>
-            Lesson 13 of 14
-          </p>
-          <a class="caret-link" href="#lesson-14" aria-label="Next: 14 · Create and remove elements"
-            ><span aria-hidden="true">›</span></a
-          >
-        </div>
         <div class="page-width lesson-grid">
           <div class="lesson-copy">
             <p class="eyebrow">
@@ -1708,6 +2193,66 @@ topics.<span class="code-yellow">length</span>;   <span class="code-comment">// 
             </p>
           </div>
         </div>
+        <div class="page-width lesson-more">
+          <div class="more-block">
+            <h3>How it works</h3>
+            <p>A <code>for</code> loop has three parts in its parentheses, separated by semicolons:</p>
+            <ol>
+              <li><code>let i = 0</code>: the <strong>start</strong>. Create a counter called <code>i</code> and set it to 0. (<code>let</code> is like <code>const</code>, but the value is allowed to change.)</li>
+              <li><code>i &lt; topics.length</code>: the <strong>condition</strong>. Before each round, check this. If it's true, run the code in <code>{ }</code>. If it's false, stop.</li>
+              <li><code>i = i + 1</code>: the <strong>step</strong>. After each round, add 1 to the counter.</li>
+            </ol>
+            <p>With three topics, the loop runs with <code>i</code> as 0, then 1, then 2. When <code>i</code> becomes 3, <code>3 &lt; 3</code> is false and the loop ends. Inside, <code>topics[i]</code> picks the item at the current position.</p>
+          </div>
+          <div class="more-block">
+            <h3>More examples</h3>
+            <p>Go through an array and build one line of text:</p>
+            <div class="code-card">
+              <div class="code-card-heading">
+                <span>JOIN AN ARRAY INTO A SENTENCE</span
+                ><span class="code-language">JAVASCRIPT</span>
+              </div>
+              <pre><code><span class="code-pink">const</span> colors = [<span class="code-green">"red"</span>, <span class="code-green">"green"</span>, <span class="code-green">"blue"</span>];
+<span class="code-pink">let</span> sentence = <span class="code-green">"Colors:"</span>;
+
+<span class="code-pink">for</span> (<span class="code-pink">let</span> i = <span class="code-green">0</span>; i &lt; colors.<span class="code-yellow">length</span>; i = i + <span class="code-green">1</span>) {
+  sentence = sentence + <span class="code-green">" "</span> + colors[i];
+}
+
+output.<span class="code-yellow">textContent</span> = sentence;
+<span class="code-comment">// The page shows: Colors: red green blue</span></code></pre>
+            </div>
+            <p>This is how you change every element from <code>querySelectorAll</code> (lesson 10). The loop visits each one in turn:</p>
+            <div class="code-card">
+              <div class="code-card-heading">
+                <span>CHANGE EVERY ELEMENT IN A LIST</span
+                ><span class="code-language">JAVASCRIPT</span>
+              </div>
+              <pre><code><span class="code-pink">const</span> notes = document.<span class="code-blue">querySelectorAll</span>(<span class="code-green">".note"</span>);
+
+<span class="code-pink">for</span> (<span class="code-pink">let</span> i = <span class="code-green">0</span>; i &lt; notes.<span class="code-yellow">length</span>; i = i + <span class="code-green">1</span>) {
+  notes[i].<span class="code-yellow">classList</span>.<span class="code-blue">add</span>(<span class="code-green">"highlight"</span>);
+}</code></pre>
+            </div>
+            <p>The last item in any list is at position <code>length - 1</code>, because counting starts at 0:</p>
+            <div class="code-card">
+              <div class="code-card-heading">
+                <span>FIRST AND LAST</span
+                ><span class="code-language">JAVASCRIPT</span>
+              </div>
+              <pre><code><span class="code-pink">const</span> first = colors[<span class="code-green">0</span>];                  <span class="code-comment">// "red"</span>
+<span class="code-pink">const</span> last = colors[colors.<span class="code-yellow">length</span> - <span class="code-green">1</span>];   <span class="code-comment">// "blue"</span></code></pre>
+            </div>
+          </div>
+          <div class="more-block">
+            <h3>Watch out for</h3>
+            <ul>
+              <li><strong><code>&lt;=</code> instead of <code>&lt;</code>.</strong> <code>i &lt;= colors.length</code> runs one extra time, and <code>colors[3]</code> is <code>undefined</code>.</li>
+              <li><strong>Loops that never end.</strong> If the step is missing, <code>i</code> never grows, the condition stays true, and the tab freezes. Close the tab and fix the step.</li>
+              <li><strong><code>const</code> for the counter.</strong> The counter changes, so it must be <code>let i</code>, not <code>const i</code>.</li>
+            </ul>
+          </div>
+        </div>
         <div class="page-width">
           <div class="challenge" data-challenge="loops" role="group" aria-labelledby="challenge-loops-title">
             <div class="challenge-header">
@@ -1756,15 +2301,18 @@ for (let i = 0; i &lt; planets.length; i = i + 1) {
             </div>
           </div>
         </div>
-        <nav class="page-width pager" aria-label="Previous and next page">
-          <a class="pager-link pager-prev" href="#lesson-12"
-            ><span class="pager-caret" aria-hidden="true">‹</span
-            ><span class="pager-text"><small>Previous</small> 12 · Write a function</span></a
-          >
-          <a class="pager-link pager-next" href="#lesson-14"
-            ><span class="pager-text"><small>Next</small> 14 · Create and remove elements</span
-            ><span class="pager-caret" aria-hidden="true">›</span></a
-          >
+        <nav class="pager" aria-label="Previous and next page">
+          <div class="page-width pager-inner">
+            <a class="pager-link pager-prev" href="#lesson-12"
+              ><span class="pager-caret" aria-hidden="true">‹</span
+              ><span class="pager-text"><small>Previous</small> <span class="pager-title">12 · Write a function</span></span></a
+            >
+            <p class="pager-position"><span class="pager-chapter">Next steps</span> Lesson 13 of 14</p>
+            <a class="pager-link pager-next" href="#lesson-14"
+              ><span class="pager-text"><small>Next</small> <span class="pager-title">14 · Create and remove elements</span></span
+              ><span class="pager-caret" aria-hidden="true">›</span></a
+            >
+          </div>
         </nav>
       </section>
 
@@ -1772,18 +2320,6 @@ for (let i = 0; i &lt; planets.length; i = i + 1) {
         class="page lesson-section create-section"
         aria-labelledby="create-title"
       >
-        <div class="page-width lesson-bar">
-          <a class="caret-link" href="#lesson-13" aria-label="Previous: 13 · Loop through a list"
-            ><span aria-hidden="true">‹</span></a
-          >
-          <p class="lesson-bar-title">
-            <span class="lesson-bar-chapter">Next steps</span>
-            Lesson 14 of 14
-          </p>
-          <a class="caret-link" href="#finish" aria-label="Next: Finish"
-            ><span aria-hidden="true">›</span></a
-          >
-        </div>
         <div class="page-width lesson-grid">
           <div class="lesson-copy">
             <p class="eyebrow">
@@ -1855,6 +2391,72 @@ newItem.<span class="code-blue">remove</span>();</code></pre>
             </p>
           </div>
         </div>
+        <div class="page-width lesson-more">
+          <div class="more-block">
+            <h3>How it works</h3>
+            <p>Adding an element always takes the same three steps:</p>
+            <ol>
+              <li><strong>Create</strong> it with <code>document.createElement("li")</code>. It exists in memory, but it's not on the page yet.</li>
+              <li><strong>Fill</strong> it: set its <code>textContent</code>, add a class, and so on. This is just like changing an element you selected.</li>
+              <li><strong>Attach</strong> it with <code>parent.appendChild(newItem)</code>. It goes inside the parent, after any children already there, and appears on the page.</li>
+            </ol>
+            <p>To take an element away, call <code>remove()</code> on it. It disappears from the page right away.</p>
+          </div>
+          <div class="more-block">
+            <h3>More examples</h3>
+            <p>A new element can get classes and be placed anywhere:</p>
+            <div class="code-card">
+              <div class="code-card-heading">
+                <span>CREATE A STYLED PARAGRAPH</span
+                ><span class="code-language">JAVASCRIPT</span>
+              </div>
+              <pre><code><span class="code-pink">const</span> note = document.<span class="code-blue">createElement</span>(<span class="code-green">"p"</span>);
+note.<span class="code-yellow">textContent</span> = <span class="code-green">"This paragraph was made by JavaScript."</span>;
+note.<span class="code-yellow">classList</span>.<span class="code-blue">add</span>(<span class="code-green">"note"</span>);
+
+<span class="code-pink">const</span> notesArea = document.<span class="code-blue">querySelector</span>(<span class="code-green">"#notesArea"</span>);
+notesArea.<span class="code-blue">appendChild</span>(note);</code></pre>
+            </div>
+            <p>Combine this with a loop (lesson 13) to turn an array into a list on the page:</p>
+            <div class="code-card">
+              <div class="code-card-heading">
+                <span>BUILD A LIST FROM AN ARRAY</span
+                ><span class="code-language">JAVASCRIPT</span>
+              </div>
+              <pre><code><span class="code-pink">const</span> fruits = [<span class="code-green">"Apple"</span>, <span class="code-green">"Banana"</span>, <span class="code-green">"Cherry"</span>];
+<span class="code-pink">const</span> fruitList = document.<span class="code-blue">querySelector</span>(<span class="code-green">"#fruitList"</span>);
+
+<span class="code-pink">for</span> (<span class="code-pink">let</span> i = <span class="code-green">0</span>; i &lt; fruits.<span class="code-yellow">length</span>; i = i + <span class="code-green">1</span>) {
+  <span class="code-pink">const</span> item = document.<span class="code-blue">createElement</span>(<span class="code-green">"li"</span>);
+  item.<span class="code-yellow">textContent</span> = fruits[i];
+  fruitList.<span class="code-blue">appendChild</span>(item);
+}</code></pre>
+            </div>
+            <p>New elements can have their own listeners. This is how the to-do demo gives each item a Remove button:</p>
+            <div class="code-card">
+              <div class="code-card-heading">
+                <span>A BUTTON THAT REMOVES ITS OWN ITEM</span
+                ><span class="code-language">JAVASCRIPT</span>
+              </div>
+              <pre><code><span class="code-pink">const</span> removeButton = document.<span class="code-blue">createElement</span>(<span class="code-green">"button"</span>);
+removeButton.<span class="code-yellow">textContent</span> = <span class="code-green">"Remove"</span>;
+
+removeButton.<span class="code-blue">addEventListener</span>(<span class="code-green">"click"</span>, <span class="code-pink">function</span> () {
+  newItem.<span class="code-blue">remove</span>();
+});
+
+newItem.<span class="code-blue">appendChild</span>(removeButton);</code></pre>
+            </div>
+          </div>
+          <div class="more-block">
+            <h3>Watch out for</h3>
+            <ul>
+              <li><strong>Forgetting <code>appendChild</code>.</strong> The element is created but never shown. If nothing appears, check this step first.</li>
+              <li><strong>Creating outside the listener.</strong> If <code>createElement</code> runs once at the top of the file, every click moves the same element instead of making a new one. Create it inside the listener.</li>
+              <li><strong>Tag names are strings.</strong> Write <code>createElement("li")</code>, without the angle brackets.</li>
+            </ul>
+          </div>
+        </div>
         <div class="page-width">
           <div class="challenge" data-challenge="create" role="group" aria-labelledby="challenge-create-title">
             <div class="challenge-header">
@@ -1910,15 +2512,18 @@ oldItem.___();</textarea>
             </div>
           </div>
         </div>
-        <nav class="page-width pager" aria-label="Previous and next page">
-          <a class="pager-link pager-prev" href="#lesson-13"
-            ><span class="pager-caret" aria-hidden="true">‹</span
-            ><span class="pager-text"><small>Previous</small> 13 · Loop through a list</span></a
-          >
-          <a class="pager-link pager-next" href="#finish"
-            ><span class="pager-text"><small>Next</small> Finish</span
-            ><span class="pager-caret" aria-hidden="true">›</span></a
-          >
+        <nav class="pager" aria-label="Previous and next page">
+          <div class="page-width pager-inner">
+            <a class="pager-link pager-prev" href="#lesson-13"
+              ><span class="pager-caret" aria-hidden="true">‹</span
+              ><span class="pager-text"><small>Previous</small> <span class="pager-title">13 · Loop through a list</span></span></a
+            >
+            <p class="pager-position"><span class="pager-chapter">Next steps</span> Lesson 14 of 14</p>
+            <a class="pager-link pager-next" href="#finish"
+              ><span class="pager-text"><small>Next</small> <span class="pager-title">Finish</span></span
+              ><span class="pager-caret" aria-hidden="true">›</span></a
+            >
+          </div>
         </nav>
       </section>
 
@@ -1939,22 +2544,72 @@ oldItem.___();</textarea>
             <a class="button button-outline" href="#lesson-04">Review the challenges</a>
           </div>
         </div>
-        <nav class="page-width pager" aria-label="Previous and next page">
-          <a class="pager-link pager-prev" href="#lesson-14"
-            ><span class="pager-caret" aria-hidden="true">‹</span
-            ><span class="pager-text"><small>Previous</small> 14 · Create and remove elements</span></a
-          >
-          <span></span>
+        <div class="page-width lesson-more">
+          <div class="more-block">
+            <h3>The cycle you learned</h3>
+            <ol>
+              <li>HTML creates an element.</li>
+              <li>CSS styles the element.</li>
+              <li>JavaScript finds the element.</li>
+              <li>JavaScript listens for an event.</li>
+              <li>JavaScript reads information.</li>
+              <li>JavaScript changes the element, and the browser shows the result.</li>
+            </ol>
+          </div>
+          <div class="more-block">
+            <h3>Ideas to practice</h3>
+            <ul>
+              <li><strong>A character counter.</strong> Use the <code>input</code> event and show how many characters are in a text field (<code>value.length</code>).</li>
+              <li><strong>A dark-mode button.</strong> Toggle a class on <code>document.body</code> and write the dark colors in CSS.</li>
+              <li><strong>A shopping list.</strong> Combine lessons 9 and 14: add items from an input, and remove them with a button.</li>
+              <li><strong>Read this site's code.</strong> Open <code>script.js</code> next to the page and match each demo to its code.</li>
+            </ul>
+          </div>
+        </div>
+        <nav class="pager" aria-label="Previous and next page">
+          <div class="page-width pager-inner">
+            <a class="pager-link pager-prev" href="#lesson-14"
+              ><span class="pager-caret" aria-hidden="true">‹</span
+              ><span class="pager-text"><small>Previous</small> <span class="pager-title">14 · Create and remove elements</span></span></a
+            >
+            <p class="pager-position"><span class="pager-chapter">The end</span> Finish</p>
+            <span class="pager-spacer"></span>
+          </div>
         </nav>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div class="page-width footer-content">
-        <span>Made for curious minds.</span>
-        <a href="#home"
-          >JavaScript, made visible</a
-        >
+      <div class="page-width">
+        <p class="footer-heading">All lessons</p>
+        <nav class="lesson-nav" aria-label="All lessons">
+          <a class="nav-text" href="#home">Home</a>
+          <span class="nav-group">
+            <a class="nav-text nav-group-label" href="#lesson-01">HTML &amp; CSS</a>
+            <a href="#lesson-01" title="01 · HTML is the structure" aria-label="Lesson 1: HTML is the structure">01</a>
+            <a href="#lesson-02" title="02 · CSS is the style" aria-label="Lesson 2: CSS is the style">02</a>
+          </span>
+          <span class="nav-group">
+            <a class="nav-text nav-group-label" href="#lesson-03">JavaScript</a>
+            <a href="#lesson-03" title="03 · JavaScript adds behavior" aria-label="Lesson 3: JavaScript adds behavior">03</a>
+            <a href="#lesson-04" title="04 · Select an element" aria-label="Lesson 4: Select an element">04</a>
+            <a href="#lesson-05" title="05 · Elements have content" aria-label="Lesson 5: Elements have content">05</a>
+            <a href="#lesson-06" title="06 · Change the page" aria-label="Lesson 6: Change the page">06</a>
+            <a href="#lesson-07" title="07 · Change a style" aria-label="Lesson 7: Change a style">07</a>
+            <a href="#lesson-08" title="08 · Listen for an event" aria-label="Lesson 8: Listen for an event">08</a>
+            <a href="#lesson-09" title="09 · Read user input" aria-label="Lesson 9: Read user input">09</a>
+            <a href="#lesson-10" title="10 · Select multiple elements" aria-label="Lesson 10: Select multiple elements">10</a>
+            <a href="#lesson-11" title="11 · Meet the console" aria-label="Lesson 11: Meet the console">11</a>
+          </span>
+          <span class="nav-group">
+            <a class="nav-text nav-group-label" href="#next-steps">Next steps</a>
+            <a href="#lesson-12" title="12 · Write a function" aria-label="Lesson 12: Write a function">12</a>
+            <a href="#lesson-13" title="13 · Loop through a list" aria-label="Lesson 13: Loop through a list">13</a>
+            <a href="#lesson-14" title="14 · Create and remove elements" aria-label="Lesson 14: Create and remove elements">14</a>
+          </span>
+          <a class="nav-text" href="#finish">Finish</a>
+        </nav>
+        <p class="footer-note">JavaScript, made visible · Made for curious minds.</p>
       </div>
     </footer>
   </body>

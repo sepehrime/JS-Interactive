@@ -34,16 +34,20 @@ No other website files. No frameworks, libraries, TypeScript, npm, or bundlers.
 **One page per lesson, no JavaScript routing.** Every direct child of `<main>` is a `<section class="page ...">` with an ID: `home`, `lesson-01` … `lesson-11`, `next-steps`, `lesson-12` … `lesson-14`, and `finish`. CSS shows only the section matching the URL hash (`.page:target`), and shows `#home` when there's no hash (`main:not(:has(.page:target))`). Links between pages are plain `<a href="#lesson-05">`, so the Back button and bookmarks work. `scroll-margin-top: 400px` on `.page` makes every page switch land at the top of the page.
 
 Navigation is static HTML and must be kept in sync by hand when adding, removing, or reordering a page:
-- the header strip `.lesson-nav` (the current link is highlighted by a generated `body:has(#id:target) .lesson-nav a[href="#id"]` selector list in `style.css`, which needs one entry per page),
-- each lesson's top `.lesson-bar` (‹ › carets, "Lesson N of 14") and bottom `.pager` (Previous/Next with titles),
+- the "All lessons" strip `.lesson-nav` in the footer (the current link is highlighted by a generated `body:has(#id:target) .lesson-nav a[href="#id"]` selector list in `style.css`, which needs one entry per page),
+- each page's bottom `.pager` (Previous link, `.pager-position` with the chapter and "Lesson N of 14", Next link). It is `position: sticky; bottom: 0`, so it stays at the bottom of the window while the page scrolls. On phones the titles are hidden,
 - the home page `.course-outline`.
 
 `challenges.js` adds `.is-solved` to strip and outline links when a lesson's challenge is solved. Note that a `.challenge` inside a hidden page can't be focused, so tests have to navigate to the page first.
 
 Page order: home → 01–02 (HTML/CSS) → 03 (`.chapter-intro`, the JavaScript intro) → 04–11 → `next-steps` (`.chapter-intro`) → 12–14 → `finish` (`.closing-section`). Each lesson page contains:
 
-- `.lesson-bar` → `.lesson-grid` → `.lesson-copy` (`.lesson-number` eyebrow, `<h2>`, explanation, `.code-card` with a hand-colored `<pre><code>` snippet) and `.demo-card` (`.demo-stage` with interactive elements, `.demo-caption`).
-- For JS lessons, a `.challenge` block after the grid.
+- `.lesson-grid` → `.lesson-copy` (`.lesson-number` eyebrow, `<h2>`, explanation, `.code-card` with a hand-colored `<pre><code>` snippet) and `.demo-card` (`.demo-stage` with interactive elements, `.demo-caption`).
+- `.lesson-more`: longer explanations in `.more-block`s ("How it works", "More examples" with extra `.code-card`s, "Watch out for"). The extra examples are illustrations only and are not in `script.js`. The chapter pages (03, `next-steps`, `finish`) have one too.
+- For JS lessons, a `.challenge` block after `.lesson-more`.
+- The `.pager` at the end.
+
+All pages share one light design: no dark page backgrounds, one coral accent, and light code blocks, editors, and consoles with the same `code-*` colors.
 
 The code snippets on the page are hand-written HTML with `code-pink`/`code-blue`/`code-green`/`code-yellow`/`code-comment` spans. They must stay in sync with the matching block in `script.js`.
 

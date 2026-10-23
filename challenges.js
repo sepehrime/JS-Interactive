@@ -329,7 +329,7 @@ function updateProgress() {
         if (solved === total) {
             closingProgress.textContent = "You solved all " + total + " code challenges. Well done!";
         } else {
-            closingProgress.textContent = "You've solved " + solved + " of " + total + " code challenges. Lessons with a green dot at the top are done. Try the others!";
+            closingProgress.textContent = "You've solved " + solved + " of " + total + " code challenges. Lessons with a green dot in the lesson list below are done. Try the others!";
         }
     }
 }
